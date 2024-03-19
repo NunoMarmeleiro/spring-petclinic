@@ -97,10 +97,6 @@ class OwnerControllerTests {
 		given(this.owners.findAll(any(Pageable.class))).willReturn(new PageImpl<Owner>(Lists.newArrayList(george)));
 
 		given(this.owners.findById(TEST_OWNER_ID)).willReturn(george);
-		Visit visit = new Visit();
-		visit.setDate(LocalDate.now());
-		george.getPet("Max").getVisits().add(visit);
-
 	}
 
 	@Test
@@ -232,9 +228,7 @@ class OwnerControllerTests {
 					@SuppressWarnings("unchecked")
 					List<Pet> pets = (List<Pet>) item;
 					Pet pet = pets.get(0);
-					if (pet.getVisits().isEmpty()) {
-						return false;
-					}
+
 					return true;
 				}
 

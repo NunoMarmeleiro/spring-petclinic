@@ -37,6 +37,7 @@ public class PetClinicApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PetClinicApplication.class, args);
+
 		var modules = ApplicationModules.of(PetClinicApplication.class);
 		modules.forEach(System.out::println);
 
