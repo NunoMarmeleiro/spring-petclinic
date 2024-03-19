@@ -32,6 +32,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
+import org.springframework.samples.petclinic.visit.Visit;
 
 /**
  * Simple business object representing a pet.
@@ -52,11 +53,6 @@ public class Pet extends NamedEntity {
 	@JoinColumn(name = "type_id")
 	private PetType type;
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "pet_id")
-	@OrderBy("visit_date ASC")
-	private Set<Visit> visits = new LinkedHashSet<>();
-
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
@@ -71,14 +67,6 @@ public class Pet extends NamedEntity {
 
 	public void setType(PetType type) {
 		this.type = type;
-	}
-
-	public Collection<Visit> getVisits() {
-		return this.visits;
-	}
-
-	public void addVisit(Visit visit) {
-		getVisits().add(visit);
 	}
 
 }
