@@ -19,7 +19,8 @@ import java.util.Map;
 
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerRepository;
-import org.springframework.samples.petclinic.owner.Pet;
+import org.springframework.samples.petclinic.pet.Pet;
+import org.springframework.samples.petclinic.pet.PetRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -43,11 +44,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 class VisitController {
 
 	private final OwnerRepository owners;
+	private final PetRepository pets;
 	private final VisitRepository visits;
 
-	public VisitController(OwnerRepository owners, VisitRepository visits) {
+	public VisitController(OwnerRepository owners, VisitRepository visits, PetRepository pets) {
 		this.owners = owners;
 		this.visits = visits;
+		this.pets = pets;
 	}
 
 	@InitBinder
@@ -67,11 +70,11 @@ class VisitController {
 			Map<String, Object> model) {
 		Owner owner = this.owners.findById(ownerId);
 
-		Pet pet = owner.getPet(petId);
+		Pet pet = this.pets.findById(petId);
 		model.put("pet", pet);
 		model.put("owner", owner);
 
-		Visit visit = new Visit(pet);
+		Visit visit = new Visit(petId);
 		return visit;
 	}
 
@@ -91,8 +94,7 @@ class VisitController {
 			return "pets/createOrUpdateVisitForm";
 		}
 
-		Pet pet = owner.getPet(petId);
-		visit.setPet(pet);
+		visit.setPet(petId);
 		this.visits.save(visit);
 		redirectAttributes.addFlashAttribute("message", "Your visit has been booked");
 		return "redirect:/owners/{ownerId}";

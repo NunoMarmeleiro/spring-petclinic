@@ -22,7 +22,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.samples.petclinic.model.BaseEntity;
 
 import jakarta.validation.constraints.NotBlank;
-import org.springframework.samples.petclinic.owner.Pet;
 
 /**
  * Simple JavaBean domain object representing a visit.
@@ -41,15 +40,15 @@ public class Visit extends BaseEntity {
 	@NotBlank
 	private String description;
 
-	@ManyToOne
-	private Pet pet;
+	@NotBlank
+	private int petId;
 
 	/**
 	 * Creates a new instance of Visit for the current date
 	 */
-	public Visit(Pet pet) {
+	public Visit(int petId) {
 		this.date = LocalDate.now();
-		this.pet = pet;
+		this.petId = petId;
 	}
 
 	public LocalDate getDate() {
@@ -68,12 +67,12 @@ public class Visit extends BaseEntity {
 		this.description = description;
 	}
 
-	public Pet getPet() {
-		return this.pet;
+	public int getPetId() {
+		return this.petId;
 	}
 
-	public void setPet(Pet pet) {
-		this.pet = pet;
+	public void setPet(int petId) {
+		this.petId = petId;
 	}
 
 }

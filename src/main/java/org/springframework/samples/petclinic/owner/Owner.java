@@ -58,11 +58,6 @@ public class Owner extends Person {
 	@Digits(fraction = 0, integer = 10)
 	private String telephone;
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "owner_id")
-	@OrderBy("name")
-	private List<Pet> pets = new ArrayList<>();
-
 	public String getAddress() {
 		return this.address;
 	}
@@ -85,60 +80,6 @@ public class Owner extends Person {
 
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
-	}
-
-	public List<Pet> getPets() {
-		return this.pets;
-	}
-
-	public void addPet(Pet pet) {
-		if (pet.isNew()) {
-			getPets().add(pet);
-		}
-	}
-
-	/**
-	 * Return the Pet with the given name, or null if none found for this Owner.
-	 * @param name to test
-	 * @return a pet if pet name is already in use
-	 */
-	public Pet getPet(String name) {
-		return getPet(name, false);
-	}
-
-	/**
-	 * Return the Pet with the given id, or null if none found for this Owner.
-	 * @param id to test
-	 * @return a pet if pet id is already in use
-	 */
-	public Pet getPet(Integer id) {
-		for (Pet pet : getPets()) {
-			if (!pet.isNew()) {
-				Integer compId = pet.getId();
-				if (compId.equals(id)) {
-					return pet;
-				}
-			}
-		}
-		return null;
-	}
-
-	/**
-	 * Return the Pet with the given name, or null if none found for this Owner.
-	 * @param name to test
-	 * @return a pet if pet name is already in use
-	 */
-	public Pet getPet(String name, boolean ignoreNew) {
-		name = name.toLowerCase();
-		for (Pet pet : getPets()) {
-			String compName = pet.getName();
-			if (compName != null && compName.equalsIgnoreCase(name)) {
-				if (!ignoreNew || !pet.isNew()) {
-					return pet;
-				}
-			}
-		}
-		return null;
 	}
 
 	@Override
