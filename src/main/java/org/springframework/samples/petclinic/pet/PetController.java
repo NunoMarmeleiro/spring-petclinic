@@ -18,8 +18,6 @@ package org.springframework.samples.petclinic.pet;
 import java.time.LocalDate;
 import java.util.Collection;
 
-import org.springframework.samples.petclinic.owner.Owner;
-import org.springframework.samples.petclinic.owner.OwnerRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
@@ -41,52 +39,27 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  * @author Arjen Poutsma
  */
 @Controller
-@RequestMapping("/owners/{ownerId}")
 class PetController {
 
 	private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
-
-	private final OwnerRepository owners;
 	private final PetRepository pets;
 
-	public PetController(OwnerRepository owners, PetRepository pets) {
-		this.owners = owners;
+	public PetController(PetRepository pets) {
 		this.pets = pets;
 	}
 
 	@ModelAttribute("types")
 	public Collection<PetType> populatePetTypes() {
-		return this.owners.findPetTypes();
-	}
-
-	@ModelAttribute("owner")
-	public Owner findOwner(@PathVariable("ownerId") int ownerId) {
-
-		Owner owner = this.owners.findById(ownerId);
-		if (owner == null) {
-			throw new IllegalArgumentException("Owner ID not found: " + ownerId);
-		}
-		return owner;
+		return this.pets.findPetTypes();
 	}
 
 	@ModelAttribute("pet")
-	public Pet findPet(@PathVariable("ownerId") int ownerId,
-			@PathVariable(name = "petId", required = false) Integer petId) {
-
-		if (petId == null) {
-			return new Pet();
-		}
-
+	public Pet findPet(@PathVariable("petId") int petId) {
 		Pet pet = this.pets.findById(petId);
 		if (pet == null) {
 			throw new IllegalArgumentException("Pet ID not found: " + petId);
 		}
 		return pet;
-	}
-
-	@InitBinder("owner")
-	public void initOwnerBinder(WebDataBinder dataBinder) {
-		dataBinder.setDisallowedFields("id");
 	}
 
 	@InitBinder("pet")
@@ -95,14 +68,14 @@ class PetController {
 	}
 
 	@GetMapping("/pets/new")
-	public String initCreationForm(Owner owner, ModelMap model) {
+	public String initCreationForm(ModelMap model) {
 		Pet pet = new Pet();
 		model.put("pet", pet);
 		return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
 	}
 
 	@PostMapping("/pets/new")
-	public String processCreationForm(Owner owner, @Valid Pet pet, BindingResult result, ModelMap model,
+	public String processCreationForm(@Valid Pet pet, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
 		if (StringUtils.hasText(pet.getName()) && pet.isNew()) {
 			result.rejectValue("name", "duplicate", "already exists");
@@ -124,7 +97,7 @@ class PetController {
 	}
 
 	@GetMapping("/pets/{petId}/edit")
-	public String initUpdateForm(Owner owner, @PathVariable("petId") int petId, ModelMap model,
+	public String initUpdateForm(@PathVariable("petId") int petId, ModelMap model,
 			RedirectAttributes redirectAttributes) {
 		Pet pet = this.pets.findById(petId);
 		model.put("pet", pet);
@@ -132,7 +105,7 @@ class PetController {
 	}
 
 	@PostMapping("/pets/{petId}/edit")
-	public String processUpdateForm(@Valid Pet pet, BindingResult result, Owner owner, ModelMap model,
+	public String processUpdateForm(@Valid Pet pet, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
 
 		String petName = pet.getName();

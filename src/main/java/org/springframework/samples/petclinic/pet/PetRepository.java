@@ -5,6 +5,8 @@ import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 
 public interface PetRepository extends Repository<Pet, Integer> {
 
@@ -17,4 +19,12 @@ public interface PetRepository extends Repository<Pet, Integer> {
 	Pet findByOwnerIdAndName(@Param("id") Integer id, @Param("name") String petName);
 
 	void save(Pet pet);
+
+	/**
+	 * Retrieve all {@link PetType}s from the data store.
+	 * @return a Collection of {@link PetType}s.
+	 */
+	@Query("SELECT ptype FROM PetType ptype ORDER BY ptype.name")
+	@Transactional(readOnly = true)
+	List<PetType> findPetTypes();
 }
