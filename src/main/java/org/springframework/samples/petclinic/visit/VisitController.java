@@ -17,10 +17,6 @@ package org.springframework.samples.petclinic.visit;
 
 import java.util.Map;
 
-import org.springframework.samples.petclinic.owner.Owner;
-import org.springframework.samples.petclinic.owner.OwnerRepository;
-import org.springframework.samples.petclinic.pet.Pet;
-import org.springframework.samples.petclinic.pet.PetRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -42,15 +38,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  */
 @Controller
 class VisitController {
-
-	private final OwnerRepository owners;
-	private final PetRepository pets;
 	private final VisitRepository visits;
 
-	public VisitController(OwnerRepository owners, VisitRepository visits, PetRepository pets) {
-		this.owners = owners;
+	public VisitController(VisitRepository visits) {
 		this.visits = visits;
-		this.pets = pets;
 	}
 
 	@InitBinder
@@ -68,12 +59,6 @@ class VisitController {
 	@ModelAttribute("visit")
 	public Visit loadPetWithVisit(@PathVariable("ownerId") int ownerId, @PathVariable("petId") int petId,
 			Map<String, Object> model) {
-		Owner owner = this.owners.findById(ownerId);
-
-		Pet pet = this.pets.findById(petId);
-		model.put("pet", pet);
-		model.put("owner", owner);
-
 		Visit visit = new Visit(petId);
 		return visit;
 	}
@@ -88,7 +73,7 @@ class VisitController {
 	// Spring MVC calls method loadPetWithVisit(...) before processNewVisitForm is
 	// called
 	@PostMapping("/owners/{ownerId}/pets/{petId}/visits/new")
-	public String processNewVisitForm(@ModelAttribute Owner owner, @PathVariable int petId, @Valid Visit visit,
+	public String processNewVisitForm(@PathVariable int petId, @Valid Visit visit,
 			BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "pets/createOrUpdateVisitForm";

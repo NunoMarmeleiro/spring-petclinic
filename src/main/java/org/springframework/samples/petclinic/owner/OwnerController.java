@@ -15,12 +15,17 @@
  */
 package org.springframework.samples.petclinic.owner;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.samples.petclinic.pet.Pet;
+import org.springframework.samples.petclinic.pet.PetRepository;
+import org.springframework.samples.petclinic.visit.Visit;
+import org.springframework.samples.petclinic.visit.VisitRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -48,9 +53,13 @@ class OwnerController {
 	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
 
 	private final OwnerRepository owners;
+	private final PetRepository pets;
+	private final VisitRepository visits;
 
-	public OwnerController(OwnerRepository clinicService) {
+	public OwnerController(OwnerRepository clinicService, PetRepository pets, VisitRepository visits) {
 		this.owners = clinicService;
+		this.pets = pets;
+		this.visits = visits;
 	}
 
 	@InitBinder
@@ -115,10 +124,17 @@ class OwnerController {
 
 	private String addPaginationModel(int page, Model model, Page<Owner> paginated) {
 		List<Owner> listOwners = paginated.getContent();
+		Map<Owner, List<Pet>> petMap = new HashMap<>();
+
+		for (Owner owner : listOwners) {
+			List<Pet> pets = this.pets.findByOwnerId(owner.getId());
+			petMap.put(owner, pets);
+		}
 		model.addAttribute("currentPage", page);
 		model.addAttribute("totalPages", paginated.getTotalPages());
 		model.addAttribute("totalItems", paginated.getTotalElements());
 		model.addAttribute("listOwners", listOwners);
+		model.addAttribute("petMap", petMap);
 		return "owners/ownersList";
 	}
 
@@ -158,7 +174,21 @@ class OwnerController {
 	public ModelAndView showOwner(@PathVariable("ownerId") int ownerId) {
 		ModelAndView mav = new ModelAndView("owners/ownerDetails");
 		Owner owner = this.owners.findById(ownerId);
+		List<Pet> pets = this.pets.findByOwnerId(ownerId);
+
+		// Create a map to store visits for each pet
+		Map<Pet, List<Visit>> petVisitsMap = new HashMap<>();
+
+		for (Pet pet : pets) {
+			// Fetch visits for each pet
+			List<Visit> visits = this.visits.findByPetId(pet.getId());
+			// Associate visits with pet in the map
+			petVisitsMap.put(pet, visits);
+		}
+
 		mav.addObject(owner);
+		mav.addObject("pets", pets);
+		mav.addObject("petVisitsMap", petVisitsMap);
 		return mav;
 	}
 
