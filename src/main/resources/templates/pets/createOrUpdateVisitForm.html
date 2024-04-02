@@ -45,13 +45,13 @@
   </form>
 
   <br />
-  <b>Previous Visits</b>
+  <b>Visits</b>
   <table class="table table-striped">
     <tr>
       <th>Date</th>
       <th>Description</th>
     </tr>
-    <tr th:if="${!visit['new']}" th:each="visit : ${pet.visits}">
+    <tr th:if="${!visit['new']}" th:each="visit : ${prevVisits}">
       <td th:text="${#temporals.format(visit.date, 'yyyy-MM-dd')}"></td>
       <td th:text=" ${visit.description}"></td>
     </tr>

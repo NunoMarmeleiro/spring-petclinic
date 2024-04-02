@@ -207,7 +207,8 @@ class ClinicServiceTests {
 		Pet pet7 = this.pets.findById(7);
 		List<Visit> visits = this.visits.findByPetId(7);
 		int found = visits.size();
-		Visit visit = new Visit(7);
+		Visit visit = new Visit();
+		visit.setId(7);
 		visit.setDescription("test");
 
 		this.visits.save(visit);

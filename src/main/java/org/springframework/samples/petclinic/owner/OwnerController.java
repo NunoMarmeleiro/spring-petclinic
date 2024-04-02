@@ -24,8 +24,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.samples.petclinic.pet.Pet;
 import org.springframework.samples.petclinic.pet.PetRepository;
-import org.springframework.samples.petclinic.visit.Visit;
-import org.springframework.samples.petclinic.visit.VisitRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -54,12 +52,10 @@ class OwnerController {
 
 	private final OwnerRepository owners;
 	private final PetRepository pets;
-	private final VisitRepository visits;
 
-	public OwnerController(OwnerRepository clinicService, PetRepository pets, VisitRepository visits) {
+	public OwnerController(OwnerRepository clinicService, PetRepository pets) {
 		this.owners = clinicService;
 		this.pets = pets;
-		this.visits = visits;
 	}
 
 	@InitBinder
@@ -176,19 +172,8 @@ class OwnerController {
 		Owner owner = this.owners.findById(ownerId);
 		List<Pet> pets = this.pets.findByOwnerId(ownerId);
 
-		// Create a map to store visits for each pet
-		Map<Pet, List<Visit>> petVisitsMap = new HashMap<>();
-
-		for (Pet pet : pets) {
-			// Fetch visits for each pet
-			List<Visit> visits = this.visits.findByPetId(pet.getId());
-			// Associate visits with pet in the map
-			petVisitsMap.put(pet, visits);
-		}
-
 		mav.addObject(owner);
 		mav.addObject("pets", pets);
-		mav.addObject("petVisitsMap", petVisitsMap);
 		return mav;
 	}
 
