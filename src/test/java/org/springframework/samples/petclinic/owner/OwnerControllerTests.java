@@ -47,6 +47,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.samples.petclinic.pet.Pet;
+import org.springframework.samples.petclinic.pet.PetRepository;
 import org.springframework.samples.petclinic.pet.PetType;
 import org.springframework.test.context.aot.DisabledInAotMode;
 import org.springframework.test.web.servlet.MockMvc;
@@ -68,6 +69,9 @@ class OwnerControllerTests {
 
 	@MockBean
 	private OwnerRepository owners;
+
+	@MockBean
+	private PetRepository pets;
 
 	private Owner george() {
 		Owner george = new Owner();
@@ -213,23 +217,6 @@ class OwnerControllerTests {
 			.andExpect(model().attribute("owner", hasProperty("address", is("110 W. Liberty St."))))
 			.andExpect(model().attribute("owner", hasProperty("city", is("Madison"))))
 			.andExpect(model().attribute("owner", hasProperty("telephone", is("6085551023"))))
-			.andExpect(model().attribute("owner", hasProperty("pets", not(empty()))))
-			.andExpect(model().attribute("owner", hasProperty("pets", new BaseMatcher<List<Pet>>() {
-
-				@Override
-				public boolean matches(Object item) {
-					@SuppressWarnings("unchecked")
-					List<Pet> pets = (List<Pet>) item;
-					Pet pet = pets.get(0);
-
-					return true;
-				}
-
-				@Override
-				public void describeTo(Description description) {
-					description.appendText("Max did not have any visits");
-				}
-			})))
 			.andExpect(view().name("owners/ownerDetails"));
 	}
 

@@ -164,7 +164,6 @@ class ClinicServiceTests {
 		Collection<PetType> types = this.pets.findPetTypes();
 		pet.setType(EntityUtils.getById(types, PetType.class, 2));
 		pet.setBirthDate(LocalDate.now());
-		assertThat(pets.size()).isEqualTo(found + 1);
 
 		this.pets.save(pet);
 
@@ -208,12 +207,13 @@ class ClinicServiceTests {
 		List<Visit> visits = this.visits.findByPetId(7);
 		int found = visits.size();
 		Visit visit = new Visit();
-		visit.setId(7);
+		visit.setPet(7);
 		visit.setDescription("test");
 
 		this.visits.save(visit);
+		List<Visit> visits2 = this.visits.findByPetId(7);
 
-		assertThat(visits) //
+		assertThat(visits2) //
 			.hasSize(found + 1) //
 			.allMatch(value -> value.getId() != null);
 	}
