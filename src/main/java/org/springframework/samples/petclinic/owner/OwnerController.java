@@ -24,7 +24,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.samples.petclinic.owner.internal.OwnerRepository;
 import org.springframework.samples.petclinic.pet.Pet;
-import org.springframework.samples.petclinic.pet.internal.PetRepository;
+import org.springframework.samples.petclinic.pet.PetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -52,11 +52,12 @@ class OwnerController {
 	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
 
 	private final OwnerRepository owners;
-	private final PetRepository pets;
 
-	public OwnerController(OwnerRepository clinicService, PetRepository pets) {
+	private final PetService petService;
+
+	public OwnerController(OwnerRepository clinicService, PetService petService) {
 		this.owners = clinicService;
-		this.pets = pets;
+		this.petService = petService;
 	}
 
 	@InitBinder
@@ -124,7 +125,7 @@ class OwnerController {
 		Map<Owner, List<Pet>> petMap = new HashMap<>();
 
 		for (Owner owner : listOwners) {
-			List<Pet> pets = this.pets.findByOwnerId(owner.getId());
+			List<Pet> pets = this.petService.findByOwnerId(owner.getId());
 			petMap.put(owner, pets);
 		}
 		model.addAttribute("currentPage", page);
@@ -171,7 +172,7 @@ class OwnerController {
 	public ModelAndView showOwner(@PathVariable("ownerId") int ownerId) {
 		ModelAndView mav = new ModelAndView("owners/ownerDetails");
 		Owner owner = this.owners.findById(ownerId);
-		List<Pet> pets = this.pets.findByOwnerId(ownerId);
+		List<Pet> pets = this.petService.findByOwnerId(ownerId);
 
 		mav.addObject(owner);
 		mav.addObject("pets", pets);

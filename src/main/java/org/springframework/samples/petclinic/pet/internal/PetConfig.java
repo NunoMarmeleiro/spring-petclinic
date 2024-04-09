@@ -14,7 +14,7 @@ public class PetConfig {
 		this.pets = petRepo;
 	}
 	@Bean
-	public PetService ownerService() {
+	public PetService petService() {
 		return new PetServiceImpl(this.pets);
 	}
 }
