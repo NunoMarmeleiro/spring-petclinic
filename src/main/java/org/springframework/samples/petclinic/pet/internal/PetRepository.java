@@ -1,11 +1,9 @@
-package org.springframework.samples.petclinic.pet;
+package org.springframework.samples.petclinic.pet.internal;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.samples.petclinic.vet.Vet;
+import org.springframework.samples.petclinic.pet.Pet;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

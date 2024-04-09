@@ -17,9 +17,10 @@ package org.springframework.samples.petclinic.pet;
 
 import java.time.LocalDate;
 import java.util.Collection;
-import java.util.List;
 
-import org.springframework.samples.petclinic.owner.Owner;
+import org.springframework.samples.petclinic.pet.internal.PetRepository;
+import org.springframework.samples.petclinic.pet.internal.PetType;
+import org.springframework.samples.petclinic.pet.internal.PetValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
@@ -33,7 +34,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.validation.Valid;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**

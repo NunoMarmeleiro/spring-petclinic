@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.samples.petclinic.pet;
+package org.springframework.samples.petclinic.pet.internal;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.Formatter;
