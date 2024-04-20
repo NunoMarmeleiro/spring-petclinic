@@ -8,13 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-petclinic-async" />
         <module name="spring-petclinic-sync" />
+        <module name="spring-petclinic" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="spring-petclinic-async" options="-parameters" />
-      <module name="spring-petclinic-sync" options="-parameters" />
+      <module name="spring-petclinic-sync" options="" />
     </option>
   </component>
 </project>
