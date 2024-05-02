@@ -1,0 +1,40 @@
+th:replace="~{fragments/layout :: layout (~{::body},'owners')}">
+
+<body>
+
+<h2>Owner</h2>
+<form th:object="${owner}" class="form-horizontal" id="delete-owner-form" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <div class="form-group has-feedback">
+    <div>
+      <strong>First Name:</strong>
+      <span th:text="${owner.firstName}" />
+    </div>
+    <div>
+      <strong>Last Name:</strong>
+      <span th:text="${owner.lastName}" />
+    </div>
+    <div>
+      <strong>Address:</strong>
+      <span th:text="${owner.address}" />
+    </div>
+    <div>
+      <strong>City:</strong>
+      <span th:text="${owner.city}" />
+    </div>
+    <div>
+      <strong>Telephone:</strong>
+      <span th:text="${owner.telephone}" />
+    </div>
+
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button
+        class="btn btn-primary" type="submit">Delete
+        Owner</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>

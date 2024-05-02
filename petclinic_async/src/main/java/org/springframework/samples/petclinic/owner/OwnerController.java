@@ -15,6 +15,7 @@
  */
 package org.springframework.samples.petclinic.owner;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +23,7 @@ import java.util.Map;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.samples.petclinic.owner.internal.OwnerManagement;
 import org.springframework.samples.petclinic.owner.internal.OwnerRepository;
 import org.springframework.samples.petclinic.pet.Pet;
 import org.springframework.samples.petclinic.pet.PetService;
@@ -29,12 +31,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.validation.Valid;
@@ -52,12 +49,14 @@ class OwnerController {
 	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
 
 	private final OwnerRepository owners;
+	private final OwnerManagement ownerManagement;
 
 	private final PetService petService;
 
-	public OwnerController(OwnerRepository clinicService, PetService petService) {
+	public OwnerController(OwnerRepository clinicService, OwnerManagement ownerManagement, PetService petService) {
 		this.owners = clinicService;
-		this.petService = petService;
+        this.ownerManagement = ownerManagement;
+        this.petService = petService;
 	}
 
 	@InitBinder
@@ -177,6 +176,20 @@ class OwnerController {
 		mav.addObject(owner);
 		mav.addObject("pets", pets);
 		return mav;
+	}
+
+	@GetMapping("/owners/{ownerId}/delete")
+	public String initDeleteOwnerForm(@PathVariable("ownerId") int ownerId, Model model) {
+		Owner owner = this.owners.findById(ownerId);
+		model.addAttribute(owner);
+		return "owners/deleteOwner";
+	}
+
+	@DeleteMapping("/owners/{ownerId}/delete")
+	public String processDeleteOwner(@PathVariable("ownerId") int ownerId) {
+		this.ownerManagement.complete(ownerId);
+		this.owners.deleteById(ownerId);
+		return "redirect:owners/find";
 	}
 
 }

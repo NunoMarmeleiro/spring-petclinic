@@ -5,13 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d9c93f9-746a-4b38-9a2f-d24b9e11ebc2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/DeletedOwner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/DeletedPet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/DeletedPets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/VisitManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/owners/deleteOwner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/pets/deletePet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/test/jmeter/petclinic_test_plan.jmx" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/test/jmeter/petclinic_test_plan.jmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/PetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/PetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/VisitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/VisitRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/owners/ownerDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/owners/ownerDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/docs/glossary.md" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/docs/glossary.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Class" />
+        <option value="UML Component" />
+        <option value="HTML File" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -20,26 +56,49 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2fSiShgrDmnaxSW4jTcvEW0djB5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "DefaultPlantUmlFileTemplate": "UML Component",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.PetClinicApplication (1).executor": "Run",
     "Spring Boot.PetClinicApplication.executor": "Run",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/pedro/OneDrive/Documentos/GitHub/spring-petclinic-modulith/petclinic_async",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pedro/OneDrive/Documentos/GitHub/spring-petclinic-modulith",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.PetClinicApplication">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.springframework.samples.petclinic.pet" />
+      <recent name="org.springframework.samples.petclinic.visit" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.PetClinicApplication (1)">
     <configuration name="PetClinicApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="spring-petclinic-async" />
@@ -57,7 +116,32 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d9c93f9-746a-4b38-9a2f-d24b9e11ebc2" name="Changes" comment="" />
+      <created>1713800881667</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713800881667</updated>
+      <workItem from="1713800885397" duration="2186000" />
+      <workItem from="1714142790325" duration="111000" />
+      <workItem from="1714142910851" duration="77000" />
+      <workItem from="1714142996831" duration="6690000" />
+      <workItem from="1714404459162" duration="1364000" />
+      <workItem from="1714495314783" duration="1991000" />
+      <workItem from="1714665748752" duration="3415000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
