@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d9c93f9-746a-4b38-9a2f-d24b9e11ebc2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/DeletedOwner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/DeletedPet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/DeletedPets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/VisitManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/owners/deleteOwner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/pets/deletePet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_async/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/PetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/PetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/VisitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/VisitRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/owners/ownerDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/owners/ownerDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_sync/docs/glossary.md" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/docs/glossary.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/owners/deleteOwner.html" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/owners/deleteOwner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/pets/deletePet.html" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/pets/deletePet.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +120,7 @@
       <workItem from="1714142996831" duration="6690000" />
       <workItem from="1714404459162" duration="1364000" />
       <workItem from="1714495314783" duration="1991000" />
-      <workItem from="1714665748752" duration="3415000" />
+      <workItem from="1714665748752" duration="4847000" />
     </task>
     <servers />
   </component>

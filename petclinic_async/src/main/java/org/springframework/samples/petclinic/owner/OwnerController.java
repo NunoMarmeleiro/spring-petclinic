@@ -189,7 +189,7 @@ class OwnerController {
 	public String processDeleteOwner(@PathVariable("ownerId") int ownerId) {
 		this.ownerManagement.complete(ownerId);
 		this.owners.deleteById(ownerId);
-		return "redirect:owners/find";
+		return "redirect:/owners";
 	}
 
 }

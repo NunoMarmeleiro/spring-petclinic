@@ -56,7 +56,11 @@ class PetController {
 	}
 
 	@ModelAttribute("pet")
-	public Pet findPet(@PathVariable("ownerId") int ownerId, @PathVariable("petId") int petId) {
+	public Pet findPet(@PathVariable("ownerId") int ownerId, @PathVariable(name = "petId", required = false) Integer petId) {
+		if (petId == null) {
+			return new Pet();
+		}
+
 		Pet pet = this.pets.findById(petId);
 		if (pet == null) {
 			throw new IllegalArgumentException("Pet ID not found: " + petId);
@@ -80,7 +84,7 @@ class PetController {
 	public String processCreationForm(@Valid Pet pet, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
 		if (StringUtils.hasText(pet.getName()) && pet.isNew()) {
-			result.rejectValue("name", "duplicate", "already exists");
+			//result.rejectValue("name", "duplicate", "already exists");
 		}
 
 		LocalDate currentDate = LocalDate.now();
