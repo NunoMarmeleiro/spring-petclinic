@@ -17,6 +17,7 @@ package org.springframework.samples.petclinic.owner.internal;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
@@ -69,5 +70,10 @@ public interface OwnerRepository extends Repository<Owner, Integer> {
 	@Query("SELECT owner FROM Owner owner")
 	@Transactional(readOnly = true)
 	Page<Owner> findAll(Pageable pageable);
+
+	@Modifying
+	@Transactional
+	@Query("DELETE FROM Owner owner WHERE owner.id = :id")
+	void deleteById(@Param("id") Integer id);
 
 }

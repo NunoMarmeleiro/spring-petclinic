@@ -29,12 +29,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.validation.Valid;
@@ -177,6 +172,20 @@ class OwnerController {
 		mav.addObject(owner);
 		mav.addObject("pets", pets);
 		return mav;
+	}
+
+	@GetMapping("/owners/{ownerId}/delete")
+	public String initDeleteOwnerForm(@PathVariable("ownerId") int ownerId, Model model) {
+		Owner owner = this.owners.findById(ownerId);
+		model.addAttribute(owner);
+		return "owners/deleteOwner";
+	}
+
+	@DeleteMapping("/owners/{ownerId}/delete")
+	public String processDeleteOwner(@PathVariable("ownerId") int ownerId) {
+		this.petService.deletePets(ownerId);
+		this.owners.deleteById(ownerId);
+		return "redirect:/owners";
 	}
 
 }

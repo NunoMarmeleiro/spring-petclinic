@@ -1,5 +1,6 @@
 package org.springframework.samples.petclinic.visit;
 
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
@@ -14,4 +15,9 @@ public interface VisitRepository extends Repository<Visit, Integer> {
 	List<Visit> findByPetId(@Param("id") Integer id);
 
 	void save(Visit visit);
+
+	@Modifying
+	@Transactional
+	@Query("DELETE FROM Visit visit WHERE visit.petId = :id")
+	void deleteVisitByPetId(@Param("id") Integer id);
 }

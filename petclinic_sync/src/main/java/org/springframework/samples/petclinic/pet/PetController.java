@@ -21,17 +21,13 @@ import java.util.Collection;
 import org.springframework.samples.petclinic.pet.internal.PetRepository;
 import org.springframework.samples.petclinic.pet.internal.PetType;
 import org.springframework.samples.petclinic.pet.internal.PetValidator;
+import org.springframework.samples.petclinic.visit.VisitService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -47,10 +43,12 @@ class PetController {
 
 	private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
 	private final PetRepository pets;
+	private final VisitService visitService;
 
-	public PetController(PetRepository pets) {
+	public PetController(PetRepository pets, VisitService visitService) {
 		this.pets = pets;
-	}
+        this.visitService = visitService;
+    }
 
 	@ModelAttribute("types")
 	public Collection<PetType> populatePetTypes() {
@@ -138,6 +136,20 @@ class PetController {
 
 		this.pets.save(pet);
 		redirectAttributes.addFlashAttribute("message", "Pet details has been edited");
+		return "redirect:/owners/{ownerId}";
+	}
+
+	@GetMapping("/pets/{petId}/delete")
+	public String initDeletePetForm(@PathVariable("petId") int petId, ModelMap model) {
+		Pet pet = this.pets.findById(petId);
+		model.put("pet", pet);
+		return "pets/deletePet";
+	}
+
+	@DeleteMapping("/pets/{petId}/delete")
+	public String processDeletePet(Pet pet) {
+		this.visitService.deleteVisits(pet.getId());
+		this.pets.deletePetById(pet.getId());
 		return "redirect:/owners/{ownerId}";
 	}
 

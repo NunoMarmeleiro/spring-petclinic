@@ -1,5 +1,6 @@
 package org.springframework.samples.petclinic.pet.internal;
 
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
@@ -32,4 +33,14 @@ public interface PetRepository extends Repository<Pet, Integer> {
 	@Query("SELECT ptype FROM PetType ptype ORDER BY ptype.name")
 	@Transactional(readOnly = true)
 	List<PetType> findPetTypes();
+
+	@Modifying
+	@Transactional
+	@Query("DELETE FROM Pet pet WHERE pet.id = :id")
+	void deletePetById(@Param("id") Integer id);
+
+	@Modifying
+	@Transactional
+	@Query("DELETE FROM Pet pet WHERE pet.ownerId = :id")
+	void deletePetByOwnerId(@Param("id") Integer id);
 }

@@ -15,6 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-petclinic" options="-parameters" />
       <module name="spring-petclinic-async" options="-parameters" />
       <module name="spring-petclinic-sync" options="-parameters" />
     </option>

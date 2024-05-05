@@ -6,4 +6,5 @@ public interface PetService {
 
 	Pet findPet(int petId);
 	List<Pet> findByOwnerId(int ownerId);
+	void deletePets(int ownerId);
 }
