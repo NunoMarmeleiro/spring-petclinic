@@ -15,7 +15,6 @@
  */
 package org.springframework.samples.petclinic.owner;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,9 +22,10 @@ import java.util.Map;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.samples.petclinic.owner.domain.Owner;
 import org.springframework.samples.petclinic.owner.internal.OwnerManagement;
 import org.springframework.samples.petclinic.owner.internal.OwnerRepository;
-import org.springframework.samples.petclinic.pet.Pet;
+import org.springframework.samples.petclinic.pet.domain.Pet;
 import org.springframework.samples.petclinic.pet.PetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

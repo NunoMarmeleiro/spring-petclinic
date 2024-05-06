@@ -40,6 +40,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.samples.petclinic.owner.domain.Owner;
 import org.springframework.samples.petclinic.owner.internal.OwnerRepository;
 import org.springframework.samples.petclinic.pet.internal.PetRepository;
 import org.springframework.test.context.aot.DisabledInAotMode;

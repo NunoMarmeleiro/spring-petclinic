@@ -13,9 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.samples.petclinic.pet.internal;
+package org.springframework.samples.petclinic.pet.domain;
 
-import org.springframework.samples.petclinic.pet.Pet;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;

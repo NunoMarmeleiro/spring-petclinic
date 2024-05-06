@@ -18,10 +18,7 @@ package org.springframework.samples.petclinic.visit;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.samples.petclinic.owner.Owner;
-import org.springframework.samples.petclinic.owner.OwnerService;
-import org.springframework.samples.petclinic.pet.Pet;
-import org.springframework.samples.petclinic.pet.PetService;
+import org.springframework.samples.petclinic.visit.domain.Visit;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -44,13 +41,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 class VisitController {
 	private final VisitRepository visits;
-	private final OwnerService ownerService;
-	private final PetService petService;
 
-	public VisitController(VisitRepository visits, OwnerService ownerService, PetService petService) {
+	public VisitController(VisitRepository visits) {
 		this.visits = visits;
-		this.ownerService = ownerService;
-		this.petService = petService;
 	}
 
 	@InitBinder
@@ -67,14 +60,10 @@ class VisitController {
 	 */
 	@ModelAttribute("visit")
 	public Visit loadPetWithVisit(@PathVariable("ownerId") int ownerId, @PathVariable("petId") int petId,
-			Map<String, Object> model) {
-		Owner owner = this.ownerService.findOwner(ownerId);
-		Pet pet = this.petService.findPet(petId);
+								  Map<String, Object> model) {
 		Visit visit = new Visit();
 		visit.setId(petId);
 		List<Visit> previousVisits = this.visits.findByPetId(petId);
-		model.put("owner", owner);
-		model.put("pet", pet);
 		model.put("prevVisits", previousVisits);
 		return visit;
 	}

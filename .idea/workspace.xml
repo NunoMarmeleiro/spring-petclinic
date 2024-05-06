@@ -5,24 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d9c93f9-746a-4b38-9a2f-d24b9e11ebc2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/visit/VisitService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/visit/VisitServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_sync/src/main/resources/templates/owners/deleteOwner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petclinic_sync/src/main/resources/templates/pets/deletePet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/domain/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/OwnerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/domain/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/PetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/PetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/PetService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetType.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/domain/PetType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetTypeFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/domain/PetTypeFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/internal/PetValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/pet/domain/PetValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/vet/domain/Specialty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/vet/Vet.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/vet/domain/Vet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/vet/VetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/vet/VetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/vet/VetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/vet/VetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/vet/Vets.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/vet/domain/Vets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/domain/Visit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/VisitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/VisitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/VisitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/java/org/springframework/samples/petclinic/visit/VisitRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/pets/createOrUpdateVisitForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/main/resources/templates/pets/createOrUpdateVisitForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/pet/PetControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/pet/PetControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/pet/PetTypeFormatterTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/pet/PetTypeFormatterTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/vet/VetControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/vet/VetControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/vet/VetTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/vet/VetTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/visit/VisitControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_async/src/test/java/org/springframework/samples/petclinic/visit/VisitControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/owner/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/owner/domain/Owner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/owner/OwnerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/owner/internal/OwnerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/domain/Pet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/PetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/PetController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/PetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/internal/PetConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/internal/PetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/internal/PetRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/internal/PetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/internal/PetServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/internal/PetType.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/domain/PetType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/internal/PetTypeFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/domain/PetTypeFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/internal/PetValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/pet/domain/PetValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/visit/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/visit/domain/Visit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/visit/VisitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/visit/VisitController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/visit/VisitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/java/org/springframework/samples/petclinic/visit/VisitRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/resources/templates/owners/ownerDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/resources/templates/owners/ownerDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/main/resources/templates/pets/createOrUpdateVisitForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/main/resources/templates/pets/createOrUpdateVisitForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/test/java/org/springframework/samples/petclinic/pet/PetControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/test/java/org/springframework/samples/petclinic/pet/PetControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/test/java/org/springframework/samples/petclinic/pet/PetTypeFormatterTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/test/java/org/springframework/samples/petclinic/pet/PetTypeFormatterTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_sync/src/test/java/org/springframework/samples/petclinic/visit/VisitControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_sync/src/test/java/org/springframework/samples/petclinic/visit/VisitControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +85,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -62,34 +93,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "DefaultPlantUmlFileTemplate": "UML Component",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.PetClinicApplication (1).executor": "Run",
-    "Spring Boot.PetClinicApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pedro/OneDrive/Documentos/GitHub/spring-petclinic-modulith",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Component&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.PetClinicApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PetClinicApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pedro/OneDrive/Documentos/GitHub/spring-petclinic-modulith&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.springframework.samples.petclinic.pet" />
@@ -117,8 +148,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
-        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -138,10 +168,22 @@
       <workItem from="1714495314783" duration="1991000" />
       <workItem from="1714665748752" duration="4847000" />
       <workItem from="1714832386474" duration="7763000" />
+      <workItem from="1715004602755" duration="1141000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -26,8 +26,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.samples.petclinic.pet.internal.PetRepository;
-import org.springframework.samples.petclinic.pet.internal.PetType;
-import org.springframework.samples.petclinic.pet.internal.PetTypeFormatter;
+import org.springframework.samples.petclinic.pet.domain.PetType;
+import org.springframework.samples.petclinic.pet.domain.PetTypeFormatter;
 import org.springframework.test.context.aot.DisabledInAotMode;
 import org.springframework.test.web.servlet.MockMvc;
 

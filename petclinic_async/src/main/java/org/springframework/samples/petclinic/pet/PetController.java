@@ -18,10 +18,11 @@ package org.springframework.samples.petclinic.pet;
 import java.time.LocalDate;
 import java.util.Collection;
 
+import org.springframework.samples.petclinic.pet.domain.Pet;
 import org.springframework.samples.petclinic.pet.internal.PetManagement;
 import org.springframework.samples.petclinic.pet.internal.PetRepository;
-import org.springframework.samples.petclinic.pet.internal.PetType;
-import org.springframework.samples.petclinic.pet.internal.PetValidator;
+import org.springframework.samples.petclinic.pet.domain.PetType;
+import org.springframework.samples.petclinic.pet.domain.PetValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;

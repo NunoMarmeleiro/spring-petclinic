@@ -21,7 +21,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.samples.petclinic.owner.Owner;
+import org.springframework.samples.petclinic.owner.domain.Owner;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
