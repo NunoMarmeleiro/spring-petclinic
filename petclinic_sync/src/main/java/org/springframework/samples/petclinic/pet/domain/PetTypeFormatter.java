@@ -17,7 +17,7 @@ package org.springframework.samples.petclinic.pet.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.Formatter;
-import org.springframework.samples.petclinic.pet.internal.PetRepository;
+import org.springframework.samples.petclinic.pet.infrastructure.PetRepository;
 import org.springframework.stereotype.Component;
 
 import java.text.ParseException;

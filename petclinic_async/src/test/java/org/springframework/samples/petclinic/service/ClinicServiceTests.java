@@ -31,14 +31,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.samples.petclinic.owner.domain.Owner;
-import org.springframework.samples.petclinic.owner.internal.OwnerRepository;
+import org.springframework.samples.petclinic.owner.infrastructure.OwnerRepository;
 import org.springframework.samples.petclinic.pet.domain.Pet;
-import org.springframework.samples.petclinic.pet.internal.PetRepository;
+import org.springframework.samples.petclinic.pet.infrastructure.PetRepository;
 import org.springframework.samples.petclinic.pet.domain.PetType;
 import org.springframework.samples.petclinic.visit.domain.Visit;
 import org.springframework.samples.petclinic.vet.domain.Vet;
-import org.springframework.samples.petclinic.vet.VetRepository;
-import org.springframework.samples.petclinic.visit.VisitRepository;
+import org.springframework.samples.petclinic.vet.infrastructure.VetRepository;
+import org.springframework.samples.petclinic.visit.infrastructure.VisitRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

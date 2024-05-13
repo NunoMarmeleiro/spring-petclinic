@@ -34,9 +34,7 @@ Pet ---> "1" PetType: belongs
 Pet ---> "1" BirthDate: has
 Visit ---> "1" VisitDate: has
 Vet ---> "*" Speciality: possesses
-
 Pet "*" --- "1" Owner: owned >
-Visit "*" --- "1" Owner: scheduled >
 Visit "*" --- "1" Pet: belongs >
 
 @enduml

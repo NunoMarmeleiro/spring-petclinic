@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor user
+rectangle PetClinic {
+  user --> (Create a new Owner)
+  user --> (Edit existing Owner)
+  user --> (Delete Owner)
+  user --> (List all Owners)
+  user --> (Add a new Pet for a Owner)
+  user --> (Edit existing Pet)
+  user --> (Delete Pet)
+  user --> (List Pets of Owner)
+  user --> (Add a new Visit for a Pet)
+  user --> (List Visits of Pet)
+  user --> (List all Vets)
+}
+@enduml

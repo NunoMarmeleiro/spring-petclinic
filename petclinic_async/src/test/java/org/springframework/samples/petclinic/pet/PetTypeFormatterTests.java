@@ -32,7 +32,7 @@ import org.junit.jupiter.api.condition.DisabledInNativeImage;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.samples.petclinic.pet.internal.PetRepository;
+import org.springframework.samples.petclinic.pet.infrastructure.PetRepository;
 import org.springframework.samples.petclinic.pet.domain.PetType;
 import org.springframework.samples.petclinic.pet.domain.PetTypeFormatter;
 
