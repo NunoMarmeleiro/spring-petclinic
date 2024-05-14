@@ -20,4 +20,5 @@ The Spring PetClinic sample application is released under version 2.0 of the [Ap
 ## Changes in This Version
 
 This version of PetClinic, consists in migrating the original version developed in a monolith architecture to a modular modulith one using the latest technology Spring Modulith.
+After the migration, the purpose of this project is to analyse both applications in terms of performance and other metrics, using programs like JMeter and Sonargraph.
 
