@@ -48,14 +48,16 @@ class OwnerController {
 	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
 
 	private final OwnerRepository owners;
+
 	private final OwnerManagement ownerManagement;
 
 	private final PetManagement petManagement;
 
-	public OwnerController(OwnerRepository clinicService, OwnerManagement ownerManagement, PetManagement petManagement) {
+	public OwnerController(OwnerRepository clinicService, OwnerManagement ownerManagement,
+			PetManagement petManagement) {
 		this.owners = clinicService;
-        this.ownerManagement = ownerManagement;
-        this.petManagement = petManagement;
+		this.ownerManagement = ownerManagement;
+		this.petManagement = petManagement;
 	}
 
 	@InitBinder

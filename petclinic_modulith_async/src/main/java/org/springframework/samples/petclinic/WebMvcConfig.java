@@ -6,8 +6,10 @@ import org.springframework.web.filter.HiddenHttpMethodFilter;
 
 @Configuration
 public class WebMvcConfig {
+
 	@Bean
 	public HiddenHttpMethodFilter hiddenHttpMethodFilter() {
 		return new HiddenHttpMethodFilter();
 	}
+
 }

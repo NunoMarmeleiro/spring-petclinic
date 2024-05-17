@@ -6,7 +6,6 @@ import org.springframework.samples.petclinic.pet.DeletedOwner;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 @Service
 @RequiredArgsConstructor
 public class OwnerManagement {
@@ -17,4 +16,5 @@ public class OwnerManagement {
 	public void complete(int ownerId) {
 		events.publishEvent(new DeletedOwner(ownerId));
 	}
+
 }

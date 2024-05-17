@@ -16,12 +16,14 @@ public class VisitManagement {
 
 	@ApplicationModuleListener
 	void on(DeletedPets event) throws InterruptedException {
-		for(Integer i : event.petIds()) {
+		for (Integer i : event.petIds()) {
 			this.visits.deleteVisitByPetId(i);
 		}
 	}
+
 	@ApplicationModuleListener
 	void on(DeletedPet event) throws InterruptedException {
 		this.visits.deleteVisitByPetId(event.petId());
 	}
+
 }

@@ -48,6 +48,7 @@ public class Pet extends NamedEntity {
 
 	@NotBlank
 	private String name;
+
 	private int ownerId;
 
 	public void setBirthDate(LocalDate birthDate) {

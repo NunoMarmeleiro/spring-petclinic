@@ -39,6 +39,7 @@ public class Visit extends BaseEntity {
 
 	@NotBlank
 	private String description;
+
 	private int petId;
 
 	/**

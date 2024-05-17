@@ -19,13 +19,14 @@ import java.util.List;
 public class PetManagement {
 
 	private final ApplicationEventPublisher events;
+
 	private final PetRepository pets;
 
 	@ApplicationModuleListener
 	void on(DeletedOwner event) throws InterruptedException {
 		List<Pet> pets = this.pets.findByOwnerId(event.ownerId());
 		List<Integer> petIds = new ArrayList<>();
-		for(Pet i : pets) {
+		for (Pet i : pets) {
 			petIds.add(i.getId());
 		}
 		deleteVisitsFromPets(petIds);
@@ -45,4 +46,5 @@ public class PetManagement {
 	public List<Pet> findByOwnerId(int ownerId) {
 		return this.pets.findByOwnerId(ownerId);
 	}
+
 }

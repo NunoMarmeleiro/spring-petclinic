@@ -26,4 +26,5 @@ public interface VisitRepository extends Repository<Visit, Integer> {
 	@Transactional
 	@Query("DELETE FROM Visit visit WHERE visit.petId = :id")
 	void deleteVisitByPetId(@Param("id") Integer id);
+
 }

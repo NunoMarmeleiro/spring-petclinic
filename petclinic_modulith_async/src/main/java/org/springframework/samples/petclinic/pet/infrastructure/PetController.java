@@ -42,13 +42,15 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 class PetController {
 
 	private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
+
 	private final PetRepository pets;
+
 	private final PetManagement petManagement;
 
 	public PetController(PetRepository pets, PetManagement petManagement) {
 		this.pets = pets;
-        this.petManagement = petManagement;
-    }
+		this.petManagement = petManagement;
+	}
 
 	@ModelAttribute("types")
 	public Collection<PetType> populatePetTypes() {
@@ -56,7 +58,8 @@ class PetController {
 	}
 
 	@ModelAttribute("pet")
-	public Pet findPet(@PathVariable("ownerId") int ownerId, @PathVariable(name = "petId", required = false) Integer petId) {
+	public Pet findPet(@PathVariable("ownerId") int ownerId,
+			@PathVariable(name = "petId", required = false) Integer petId) {
 		if (petId == null) {
 			return new Pet();
 		}
@@ -84,7 +87,7 @@ class PetController {
 	public String processCreationForm(@Valid Pet pet, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
 		if (StringUtils.hasText(pet.getName()) && pet.isNew()) {
-			//result.rejectValue("name", "duplicate", "already exists");
+			// result.rejectValue("name", "duplicate", "already exists");
 		}
 
 		LocalDate currentDate = LocalDate.now();

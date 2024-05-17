@@ -11,8 +11,7 @@ public class ApplicationTests {
 
 		var modules = ApplicationModules.of(PetClinicApplication.class).verify();
 
-		new Documenter(modules)
-			.writeModulesAsPlantUml()
-			.writeIndividualModulesAsPlantUml();
+		new Documenter(modules).writeModulesAsPlantUml().writeIndividualModulesAsPlantUml();
 	}
+
 }
