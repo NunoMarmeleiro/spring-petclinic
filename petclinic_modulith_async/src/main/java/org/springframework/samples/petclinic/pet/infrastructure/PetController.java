@@ -19,7 +19,7 @@ import java.time.LocalDate;
 import java.util.Collection;
 
 import org.springframework.samples.petclinic.pet.domain.Pet;
-import org.springframework.samples.petclinic.pet.PetManagement;
+import org.springframework.samples.petclinic.pet.application.PetManagement;
 import org.springframework.samples.petclinic.pet.domain.PetType;
 import org.springframework.samples.petclinic.pet.domain.PetValidator;
 import org.springframework.stereotype.Controller;

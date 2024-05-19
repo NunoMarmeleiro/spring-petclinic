@@ -24,8 +24,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.samples.petclinic.owner.domain.Owner;
 import org.springframework.samples.petclinic.owner.application.OwnerManagement;
+import org.springframework.samples.petclinic.pet.PetAux;
 import org.springframework.samples.petclinic.pet.domain.Pet;
-import org.springframework.samples.petclinic.pet.PetManagement;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -51,10 +51,9 @@ class OwnerController {
 
 	private final OwnerManagement ownerManagement;
 
-	private final PetManagement petManagement;
+	private final PetAux petManagement;
 
-	public OwnerController(OwnerRepository clinicService, OwnerManagement ownerManagement,
-			PetManagement petManagement) {
+	public OwnerController(OwnerRepository clinicService, OwnerManagement ownerManagement, PetAux petManagement) {
 		this.owners = clinicService;
 		this.ownerManagement = ownerManagement;
 		this.petManagement = petManagement;
