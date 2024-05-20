@@ -61,11 +61,7 @@ class PetController {
 			return new Pet();
 		}
 
-		Pet pet = this.pets.findById(petId);
-		if (pet == null) {
-			throw new IllegalArgumentException("Pet ID not found: " + petId);
-		}
-		return pet;
+		return this.pets.findById(petId);
 	}
 
 	@InitBinder("pet")
@@ -83,6 +79,7 @@ class PetController {
 	@PostMapping("/pets/new")
 	public String processCreationForm(@Valid Pet pet, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
+
 		if (StringUtils.hasText(pet.getName()) && pet.isNew()) {
 			//result.rejectValue("name", "duplicate", "already exists");
 		}
@@ -147,7 +144,7 @@ class PetController {
 	}
 
 	@DeleteMapping("/pets/{petId}/delete")
-	public String processDeletePet(Pet pet) {
+	public String processDeletePet(@Valid Pet pet) {
 		this.visitManagement.deleteVisits(pet.getId());
 		this.pets.deletePetById(pet.getId());
 		return "redirect:/owners/{ownerId}";

@@ -5,6 +5,7 @@
 
 <h2>Pet</h2>
 <form th:object="${pet}" class="form-horizontal" id="delete-pet-form" method="post">
+  <input type="hidden" name="id" th:value="*{id}" />
   <input type="hidden" name="_method" value="DELETE">
   <div class="form-group has-feedback">
     <div>
