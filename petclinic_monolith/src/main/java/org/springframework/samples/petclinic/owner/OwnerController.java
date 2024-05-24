@@ -166,7 +166,7 @@ class OwnerController {
 			this.owners.deletePetById(i.getId());
 		}
 		this.owners.deleteById(ownerId);
-		return "redirect:owners/find";
+		return "redirect:/owners";
 	}
 
 	/**

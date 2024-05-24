@@ -187,7 +187,7 @@ class OwnerController {
 
 	@DeleteMapping("/owners/{ownerId}/delete")
 	public String processDeleteOwner(@PathVariable("ownerId") int ownerId) {
-		this.ownerManagement.complete(ownerId);
+		this.ownerManagement.deleteOwner(ownerId);
 		this.owners.deleteById(ownerId);
 		return "redirect:/owners";
 	}

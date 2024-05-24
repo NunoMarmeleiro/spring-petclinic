@@ -17,16 +17,16 @@ public class PetManagementImpl implements PetManagement {
 	private final VisitManagement visitManagement;
 
 	@Override
-	public List<Pet> findByOwnerId(int ownerId) {
-		return this.pets.findByOwnerId(ownerId);
-	}
-
-	@Override
 	public void deletePets(int ownerId) {
 		List<Pet> petIds = this.pets.findByOwnerId(ownerId);
 		for(Pet i : petIds) {
 			this.visitManagement.deleteVisits(i.getId());
 		}
 		this.pets.deletePetByOwnerId(ownerId);
+	}
+
+	@Override
+	public List<Pet> findByOwnerId(int ownerId) {
+		return this.pets.findByOwnerId(ownerId);
 	}
 }

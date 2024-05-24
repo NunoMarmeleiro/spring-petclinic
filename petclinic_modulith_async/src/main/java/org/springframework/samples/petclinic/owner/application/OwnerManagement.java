@@ -13,7 +13,7 @@ public class OwnerManagement {
 	private final ApplicationEventPublisher events;
 
 	@Transactional
-	public void complete(int ownerId) {
+	public void deleteOwner(int ownerId) {
 		events.publishEvent(new DeletedOwner(ownerId));
 	}
 
