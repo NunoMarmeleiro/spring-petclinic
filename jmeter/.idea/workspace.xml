@@ -7,6 +7,8 @@
     <list default="true" id="210ca1c2-afcc-4afd-ad72-54b5c35305ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/aggregate.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_test_ownerDeletions.jmx" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_test_ownerDeletions.jmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petclinic_test_petDeletions.jmx" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_test_petDeletions.jmx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petclinic_test_plan.jmx" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_test_plan.jmx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../petclinic_monolith/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../petclinic_monolith/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java" afterDir="false" />
     </list>
@@ -61,7 +63,7 @@
       <workItem from="1716728289451" duration="2603000" />
       <workItem from="1716739896336" duration="908000" />
       <workItem from="1716743003547" duration="257000" />
-      <workItem from="1716746988648" duration="3664000" />
+      <workItem from="1716746988648" duration="5121000" />
     </task>
     <servers />
   </component>
