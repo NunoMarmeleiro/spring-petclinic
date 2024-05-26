@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="210ca1c2-afcc-4afd-ad72-54b5c35305ba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/jmeter_results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jmeter_results2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/petclinic_test_plan.jmx" beforeDir="false" afterPath="$PROJECT_DIR$/petclinic_test_plan.jmx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../petclinic_monolith/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../petclinic_monolith/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +58,7 @@
       <workItem from="1716728289451" duration="2603000" />
       <workItem from="1716739896336" duration="908000" />
       <workItem from="1716743003547" duration="257000" />
-      <workItem from="1716746988648" duration="2027000" />
+      <workItem from="1716746988648" duration="2617000" />
     </task>
     <servers />
   </component>
