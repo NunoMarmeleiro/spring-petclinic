@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+
+package "PetClinic" {
+
+  package "UI Layer (View)" {
+     [User Interface]
+  }
+
+  package "Application Logic Layer (Controller)" {
+     ControllerAPI-[Controller]
+  }
+
+  package "Business Logic Layer (Model)" {
+     ModelAPI-[Domain Model]
+     RepoAPI-[Repository]
+  }
+
+  PublicAPI-[Public API]
+}
+
+
+
+[User Interface] --( ControllerAPI
+[Controller] --( ModelAPI
+[Controller] --( RepoAPI
+[Controller] --( PublicAPI
+
+@enduml

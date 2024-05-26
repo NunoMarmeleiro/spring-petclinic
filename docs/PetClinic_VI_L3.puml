@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/component-diagram
+top to bottom direction
+
+package "PetClinic" {
+
+  package "UI" {
+     [User Interface]
+  }
+
+  package "Infrastructure" {
+     [Controller]
+     [Repository]
+  }
+
+  package "Domain" {
+     [Aggregates]
+     [Value Objects]
+  }
+
+  package "Application" {
+     package "Module Public API" {
+          [IManagement]
+          [ManagementImpl]
+     }
+  }
+
+[User Interface] ..> [Controller]
+[Controller] ..> [Repository]
+"Infrastructure" ..> "Domain"
+[Controller] ..>  [IManagement]
+[ManagementImpl] ..>  [IManagement]
+}
+
+
+
+
+
+
+
+@enduml
