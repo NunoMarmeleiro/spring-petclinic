@@ -7,7 +7,7 @@ import org.springframework.modulith.docs.Documenter;
 public class ApplicationTests {
 
 	@Test
-	void writeDocumentationSnippets() {
+	void verifyModuleStructureAndGenerateDocumentation() {
 
 		var modules = ApplicationModules.of(PetClinicApplication.class).verify();
 

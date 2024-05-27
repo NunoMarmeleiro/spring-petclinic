@@ -22,15 +22,15 @@ public class ArchitectureTests {
 
 	@ArchTest
 	public static final ArchRule petRule = classes().that().resideInAPackage("..pet..")
-		.should().onlyHaveDependentClassesThat().resideInAnyPackage( "..pet..", "..owner..", "..visit..");
+		.should().onlyHaveDependentClassesThat().resideInAnyPackage("..owner..", "..pet..", "..visit..");
 
 	@ArchTest
 	public static final ArchRule ownerRule = classes().that().resideInAPackage("..owner..")
-		.should().onlyHaveDependentClassesThat().resideInAnyPackage( "..owner..", "..visit..");
+		.should().onlyHaveDependentClassesThat().resideInAnyPackage( "..pet..", "..owner..");
 
 	@ArchTest
 	public static final ArchRule visitRule = classes().that().resideInAPackage("..visit..")
-		.should().onlyHaveDependentClassesThat().resideInAnyPackage("..owner..", "..pet..", "..visit..");
+		.should().onlyHaveDependentClassesThat().resideInAnyPackage("..visit..", "..pet..");
 
 	@ArchTest
 	public static final ArchRule vetRule = noClasses().that().resideInAPackage("..vet..")
