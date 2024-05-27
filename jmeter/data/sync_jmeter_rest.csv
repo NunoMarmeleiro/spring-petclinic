@@ -1,551 +1,551 @@
 timeStamp,elapsed,label,responseCode,threadName,dataType,success,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1716752159109,93,POST new pet,200,Original REST requests 1-4,text,true,6653,503,5,5,http://localhost:8080/owners/1;jsessionid=278856F095FA79E19040C344F8676BDA,10,0,0
-1716752158558,644,POST new pet,200,Original REST requests 1-1,text,true,5979,503,5,5,http://localhost:8080/owners/1;jsessionid=DB4059ED052DAD8A33C1F2143A2A5813,317,0,22
-1716752159109,10,POST new pet-0,302,Original REST requests 1-4,,true,307,282,5,5,http://localhost:8080/owners/1/pets/new,10,0,0
-1716752158558,321,POST new pet-0,302,Original REST requests 1-1,,true,307,282,5,5,http://localhost:8080/owners/1/pets/new,317,0,22
-1716752159119,83,POST new pet-1,200,Original REST requests 1-4,text,true,6346,221,5,5,http://localhost:8080/owners/1;jsessionid=278856F095FA79E19040C344F8676BDA,83,0,0
-1716752158882,320,POST new pet-1,200,Original REST requests 1-1,text,true,5672,221,5,5,http://localhost:8080/owners/1;jsessionid=DB4059ED052DAD8A33C1F2143A2A5813,320,0,0
-1716752158698,504,POST new pet,200,Original REST requests 1-2,text,true,5984,503,5,5,http://localhost:8080/owners/2;jsessionid=8D4E0B8E6977FE382C6C9F437AB5C8A1,178,0,1
-1716752158903,299,POST new pet,200,Original REST requests 1-3,text,true,5983,503,5,5,http://localhost:8080/owners/3;jsessionid=2EE20F368AA96C67BF16087194FA2710,14,0,1
-1716752158698,182,POST new pet-0,302,Original REST requests 1-2,,true,307,282,5,5,http://localhost:8080/owners/2/pets/new,178,0,1
-1716752158903,14,POST new pet-0,302,Original REST requests 1-3,,true,307,282,5,5,http://localhost:8080/owners/3/pets/new,14,0,1
-1716752158882,320,POST new pet-1,200,Original REST requests 1-2,text,true,5677,221,5,5,http://localhost:8080/owners/2;jsessionid=8D4E0B8E6977FE382C6C9F437AB5C8A1,320,0,0
-1716752158917,285,POST new pet-1,200,Original REST requests 1-3,text,true,5676,221,5,5,http://localhost:8080/owners/3;jsessionid=2EE20F368AA96C67BF16087194FA2710,285,0,0
-1716752159314,31,POST new pet,200,Original REST requests 1-5,text,true,6658,503,6,6,http://localhost:8080/owners/2;jsessionid=7460078EFF2D200E1E229142E66D4AD6,14,0,1
-1716752159314,14,POST new pet-0,302,Original REST requests 1-5,,true,307,282,6,6,http://localhost:8080/owners/2/pets/new,14,0,1
-1716752159328,17,POST new pet-1,200,Original REST requests 1-5,text,true,6351,221,6,6,http://localhost:8080/owners/2;jsessionid=7460078EFF2D200E1E229142E66D4AD6,16,0,0
-1716752159519,20,POST new pet,200,Original REST requests 1-6,text,true,6657,503,7,7,http://localhost:8080/owners/3;jsessionid=23EFEAE35CF8402E6DF32ABB54885015,9,0,0
-1716752159519,9,POST new pet-0,302,Original REST requests 1-6,,true,307,282,7,7,http://localhost:8080/owners/3/pets/new,9,0,0
-1716752159528,11,POST new pet-1,200,Original REST requests 1-6,text,true,6350,221,7,7,http://localhost:8080/owners/3;jsessionid=23EFEAE35CF8402E6DF32ABB54885015,11,0,0
-1716752159506,69,Vets,200,Original REST requests 1-4,text,true,4264,178,7,7,http://localhost:8080/vets.html,69,0,0
-1716752159506,69,Vets,200,Original REST requests 1-2,text,true,4264,178,7,7,http://localhost:8080/vets.html,69,0,0
-1716752159506,69,Vets,200,Original REST requests 1-1,text,true,4264,178,7,7,http://localhost:8080/vets.html,69,0,0
-1716752159506,69,Vets,200,Original REST requests 1-3,text,true,4264,178,7,7,http://localhost:8080/vets.html,69,0,0
-1716752159647,5,Vets,200,Original REST requests 1-5,text,true,4264,178,8,8,http://localhost:8080/vets.html,5,0,0
-1716752159724,18,POST new pet,200,Original REST requests 1-7,text,true,7327,503,8,8,http://localhost:8080/owners/1;jsessionid=C3FCEA69525FD21BA166206912ACF72B,8,0,0
-1716752159724,8,POST new pet-0,302,Original REST requests 1-7,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,8,0,0
-1716752159732,10,POST new pet-1,200,Original REST requests 1-7,text,true,7020,221,8,8,http://localhost:8080/owners/1;jsessionid=C3FCEA69525FD21BA166206912ACF72B,10,0,0
-1716752159840,5,Vets,200,Original REST requests 1-6,text,true,4264,178,9,9,http://localhost:8080/vets.html,5,0,0
-1716752159877,17,Find owner,200,Original REST requests 1-4,text,true,3755,180,9,9,http://localhost:8080/owners/find,17,0,0
-1716752159877,17,Find owner,200,Original REST requests 1-2,text,true,3755,180,9,9,http://localhost:8080/owners/find,17,0,0
-1716752159877,17,Find owner,200,Original REST requests 1-3,text,true,3755,180,9,9,http://localhost:8080/owners/find,17,0,0
-1716752159877,17,Find owner,200,Original REST requests 1-1,text,true,3755,180,9,9,http://localhost:8080/owners/find,17,0,0
-1716752159930,19,POST new pet,200,Original REST requests 1-8,text,true,7332,503,9,9,http://localhost:8080/owners/2;jsessionid=3B44DB3BF8DF73C7EBE58335E3D73415,8,0,1
-1716752159930,8,POST new pet-0,302,Original REST requests 1-8,,true,307,282,9,9,http://localhost:8080/owners/2/pets/new,8,0,1
-1716752159938,11,POST new pet-1,200,Original REST requests 1-8,text,true,7025,221,9,9,http://localhost:8080/owners/2;jsessionid=3B44DB3BF8DF73C7EBE58335E3D73415,11,0,0
-1716752159953,4,Find owner,200,Original REST requests 1-5,text,true,3755,180,9,9,http://localhost:8080/owners/find,4,0,0
-1716752160044,4,Vets,200,Original REST requests 1-7,text,true,4264,178,10,10,http://localhost:8080/vets.html,4,0,0
-1716752160146,3,Find owner,200,Original REST requests 1-6,text,true,3755,180,10,10,http://localhost:8080/owners/find,3,0,0
-1716752160135,18,POST new pet,200,Original REST requests 1-9,text,true,7331,503,10,10,http://localhost:8080/owners/3;jsessionid=80495C50921EBC695BEB2E6C819A8D51,9,0,1
-1716752160135,9,POST new pet-0,302,Original REST requests 1-9,,true,307,282,10,10,http://localhost:8080/owners/3/pets/new,9,0,1
-1716752160144,9,POST new pet-1,200,Original REST requests 1-9,text,true,7024,221,10,10,http://localhost:8080/owners/3;jsessionid=80495C50921EBC695BEB2E6C819A8D51,8,0,0
-1716752160196,46,POST Edit Owner,200,Original REST requests 1-1,text,true,7192,525,10,10,http://localhost:8080/owners/1,38,0,0
-1716752160196,46,POST Edit Owner,200,Original REST requests 1-2,text,true,7198,525,10,10,http://localhost:8080/owners/2,38,0,0
-1716752160196,46,POST Edit Owner,200,Original REST requests 1-3,text,true,7193,525,10,10,http://localhost:8080/owners/3,38,0,0
-1716752160196,38,POST Edit Owner-0,302,Original REST requests 1-2,,true,188,348,10,10,http://localhost:8080/owners/2/edit,38,0,0
-1716752160196,38,POST Edit Owner-0,302,Original REST requests 1-3,,true,188,348,10,10,http://localhost:8080/owners/3/edit,38,0,0
-1716752160234,8,POST Edit Owner-1,200,Original REST requests 1-2,text,true,7010,177,10,10,http://localhost:8080/owners/2,8,0,0
-1716752160196,38,POST Edit Owner-0,302,Original REST requests 1-1,,true,188,348,10,10,http://localhost:8080/owners/1/edit,38,0,0
-1716752160234,8,POST Edit Owner-1,200,Original REST requests 1-3,text,true,7005,177,10,10,http://localhost:8080/owners/3,8,0,0
-1716752160234,8,POST Edit Owner-1,200,Original REST requests 1-1,text,true,7004,177,10,10,http://localhost:8080/owners/1,8,0,0
-1716752160196,46,POST Edit Owner,200,Original REST requests 1-4,text,true,7192,525,10,10,http://localhost:8080/owners/1,38,0,0
-1716752160196,38,POST Edit Owner-0,302,Original REST requests 1-4,,true,188,348,10,10,http://localhost:8080/owners/1/edit,38,0,0
-1716752160234,8,POST Edit Owner-1,200,Original REST requests 1-4,text,true,7004,177,10,10,http://localhost:8080/owners/1,8,0,0
-1716752160251,4,Vets,200,Original REST requests 1-8,text,true,4264,178,11,11,http://localhost:8080/vets.html,4,0,0
-1716752160259,13,POST Edit Owner,200,Original REST requests 1-5,text,true,7198,525,11,11,http://localhost:8080/owners/2,5,0,0
-1716752160259,5,POST Edit Owner-0,302,Original REST requests 1-5,,true,188,348,11,11,http://localhost:8080/owners/2/edit,5,0,0
-1716752160264,8,POST Edit Owner-1,200,Original REST requests 1-5,text,true,7010,177,11,11,http://localhost:8080/owners/2,7,0,0
-1716752160350,4,Find owner,200,Original REST requests 1-7,text,true,3755,180,11,11,http://localhost:8080/owners/find,4,0,0
-1716752160338,17,POST new pet,200,Original REST requests 1-10,text,true,7987,503,11,11,http://localhost:8080/owners/1;jsessionid=638C85FF751BAB83A94555DA18D28C62,8,0,1
-1716752160338,8,POST new pet-0,302,Original REST requests 1-10,,true,307,282,11,11,http://localhost:8080/owners/1/pets/new,8,0,1
-1716752160346,9,POST new pet-1,200,Original REST requests 1-10,text,true,7680,221,11,11,http://localhost:8080/owners/1;jsessionid=638C85FF751BAB83A94555DA18D28C62,8,0,0
-1716752160455,3,Vets,200,Original REST requests 1-9,text,true,4264,178,12,12,http://localhost:8080/vets.html,3,0,0
-1716752160450,11,POST Edit Owner,200,Original REST requests 1-6,text,true,7193,525,12,12,http://localhost:8080/owners/3,5,0,0
-1716752160450,5,POST Edit Owner-0,302,Original REST requests 1-6,,true,188,348,12,12,http://localhost:8080/owners/3/edit,5,0,0
-1716752160455,6,POST Edit Owner-1,200,Original REST requests 1-6,text,true,7005,177,12,12,http://localhost:8080/owners/3,6,0,0
-1716752160544,14,POST new pet,200,Original REST requests 1-11,text,true,7993,503,12,12,http://localhost:8080/owners/2;jsessionid=1F65E6C0CA5EC87CB324A5CD21939933,6,0,1
-1716752160544,6,POST new pet-0,302,Original REST requests 1-11,,true,307,282,12,12,http://localhost:8080/owners/2/pets/new,6,0,1
-1716752160551,7,POST new pet-1,200,Original REST requests 1-11,text,true,7686,221,12,12,http://localhost:8080/owners/2;jsessionid=1F65E6C0CA5EC87CB324A5CD21939933,7,0,0
-1716752160556,3,Find owner,200,Original REST requests 1-8,text,true,3755,180,12,12,http://localhost:8080/owners/find,3,0,0
-1716752160544,26,POST new visit,200,Original REST requests 1-2,text,true,7878,490,12,12,http://localhost:8080/owners/2,18,0,0
-1716752160544,26,POST new visit,200,Original REST requests 1-1,text,true,7872,490,12,12,http://localhost:8080/owners/1,18,0,0
-1716752160544,18,POST new visit-0,302,Original REST requests 1-2,,true,188,313,12,12,http://localhost:8080/owners/2/pets/2/visits/new,18,0,0
-1716752160544,18,POST new visit-0,302,Original REST requests 1-1,,true,188,313,12,12,http://localhost:8080/owners/1/pets/1/visits/new,18,0,0
-1716752160563,7,POST new visit-1,200,Original REST requests 1-2,text,true,7690,177,12,12,http://localhost:8080/owners/2,6,0,0
-1716752160563,7,POST new visit-1,200,Original REST requests 1-1,text,true,7684,177,12,12,http://localhost:8080/owners/1,6,0,0
-1716752160544,26,POST new visit,200,Original REST requests 1-4,text,true,7872,490,12,12,http://localhost:8080/owners/1,18,0,0
-1716752160544,18,POST new visit-0,302,Original REST requests 1-4,,true,188,313,12,12,http://localhost:8080/owners/1/pets/1/visits/new,18,0,0
-1716752160563,7,POST new visit-1,200,Original REST requests 1-4,text,true,7684,177,12,12,http://localhost:8080/owners/1,6,0,0
-1716752160544,26,POST new visit,200,Original REST requests 1-3,text,true,7199,490,12,12,http://localhost:8080/owners/3,18,0,0
-1716752160544,18,POST new visit-0,302,Original REST requests 1-3,,true,188,313,12,12,http://localhost:8080/owners/3/pets/3/visits/new,18,0,0
-1716752160563,7,POST new visit-1,200,Original REST requests 1-3,text,true,7011,177,12,12,http://localhost:8080/owners/3,7,0,0
-1716752160574,12,POST new visit,200,Original REST requests 1-5,text,true,7878,490,8,8,http://localhost:8080/owners/2,5,0,0
-1716752160574,5,POST new visit-0,302,Original REST requests 1-5,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,5,0,0
-1716752160579,7,POST new visit-1,200,Original REST requests 1-5,text,true,7690,177,8,8,http://localhost:8080/owners/2,7,0,0
-1716752160657,3,Vets,200,Original REST requests 1-10,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752160656,12,POST Edit Owner,200,Original REST requests 1-7,text,true,7866,525,8,8,http://localhost:8080/owners/1,5,0,0
-1716752160656,5,POST Edit Owner-0,302,Original REST requests 1-7,,true,188,348,8,8,http://localhost:8080/owners/1/edit,5,0,0
-1716752160661,7,POST Edit Owner-1,200,Original REST requests 1-7,text,true,7678,177,8,8,http://localhost:8080/owners/1,7,0,0
-1716752160759,2,Find owner,200,Original REST requests 1-9,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752160750,16,POST new pet,200,Original REST requests 1-12,text,true,7988,503,8,8,http://localhost:8080/owners/3;jsessionid=2DC96022F7510C7CDF5FAA355484F424,8,0,1
-1716752160750,8,POST new pet-0,302,Original REST requests 1-12,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,8,0,1
-1716752160758,8,POST new pet-1,200,Original REST requests 1-12,text,true,7681,221,8,8,http://localhost:8080/owners/3;jsessionid=2DC96022F7510C7CDF5FAA355484F424,8,0,0
-1716752160762,13,POST new visit,200,Original REST requests 1-6,text,true,7873,490,8,8,http://localhost:8080/owners/3,5,0,0
-1716752160762,5,POST new visit-0,302,Original REST requests 1-6,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,5,0,0
-1716752160768,7,POST new visit-1,200,Original REST requests 1-6,text,true,7685,177,8,8,http://localhost:8080/owners/3,7,0,0
-1716752160861,4,Vets,200,Original REST requests 1-11,text,true,4264,178,8,8,http://localhost:8080/vets.html,4,0,0
-1716752160861,11,POST Edit Owner,200,Original REST requests 1-8,text,true,7872,525,8,8,http://localhost:8080/owners/2,4,0,0
-1716752160861,4,POST Edit Owner-0,302,Original REST requests 1-8,,true,188,348,8,8,http://localhost:8080/owners/2/edit,4,0,0
-1716752160865,7,POST Edit Owner-1,200,Original REST requests 1-8,text,true,7684,177,8,8,http://localhost:8080/owners/2,7,0,0
-1716752160962,2,Find owner,200,Original REST requests 1-10,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752160953,13,POST new pet,200,Original REST requests 1-13,text,true,8661,503,8,8,http://localhost:8080/owners/1;jsessionid=1065D680FE2967AAE6AC9A20B2227E12,7,0,1
-1716752160953,7,POST new pet-0,302,Original REST requests 1-13,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,7,0,1
-1716752160960,6,POST new pet-1,200,Original REST requests 1-13,text,true,8354,221,8,8,http://localhost:8080/owners/1;jsessionid=1065D680FE2967AAE6AC9A20B2227E12,6,0,0
-1716752160970,12,POST new visit,200,Original REST requests 1-7,text,true,8546,490,8,8,http://localhost:8080/owners/1,4,0,0
-1716752160970,4,POST new visit-0,302,Original REST requests 1-7,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,4,0,0
-1716752160974,8,POST new visit-1,200,Original REST requests 1-7,text,true,8358,177,8,8,http://localhost:8080/owners/1,7,0,0
-1716752161067,3,Vets,200,Original REST requests 1-12,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752161062,12,POST Edit Owner,200,Original REST requests 1-9,text,true,7867,525,8,8,http://localhost:8080/owners/3,5,0,0
-1716752161062,5,POST Edit Owner-0,302,Original REST requests 1-9,,true,188,348,8,8,http://localhost:8080/owners/3/edit,5,0,0
-1716752161068,6,POST Edit Owner-1,200,Original REST requests 1-9,text,true,7679,177,8,8,http://localhost:8080/owners/3,5,0,0
-1716752161166,3,Find owner,200,Original REST requests 1-11,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752161160,14,POST new pet,200,Original REST requests 1-14,text,true,8667,503,8,8,http://localhost:8080/owners/2;jsessionid=44E0657B81D79A86FA7B666112F8142A,6,0,1
-1716752161160,6,POST new pet-0,302,Original REST requests 1-14,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,6,0,1
-1716752161167,7,POST new pet-1,200,Original REST requests 1-14,text,true,8360,221,8,8,http://localhost:8080/owners/2;jsessionid=44E0657B81D79A86FA7B666112F8142A,7,0,0
-1716752161173,13,POST new visit,200,Original REST requests 1-8,text,true,8552,490,8,8,http://localhost:8080/owners/2,5,0,0
-1716752161173,5,POST new visit-0,302,Original REST requests 1-8,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,5,0,0
-1716752161178,8,POST new visit-1,200,Original REST requests 1-8,text,true,8364,177,8,8,http://localhost:8080/owners/2,8,0,0
-1716752161267,3,Vets,200,Original REST requests 1-13,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752161265,12,POST Edit Owner,200,Original REST requests 1-10,text,true,8540,525,8,8,http://localhost:8080/owners/1,5,0,0
-1716752161265,5,POST Edit Owner-0,302,Original REST requests 1-10,,true,188,348,8,8,http://localhost:8080/owners/1/edit,5,0,0
-1716752161270,7,POST Edit Owner-1,200,Original REST requests 1-10,text,true,8352,177,8,8,http://localhost:8080/owners/1,7,0,0
-1716752161371,3,Find owner,200,Original REST requests 1-12,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
-1716752161365,14,POST new pet,200,Original REST requests 1-15,text,true,8662,503,8,8,http://localhost:8080/owners/3;jsessionid=13BE92BC4490685DC3CAA6BB439754AB,8,0,1
-1716752161365,8,POST new pet-0,302,Original REST requests 1-15,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,8,0,1
-1716752161373,6,POST new pet-1,200,Original REST requests 1-15,text,true,8355,221,8,8,http://localhost:8080/owners/3;jsessionid=13BE92BC4490685DC3CAA6BB439754AB,6,0,0
-1716752161374,11,POST new visit,200,Original REST requests 1-9,text,true,8547,490,8,8,http://localhost:8080/owners/3,4,0,0
-1716752161374,4,POST new visit-0,302,Original REST requests 1-9,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
-1716752161378,7,POST new visit-1,200,Original REST requests 1-9,text,true,8359,177,8,8,http://localhost:8080/owners/3,7,0,0
-1716752161475,3,Vets,200,Original REST requests 1-14,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752161471,11,POST Edit Owner,200,Original REST requests 1-11,text,true,8546,525,8,8,http://localhost:8080/owners/2,5,0,0
-1716752161471,5,POST Edit Owner-0,302,Original REST requests 1-11,,true,188,348,8,8,http://localhost:8080/owners/2/edit,5,0,0
-1716752161476,6,POST Edit Owner-1,200,Original REST requests 1-11,text,true,8358,177,8,8,http://localhost:8080/owners/2,6,0,0
-1716752161571,3,Find owner,200,Original REST requests 1-13,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
-1716752161570,13,POST new pet,200,Original REST requests 1-16,text,true,9342,503,8,8,http://localhost:8080/owners/1;jsessionid=1F2C043BE04D90EA3DF1F340C64CC0B9,6,0,1
-1716752161570,6,POST new pet-0,302,Original REST requests 1-16,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,6,0,1
-1716752161577,6,POST new pet-1,200,Original REST requests 1-16,text,true,9035,221,8,8,http://localhost:8080/owners/1;jsessionid=1F2C043BE04D90EA3DF1F340C64CC0B9,6,0,0
-1716752161578,10,POST new visit,200,Original REST requests 1-10,text,true,9227,490,8,8,http://localhost:8080/owners/1,4,0,0
-1716752161578,4,POST new visit-0,302,Original REST requests 1-10,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,4,0,0
-1716752161582,6,POST new visit-1,200,Original REST requests 1-10,text,true,9039,177,8,8,http://localhost:8080/owners/1,6,0,0
-1716752161680,3,Vets,200,Original REST requests 1-15,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752161675,12,POST Edit Owner,200,Original REST requests 1-12,text,true,8541,525,8,8,http://localhost:8080/owners/3,4,0,0
-1716752161675,4,POST Edit Owner-0,302,Original REST requests 1-12,,true,188,348,8,8,http://localhost:8080/owners/3/edit,4,0,0
-1716752161680,7,POST Edit Owner-1,200,Original REST requests 1-12,text,true,8353,177,8,8,http://localhost:8080/owners/3,7,0,0
-1716752161779,2,Find owner,200,Original REST requests 1-14,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752161775,13,POST new pet,200,Original REST requests 1-17,text,true,9348,503,8,8,http://localhost:8080/owners/2;jsessionid=3368BF864DCE6CF7201B35DAE76A9CB2,5,0,0
-1716752161775,5,POST new pet-0,302,Original REST requests 1-17,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,5,0,0
-1716752161781,7,POST new pet-1,200,Original REST requests 1-17,text,true,9041,221,8,8,http://localhost:8080/owners/2;jsessionid=3368BF864DCE6CF7201B35DAE76A9CB2,7,0,0
-1716752161784,11,POST new visit,200,Original REST requests 1-11,text,true,9233,490,8,8,http://localhost:8080/owners/2,4,0,0
-1716752161784,4,POST new visit-0,302,Original REST requests 1-11,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,4,0,0
-1716752161788,7,POST new visit-1,200,Original REST requests 1-11,text,true,9045,177,8,8,http://localhost:8080/owners/2,7,0,0
-1716752161876,10,POST Edit Owner,200,Original REST requests 1-13,text,true,9221,525,8,8,http://localhost:8080/owners/1,4,0,0
-1716752161883,3,Vets,200,Original REST requests 1-16,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752161876,4,POST Edit Owner-0,302,Original REST requests 1-13,,true,188,348,8,8,http://localhost:8080/owners/1/edit,4,0,0
-1716752161881,5,POST Edit Owner-1,200,Original REST requests 1-13,text,true,9033,177,8,8,http://localhost:8080/owners/1,5,0,0
-1716752161984,2,Find owner,200,Original REST requests 1-15,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752161978,12,POST new pet,200,Original REST requests 1-18,text,true,9343,503,8,8,http://localhost:8080/owners/3;jsessionid=56C1C8E4F499A3D1FC37A6BF4A962C08,6,0,1
-1716752161978,6,POST new pet-0,302,Original REST requests 1-18,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,6,0,1
-1716752161984,6,POST new pet-1,200,Original REST requests 1-18,text,true,9036,221,8,8,http://localhost:8080/owners/3;jsessionid=56C1C8E4F499A3D1FC37A6BF4A962C08,6,0,0
-1716752161988,10,POST new visit,200,Original REST requests 1-12,text,true,9228,490,8,8,http://localhost:8080/owners/3,4,0,0
-1716752161988,4,POST new visit-0,302,Original REST requests 1-12,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
-1716752161992,6,POST new visit-1,200,Original REST requests 1-12,text,true,9040,177,8,8,http://localhost:8080/owners/3,6,0,0
-1716752162082,9,POST Edit Owner,200,Original REST requests 1-14,text,true,9227,525,8,8,http://localhost:8080/owners/2,4,0,0
-1716752162089,2,Vets,200,Original REST requests 1-17,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752162082,4,POST Edit Owner-0,302,Original REST requests 1-14,,true,188,348,8,8,http://localhost:8080/owners/2/edit,4,0,0
-1716752162086,5,POST Edit Owner-1,200,Original REST requests 1-14,text,true,9039,177,8,8,http://localhost:8080/owners/2,5,0,0
-1716752162186,3,Find owner,200,Original REST requests 1-16,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
-1716752162182,10,POST new pet,200,Original REST requests 1-19,text,true,10016,503,8,8,http://localhost:8080/owners/1;jsessionid=70AA30A5B47F62449563A4213E11783E,5,0,0
-1716752162182,5,POST new pet-0,302,Original REST requests 1-19,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,5,0,0
-1716752162187,5,POST new pet-1,200,Original REST requests 1-19,text,true,9709,221,8,8,http://localhost:8080/owners/1;jsessionid=70AA30A5B47F62449563A4213E11783E,5,0,0
-1716752162186,18,POST new visit,200,Original REST requests 1-13,text,true,9901,490,8,8,http://localhost:8080/owners/1,4,0,0
-1716752162186,4,POST new visit-0,302,Original REST requests 1-13,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,4,0,0
-1716752162190,14,POST new visit-1,200,Original REST requests 1-13,text,true,9713,177,8,8,http://localhost:8080/owners/1,14,0,0
-1716752162292,3,Vets,200,Original REST requests 1-18,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752162287,13,POST Edit Owner,200,Original REST requests 1-15,text,true,9222,525,8,8,http://localhost:8080/owners/3,7,0,0
-1716752162287,7,POST Edit Owner-0,302,Original REST requests 1-15,,true,188,348,8,8,http://localhost:8080/owners/3/edit,7,0,0
-1716752162294,6,POST Edit Owner-1,200,Original REST requests 1-15,text,true,9034,177,8,8,http://localhost:8080/owners/3,6,0,0
-1716752162393,3,Find owner,200,Original REST requests 1-17,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
-1716752162387,14,POST new pet,200,Original REST requests 1-20,text,true,10022,503,8,8,http://localhost:8080/owners/2;jsessionid=4AF7B14ED18BC416DC5A16C6263A1949,7,0,0
-1716752162387,7,POST new pet-0,302,Original REST requests 1-20,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,7,0,0
-1716752162394,7,POST new pet-1,200,Original REST requests 1-20,text,true,9715,221,8,8,http://localhost:8080/owners/2;jsessionid=4AF7B14ED18BC416DC5A16C6263A1949,7,0,0
-1716752162393,11,POST new visit,200,Original REST requests 1-14,text,true,9907,490,8,8,http://localhost:8080/owners/2,5,0,0
-1716752162393,5,POST new visit-0,302,Original REST requests 1-14,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,5,0,0
-1716752162398,6,POST new visit-1,200,Original REST requests 1-14,text,true,9719,177,8,8,http://localhost:8080/owners/2,6,0,0
-1716752162493,3,Vets,200,Original REST requests 1-19,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752162490,9,POST Edit Owner,200,Original REST requests 1-16,text,true,9895,525,8,8,http://localhost:8080/owners/1,5,0,0
-1716752162490,5,POST Edit Owner-0,302,Original REST requests 1-16,,true,188,348,8,8,http://localhost:8080/owners/1/edit,5,0,0
-1716752162495,4,POST Edit Owner-1,200,Original REST requests 1-16,text,true,9707,177,8,8,http://localhost:8080/owners/1,4,0,0
-1716752162595,2,Find owner,200,Original REST requests 1-18,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752162590,10,POST new pet,200,Original REST requests 1-21,text,true,10017,503,8,8,http://localhost:8080/owners/3;jsessionid=9E2EFE8D5EDFFD841FCAD2C7B12F85BF,6,0,1
-1716752162590,6,POST new pet-0,302,Original REST requests 1-21,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,6,0,1
-1716752162596,4,POST new pet-1,200,Original REST requests 1-21,text,true,9710,221,8,8,http://localhost:8080/owners/3;jsessionid=9E2EFE8D5EDFFD841FCAD2C7B12F85BF,4,0,0
-1716752162601,9,POST new visit,200,Original REST requests 1-15,text,true,9902,490,8,8,http://localhost:8080/owners/3,4,0,0
-1716752162601,4,POST new visit-0,302,Original REST requests 1-15,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
-1716752162605,5,POST new visit-1,200,Original REST requests 1-15,text,true,9714,177,8,8,http://localhost:8080/owners/3,5,0,0
-1716752162702,2,Vets,200,Original REST requests 1-20,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752162697,9,POST Edit Owner,200,Original REST requests 1-17,text,true,9901,525,8,8,http://localhost:8080/owners/2,4,0,0
-1716752162697,4,POST Edit Owner-0,302,Original REST requests 1-17,,true,188,348,8,8,http://localhost:8080/owners/2/edit,4,0,0
-1716752162701,5,POST Edit Owner-1,200,Original REST requests 1-17,text,true,9713,177,8,8,http://localhost:8080/owners/2,5,0,0
-1716752162796,2,Find owner,200,Original REST requests 1-19,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752162795,10,POST new pet,200,Original REST requests 1-22,text,true,10690,503,8,8,http://localhost:8080/owners/1;jsessionid=0C659C064381890C15C49CACBF8379AA,5,0,0
-1716752162795,5,POST new pet-0,302,Original REST requests 1-22,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,5,0,0
-1716752162800,5,POST new pet-1,200,Original REST requests 1-22,text,true,10383,221,8,8,http://localhost:8080/owners/1;jsessionid=0C659C064381890C15C49CACBF8379AA,5,0,0
-1716752162801,9,POST new visit,200,Original REST requests 1-16,text,true,10575,490,8,8,http://localhost:8080/owners/1,3,0,0
-1716752162801,3,POST new visit-0,302,Original REST requests 1-16,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
-1716752162805,5,POST new visit-1,200,Original REST requests 1-16,text,true,10387,177,8,8,http://localhost:8080/owners/1,5,0,0
-1716752162900,3,Vets,200,Original REST requests 1-21,text,true,4264,178,7,7,http://localhost:8080/vets.html,2,0,0
-1716752162898,10,POST Edit Owner,200,Original REST requests 1-18,text,true,9896,525,8,8,http://localhost:8080/owners/3,4,0,0
-1716752162898,4,POST Edit Owner-0,302,Original REST requests 1-18,,true,188,348,8,8,http://localhost:8080/owners/3/edit,4,0,0
-1716752162902,6,POST Edit Owner-1,200,Original REST requests 1-18,text,true,9708,177,8,8,http://localhost:8080/owners/3,5,0,0
-1716752163005,2,Find owner,200,Original REST requests 1-20,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752162999,11,POST new pet,200,Original REST requests 1-23,text,true,10696,503,8,8,http://localhost:8080/owners/2;jsessionid=AD85A88D3429D5AC35396AB48857FCBE,6,0,1
-1716752162999,6,POST new pet-0,302,Original REST requests 1-23,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,6,0,1
-1716752163005,5,POST new pet-1,200,Original REST requests 1-23,text,true,10389,221,8,8,http://localhost:8080/owners/2;jsessionid=AD85A88D3429D5AC35396AB48857FCBE,5,0,0
-1716752163008,7,POST new visit,200,Original REST requests 1-17,text,true,10581,490,8,8,http://localhost:8080/owners/2,2,0,0
-1716752163008,2,POST new visit-0,302,Original REST requests 1-17,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
-1716752163010,5,POST new visit-1,200,Original REST requests 1-17,text,true,10393,177,8,8,http://localhost:8080/owners/2,5,0,0
-1716752163106,3,Vets,200,Original REST requests 1-22,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752163099,10,POST Edit Owner,200,Original REST requests 1-19,text,true,10569,525,8,8,http://localhost:8080/owners/1,4,0,0
-1716752163099,4,POST Edit Owner-0,302,Original REST requests 1-19,,true,188,348,8,8,http://localhost:8080/owners/1/edit,4,0,0
-1716752163103,6,POST Edit Owner-1,200,Original REST requests 1-19,text,true,10381,177,8,8,http://localhost:8080/owners/1,6,0,0
-1716752163204,2,Find owner,200,Original REST requests 1-21,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752163204,9,POST new pet,200,Original REST requests 1-24,text,true,10691,503,8,8,http://localhost:8080/owners/3;jsessionid=176E1AFF29CACA9ADCC2D543F55F7D23,5,0,0
-1716752163204,5,POST new pet-0,302,Original REST requests 1-24,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,5,0,0
-1716752163209,4,POST new pet-1,200,Original REST requests 1-24,text,true,10384,221,8,8,http://localhost:8080/owners/3;jsessionid=176E1AFF29CACA9ADCC2D543F55F7D23,4,0,0
-1716752163208,8,POST new visit,200,Original REST requests 1-18,text,true,10576,490,8,8,http://localhost:8080/owners/3,4,0,0
-1716752163208,4,POST new visit-0,302,Original REST requests 1-18,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
-1716752163212,4,POST new visit-1,200,Original REST requests 1-18,text,true,10388,177,8,8,http://localhost:8080/owners/3,4,0,0
-1716752163311,2,Vets,200,Original REST requests 1-23,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752163308,8,POST Edit Owner,200,Original REST requests 1-20,text,true,10575,525,8,8,http://localhost:8080/owners/2,3,0,0
-1716752163308,3,POST Edit Owner-0,302,Original REST requests 1-20,,true,188,348,8,8,http://localhost:8080/owners/2/edit,3,0,0
-1716752163311,5,POST Edit Owner-1,200,Original REST requests 1-20,text,true,10387,177,8,8,http://localhost:8080/owners/2,5,0,0
-1716752163410,2,Find owner,200,Original REST requests 1-22,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752163408,9,POST new pet,200,Original REST requests 1-25,text,true,11364,503,8,8,http://localhost:8080/owners/1;jsessionid=72873A863CDDA26A4F44348C95BFF276,5,0,1
-1716752163410,7,POST new visit,200,Original REST requests 1-19,text,true,11249,490,8,8,http://localhost:8080/owners/1,2,0,0
-1716752163408,5,POST new pet-0,302,Original REST requests 1-25,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,5,0,1
-1716752163410,2,POST new visit-0,302,Original REST requests 1-19,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,2,0,0
-1716752163413,4,POST new pet-1,200,Original REST requests 1-25,text,true,11057,221,8,8,http://localhost:8080/owners/1;jsessionid=72873A863CDDA26A4F44348C95BFF276,4,0,0
-1716752163413,4,POST new visit-1,200,Original REST requests 1-19,text,true,11061,177,8,8,http://localhost:8080/owners/1,4,0,0
-1716752163508,8,POST Edit Owner,200,Original REST requests 1-21,text,true,10570,525,8,8,http://localhost:8080/owners/3,3,0,0
-1716752163508,3,POST Edit Owner-0,302,Original REST requests 1-21,,true,188,348,8,8,http://localhost:8080/owners/3/edit,3,0,0
-1716752163511,5,POST Edit Owner-1,200,Original REST requests 1-21,text,true,10382,177,8,8,http://localhost:8080/owners/3,5,0,0
-1716752163514,2,Vets,200,Original REST requests 1-24,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752163615,2,Find owner,200,Original REST requests 1-23,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752163613,8,POST new pet,200,Original REST requests 1-26,text,true,11370,503,8,8,http://localhost:8080/owners/2;jsessionid=902534D64310BF56B005A5AAC3C521B0,4,0,0
-1716752163613,4,POST new pet-0,302,Original REST requests 1-26,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,4,0,0
-1716752163617,4,POST new pet-1,200,Original REST requests 1-26,text,true,11063,221,8,8,http://localhost:8080/owners/2;jsessionid=902534D64310BF56B005A5AAC3C521B0,4,0,0
-1716752163616,6,POST new visit,200,Original REST requests 1-20,text,true,11255,490,8,8,http://localhost:8080/owners/2,3,0,0
-1716752163616,3,POST new visit-0,302,Original REST requests 1-20,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,3,0,0
-1716752163619,3,POST new visit-1,200,Original REST requests 1-20,text,true,11067,177,8,8,http://localhost:8080/owners/2,3,0,0
-1716752163713,6,POST Edit Owner,200,Original REST requests 1-22,text,true,11243,525,7,7,http://localhost:8080/owners/1,2,0,0
-1716752163713,2,POST Edit Owner-0,302,Original REST requests 1-22,,true,188,348,7,7,http://localhost:8080/owners/1/edit,2,0,0
-1716752163716,3,POST Edit Owner-1,200,Original REST requests 1-22,text,true,11055,177,7,7,http://localhost:8080/owners/1,3,0,0
-1716752163720,2,Vets,200,Original REST requests 1-25,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752163817,2,Find owner,200,Original REST requests 1-24,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752163816,8,POST new pet,200,Original REST requests 1-27,text,true,11365,503,8,8,http://localhost:8080/owners/3;jsessionid=95FD8CA7759CB88F5E88C0D724A56CB5,4,0,1
-1716752163817,7,POST new visit,200,Original REST requests 1-21,text,true,11250,490,8,8,http://localhost:8080/owners/3,3,0,0
-1716752163816,4,POST new pet-0,302,Original REST requests 1-27,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,4,0,1
-1716752163817,3,POST new visit-0,302,Original REST requests 1-21,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
-1716752163821,3,POST new pet-1,200,Original REST requests 1-27,text,true,11058,221,8,8,http://localhost:8080/owners/3;jsessionid=95FD8CA7759CB88F5E88C0D724A56CB5,3,0,0
-1716752163820,4,POST new visit-1,200,Original REST requests 1-21,text,true,11062,177,8,8,http://localhost:8080/owners/3,4,0,0
-1716752163921,3,Vets,200,Original REST requests 1-26,text,true,4264,178,7,7,http://localhost:8080/vets.html,3,0,0
-1716752163920,7,POST Edit Owner,200,Original REST requests 1-23,text,true,11249,525,8,8,http://localhost:8080/owners/2,3,0,0
-1716752163920,3,POST Edit Owner-0,302,Original REST requests 1-23,,true,188,348,8,8,http://localhost:8080/owners/2/edit,3,0,0
-1716752163923,4,POST Edit Owner-1,200,Original REST requests 1-23,text,true,11061,177,8,8,http://localhost:8080/owners/2,4,0,0
-1716752164024,2,Find owner,200,Original REST requests 1-25,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752164020,8,POST new visit,200,Original REST requests 1-22,text,true,11923,490,8,8,http://localhost:8080/owners/1,3,0,0
-1716752164020,3,POST new visit-0,302,Original REST requests 1-22,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
-1716752164023,5,POST new visit-1,200,Original REST requests 1-22,text,true,11735,177,8,8,http://localhost:8080/owners/1,5,0,0
-1716752164021,11,POST new pet,200,Original REST requests 1-28,text,true,12038,503,7,7,http://localhost:8080/owners/1;jsessionid=A976F324319A21E376F799BBE3B478CE,6,0,1
-1716752164021,6,POST new pet-0,302,Original REST requests 1-28,,true,307,282,7,7,http://localhost:8080/owners/1/pets/new,6,0,1
-1716752164027,5,POST new pet-1,200,Original REST requests 1-28,text,true,11731,221,7,7,http://localhost:8080/owners/1;jsessionid=A976F324319A21E376F799BBE3B478CE,5,0,0
-1716752164120,7,POST Edit Owner,200,Original REST requests 1-24,text,true,11244,525,7,7,http://localhost:8080/owners/3,3,0,0
-1716752164120,3,POST Edit Owner-0,302,Original REST requests 1-24,,true,188,348,7,7,http://localhost:8080/owners/3/edit,3,0,0
-1716752164123,4,POST Edit Owner-1,200,Original REST requests 1-24,text,true,11056,177,7,7,http://localhost:8080/owners/3,4,0,0
-1716752164127,3,Vets,200,Original REST requests 1-27,text,true,4264,178,7,7,http://localhost:8080/vets.html,3,0,0
-1716752164224,2,Find owner,200,Original REST requests 1-26,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752164225,9,POST new pet,200,Original REST requests 1-29,text,true,12044,503,8,8,http://localhost:8080/owners/2;jsessionid=F8D82A23C21B59A12D7372500B45C771,4,0,1
-1716752164225,4,POST new pet-0,302,Original REST requests 1-29,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,4,0,1
-1716752164229,5,POST new pet-1,200,Original REST requests 1-29,text,true,11737,221,8,8,http://localhost:8080/owners/2;jsessionid=F8D82A23C21B59A12D7372500B45C771,4,0,0
-1716752164228,6,POST new visit,200,Original REST requests 1-23,text,true,11929,490,8,8,http://localhost:8080/owners/2,2,0,0
-1716752164228,2,POST new visit-0,302,Original REST requests 1-23,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
-1716752164230,4,POST new visit-1,200,Original REST requests 1-23,text,true,11741,177,8,8,http://localhost:8080/owners/2,4,0,0
-1716752164333,3,Vets,200,Original REST requests 1-28,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752164327,9,POST Edit Owner,200,Original REST requests 1-25,text,true,11917,525,8,8,http://localhost:8080/owners/1,3,0,0
-1716752164327,3,POST Edit Owner-0,302,Original REST requests 1-25,,true,188,348,8,8,http://localhost:8080/owners/1/edit,3,0,0
-1716752164330,6,POST Edit Owner-1,200,Original REST requests 1-25,text,true,11729,177,8,8,http://localhost:8080/owners/1,6,0,0
-1716752164430,3,Find owner,200,Original REST requests 1-27,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
-1716752164430,7,POST new visit,200,Original REST requests 1-24,text,true,11924,490,8,8,http://localhost:8080/owners/3,3,0,0
-1716752164430,3,POST new visit-0,302,Original REST requests 1-24,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
-1716752164433,4,POST new visit-1,200,Original REST requests 1-24,text,true,11736,177,8,8,http://localhost:8080/owners/3,4,0,0
-1716752164431,10,POST new pet,200,Original REST requests 1-30,text,true,12039,503,7,7,http://localhost:8080/owners/3;jsessionid=7F1002BBCEC22E073012F6CB185BF5DA,5,0,0
-1716752164431,5,POST new pet-0,302,Original REST requests 1-30,,true,307,282,7,7,http://localhost:8080/owners/3/pets/new,5,0,0
-1716752164436,5,POST new pet-1,200,Original REST requests 1-30,text,true,11732,221,7,7,http://localhost:8080/owners/3;jsessionid=7F1002BBCEC22E073012F6CB185BF5DA,4,0,0
-1716752164527,8,POST Edit Owner,200,Original REST requests 1-26,text,true,11923,525,7,7,http://localhost:8080/owners/2,4,0,0
-1716752164527,4,POST Edit Owner-0,302,Original REST requests 1-26,,true,188,348,7,7,http://localhost:8080/owners/2/edit,4,0,0
-1716752164531,4,POST Edit Owner-1,200,Original REST requests 1-26,text,true,11735,177,7,7,http://localhost:8080/owners/2,3,0,0
-1716752164535,2,Vets,200,Original REST requests 1-29,text,true,4264,178,7,7,http://localhost:8080/vets.html,2,0,0
-1716752164636,3,Find owner,200,Original REST requests 1-28,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
-1716752164635,9,POST new pet,200,Original REST requests 1-31,text,true,12712,503,8,8,http://localhost:8080/owners/1;jsessionid=0B5951A097586591FD08C9F59EB221B8,5,0,0
-1716752164635,5,POST new pet-0,302,Original REST requests 1-31,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,5,0,0
-1716752164640,4,POST new pet-1,200,Original REST requests 1-31,text,true,12405,221,8,8,http://localhost:8080/owners/1;jsessionid=0B5951A097586591FD08C9F59EB221B8,4,0,0
-1716752164638,7,POST new visit,200,Original REST requests 1-25,text,true,12597,490,8,8,http://localhost:8080/owners/1,3,0,0
-1716752164638,3,POST new visit-0,302,Original REST requests 1-25,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
-1716752164641,4,POST new visit-1,200,Original REST requests 1-25,text,true,12409,177,8,8,http://localhost:8080/owners/1,4,0,0
-1716752164734,8,POST Edit Owner,200,Original REST requests 1-27,text,true,11918,525,7,7,http://localhost:8080/owners/3,3,0,0
-1716752164734,3,POST Edit Owner-0,302,Original REST requests 1-27,,true,188,348,7,7,http://localhost:8080/owners/3/edit,3,0,0
-1716752164737,5,POST Edit Owner-1,200,Original REST requests 1-27,text,true,11730,177,7,7,http://localhost:8080/owners/3,5,0,0
-1716752164741,3,Vets,200,Original REST requests 1-30,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752164837,3,Find owner,200,Original REST requests 1-29,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
-1716752164836,7,POST new visit,200,Original REST requests 1-26,text,true,11929,490,8,8,http://localhost:8080/owners/2,3,0,0
-1716752164836,3,POST new visit-0,302,Original REST requests 1-26,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,3,0,0
-1716752164839,4,POST new visit-1,200,Original REST requests 1-26,text,true,11741,177,8,8,http://localhost:8080/owners/2,4,0,0
-1716752164840,9,POST new pet,200,Original REST requests 1-32,text,true,12718,503,7,7,http://localhost:8080/owners/2;jsessionid=55C81D1EF7BB7E2C1CD75BE0E09F29A0,4,0,1
-1716752164840,4,POST new pet-0,302,Original REST requests 1-32,,true,307,282,7,7,http://localhost:8080/owners/2/pets/new,4,0,1
-1716752164845,4,POST new pet-1,200,Original REST requests 1-32,text,true,12411,221,7,7,http://localhost:8080/owners/2;jsessionid=55C81D1EF7BB7E2C1CD75BE0E09F29A0,4,0,0
-1716752164945,3,Vets,200,Original REST requests 1-31,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752164940,9,POST Edit Owner,200,Original REST requests 1-28,text,true,12591,525,8,8,http://localhost:8080/owners/1,4,0,0
-1716752164940,4,POST Edit Owner-0,302,Original REST requests 1-28,,true,188,348,8,8,http://localhost:8080/owners/1/edit,4,0,0
-1716752164944,5,POST Edit Owner-1,200,Original REST requests 1-28,text,true,12403,177,8,8,http://localhost:8080/owners/1,5,0,0
-1716752165044,3,Find owner,200,Original REST requests 1-30,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
-1716752165042,9,POST new visit,200,Original REST requests 1-27,text,true,11924,490,8,8,http://localhost:8080/owners/3,4,0,0
-1716752165042,4,POST new visit-0,302,Original REST requests 1-27,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
-1716752165047,4,POST new visit-1,200,Original REST requests 1-27,text,true,11736,177,8,8,http://localhost:8080/owners/3,4,0,0
-1716752165045,11,POST new pet,200,Original REST requests 1-33,text,true,12713,503,7,7,http://localhost:8080/owners/3;jsessionid=1C219E051EEE3D2E05289465EECAEF39,5,0,1
-1716752165045,5,POST new pet-0,302,Original REST requests 1-33,,true,307,282,7,7,http://localhost:8080/owners/3/pets/new,5,0,1
-1716752165050,6,POST new pet-1,200,Original REST requests 1-33,text,true,12406,221,7,7,http://localhost:8080/owners/3;jsessionid=1C219E051EEE3D2E05289465EECAEF39,6,0,0
-1716752165141,8,POST Edit Owner,200,Original REST requests 1-29,text,true,12597,525,8,8,http://localhost:8080/owners/2,4,0,0
-1716752165141,4,POST Edit Owner-0,302,Original REST requests 1-29,,true,188,348,8,8,http://localhost:8080/owners/2/edit,4,0,0
-1716752165145,4,POST Edit Owner-1,200,Original REST requests 1-29,text,true,12409,177,8,8,http://localhost:8080/owners/2,4,0,0
-1716752165151,2,Vets,200,Original REST requests 1-32,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752165249,2,Find owner,200,Original REST requests 1-31,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752165250,7,POST new visit,200,Original REST requests 1-28,text,true,13272,490,8,8,http://localhost:8080/owners/1,3,0,0
-1716752165247,10,POST new pet,200,Original REST requests 1-34,text,true,13387,503,8,8,http://localhost:8080/owners/1;jsessionid=C0BF19583F6DD079BB331F450978A3D6,6,0,1
-1716752165250,3,POST new visit-0,302,Original REST requests 1-28,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
-1716752165247,6,POST new pet-0,302,Original REST requests 1-34,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,6,0,1
-1716752165253,4,POST new visit-1,200,Original REST requests 1-28,text,true,13084,177,8,8,http://localhost:8080/owners/1,4,0,0
-1716752165253,4,POST new pet-1,200,Original REST requests 1-34,text,true,13080,221,8,8,http://localhost:8080/owners/1;jsessionid=C0BF19583F6DD079BB331F450978A3D6,4,0,0
-1716752165349,8,POST Edit Owner,200,Original REST requests 1-30,text,true,12592,525,8,8,http://localhost:8080/owners/3,3,0,0
-1716752165349,3,POST Edit Owner-0,302,Original REST requests 1-30,,true,188,348,8,8,http://localhost:8080/owners/3/edit,3,0,0
-1716752165352,5,POST Edit Owner-1,200,Original REST requests 1-30,text,true,12404,177,8,8,http://localhost:8080/owners/3,4,0,0
-1716752165357,3,Vets,200,Original REST requests 1-33,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752165455,1,Find owner,200,Original REST requests 1-32,text,true,3755,180,8,8,http://localhost:8080/owners/find,1,0,0
-1716752165450,8,POST new visit,200,Original REST requests 1-29,text,true,13278,490,8,8,http://localhost:8080/owners/2,3,0,0
-1716752165450,3,POST new visit-0,302,Original REST requests 1-29,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,3,0,0
-1716752165453,5,POST new visit-1,200,Original REST requests 1-29,text,true,13090,177,8,8,http://localhost:8080/owners/2,5,0,0
-1716752165451,9,POST new pet,200,Original REST requests 1-35,text,true,13393,503,7,7,http://localhost:8080/owners/2;jsessionid=2236B59EDCCD0C14CEA4FEFA7CCCCE24,5,0,1
-1716752165451,5,POST new pet-0,302,Original REST requests 1-35,,true,307,282,7,7,http://localhost:8080/owners/2/pets/new,5,0,1
-1716752165456,4,POST new pet-1,200,Original REST requests 1-35,text,true,13086,221,7,7,http://localhost:8080/owners/2;jsessionid=2236B59EDCCD0C14CEA4FEFA7CCCCE24,4,0,0
-1716752165551,9,POST Edit Owner,200,Original REST requests 1-31,text,true,13266,525,8,8,http://localhost:8080/owners/1,4,0,0
-1716752165551,4,POST Edit Owner-0,302,Original REST requests 1-31,,true,188,348,8,8,http://localhost:8080/owners/1/edit,4,0,0
-1716752165555,5,POST Edit Owner-1,200,Original REST requests 1-31,text,true,13078,177,8,8,http://localhost:8080/owners/1,5,0,0
-1716752165559,3,Vets,200,Original REST requests 1-34,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752165661,3,Find owner,200,Original REST requests 1-33,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
-1716752165654,13,POST new pet,200,Original REST requests 1-36,text,true,13388,503,8,8,http://localhost:8080/owners/3;jsessionid=58D4DBE1633591978DEDEDF03DB74A41,6,0,1
-1716752165654,6,POST new pet-0,302,Original REST requests 1-36,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,6,0,1
-1716752165660,7,POST new pet-1,200,Original REST requests 1-36,text,true,13081,221,8,8,http://localhost:8080/owners/3;jsessionid=58D4DBE1633591978DEDEDF03DB74A41,7,0,0
-1716752165659,12,POST new visit,200,Original REST requests 1-30,text,true,13273,490,8,8,http://localhost:8080/owners/3,4,0,0
-1716752165659,4,POST new visit-0,302,Original REST requests 1-30,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
-1716752165664,7,POST new visit-1,200,Original REST requests 1-30,text,true,13085,177,8,8,http://localhost:8080/owners/3,6,0,0
-1716752165761,4,Vets,200,Original REST requests 1-35,text,true,4264,178,8,8,http://localhost:8080/vets.html,4,0,0
-1716752165758,12,POST Edit Owner,200,Original REST requests 1-32,text,true,13272,525,8,8,http://localhost:8080/owners/2,5,0,0
-1716752165758,5,POST Edit Owner-0,302,Original REST requests 1-32,,true,188,348,8,8,http://localhost:8080/owners/2/edit,5,0,0
-1716752165764,6,POST Edit Owner-1,200,Original REST requests 1-32,text,true,13084,177,8,8,http://localhost:8080/owners/2,6,0,0
-1716752165862,3,Find owner,200,Original REST requests 1-34,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
-1716752165857,11,POST new pet,200,Original REST requests 1-37,text,true,14061,503,8,8,http://localhost:8080/owners/1;jsessionid=9A71CC5E2F45464BCA0BF409F7783672,5,0,1
-1716752165857,5,POST new pet-0,302,Original REST requests 1-37,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,5,0,1
-1716752165863,5,POST new pet-1,200,Original REST requests 1-37,text,true,13754,221,8,8,http://localhost:8080/owners/1;jsessionid=9A71CC5E2F45464BCA0BF409F7783672,5,0,0
-1716752165861,11,POST new visit,200,Original REST requests 1-31,text,true,13946,490,8,8,http://localhost:8080/owners/1,4,0,0
-1716752165861,4,POST new visit-0,302,Original REST requests 1-31,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,4,0,0
-1716752165865,7,POST new visit-1,200,Original REST requests 1-31,text,true,13758,177,8,8,http://localhost:8080/owners/1,7,0,0
-1716752165969,2,Vets,200,Original REST requests 1-36,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752165964,8,POST Edit Owner,200,Original REST requests 1-33,text,true,13267,525,8,8,http://localhost:8080/owners/3,3,0,0
-1716752165964,3,POST Edit Owner-0,302,Original REST requests 1-33,,true,188,348,8,8,http://localhost:8080/owners/3/edit,3,0,0
-1716752165968,4,POST Edit Owner-1,200,Original REST requests 1-33,text,true,13079,177,8,8,http://localhost:8080/owners/3,4,0,0
-1716752166059,8,POST new pet,200,Original REST requests 1-38,text,true,14067,503,8,8,http://localhost:8080/owners/2;jsessionid=70DB20E3C85058186BD7D403E6F8ABB7,4,0,1
-1716752166059,4,POST new pet-0,302,Original REST requests 1-38,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,4,0,1
-1716752166063,4,POST new pet-1,200,Original REST requests 1-38,text,true,13760,221,8,8,http://localhost:8080/owners/2;jsessionid=70DB20E3C85058186BD7D403E6F8ABB7,4,0,0
-1716752166066,2,Find owner,200,Original REST requests 1-35,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752166071,7,POST new visit,200,Original REST requests 1-32,text,true,13952,490,8,8,http://localhost:8080/owners/2,3,0,0
-1716752166071,3,POST new visit-0,302,Original REST requests 1-32,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,3,0,0
-1716752166074,4,POST new visit-1,200,Original REST requests 1-32,text,true,13764,177,8,8,http://localhost:8080/owners/2,4,0,0
-1716752166169,2,Vets,200,Original REST requests 1-37,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752166165,7,POST Edit Owner,200,Original REST requests 1-34,text,true,13940,525,8,8,http://localhost:8080/owners/1,3,0,0
-1716752166165,3,POST Edit Owner-0,302,Original REST requests 1-34,,true,188,348,8,8,http://localhost:8080/owners/1/edit,3,0,0
-1716752166168,4,POST Edit Owner-1,200,Original REST requests 1-34,text,true,13752,177,8,8,http://localhost:8080/owners/1,4,0,0
-1716752166262,8,POST new pet,200,Original REST requests 1-39,text,true,14062,503,8,8,http://localhost:8080/owners/3;jsessionid=98715E6B691AA93E40BE3342C425441B,4,0,1
-1716752166262,4,POST new pet-0,302,Original REST requests 1-39,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,4,0,1
-1716752166266,4,POST new pet-1,200,Original REST requests 1-39,text,true,13755,221,8,8,http://localhost:8080/owners/3;jsessionid=98715E6B691AA93E40BE3342C425441B,4,0,0
-1716752166272,1,Find owner,200,Original REST requests 1-36,text,true,3755,180,8,8,http://localhost:8080/owners/find,1,0,0
-1716752166273,6,POST new visit,200,Original REST requests 1-33,text,true,13947,490,8,8,http://localhost:8080/owners/3,2,0,0
-1716752166273,2,POST new visit-0,302,Original REST requests 1-33,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,2,0,0
-1716752166276,3,POST new visit-1,200,Original REST requests 1-33,text,true,13759,177,8,8,http://localhost:8080/owners/3,3,0,0
-1716752166368,2,Vets,200,Original REST requests 1-38,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752166368,6,POST Edit Owner,200,Original REST requests 1-35,text,true,13946,525,8,8,http://localhost:8080/owners/2,2,0,0
-1716752166368,2,POST Edit Owner-0,302,Original REST requests 1-35,,true,188,348,8,8,http://localhost:8080/owners/2/edit,2,0,0
-1716752166370,4,POST Edit Owner-1,200,Original REST requests 1-35,text,true,13758,177,8,8,http://localhost:8080/owners/2,4,0,0
-1716752166471,2,Find owner,200,Original REST requests 1-37,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752166466,9,POST new pet,200,Original REST requests 1-40,text,true,14735,503,8,8,http://localhost:8080/owners/1;jsessionid=669658C46ED7479DD88982AD56471646,4,0,1
-1716752166466,4,POST new pet-0,302,Original REST requests 1-40,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,4,0,1
-1716752166470,5,POST new pet-1,200,Original REST requests 1-40,text,true,14428,221,8,8,http://localhost:8080/owners/1;jsessionid=669658C46ED7479DD88982AD56471646,5,0,0
-1716752166473,6,POST new visit,200,Original REST requests 1-34,text,true,14620,490,8,8,http://localhost:8080/owners/1,3,0,0
-1716752166473,3,POST new visit-0,302,Original REST requests 1-34,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
-1716752166476,3,POST new visit-1,200,Original REST requests 1-34,text,true,14432,177,8,8,http://localhost:8080/owners/1,3,0,0
-1716752166571,3,Vets,200,Original REST requests 1-39,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
-1716752166574,7,POST Edit Owner,200,Original REST requests 1-36,text,true,13941,525,8,8,http://localhost:8080/owners/3,3,0,0
-1716752166574,3,POST Edit Owner-0,302,Original REST requests 1-36,,true,188,348,8,8,http://localhost:8080/owners/3/edit,3,0,0
-1716752166577,4,POST Edit Owner-1,200,Original REST requests 1-36,text,true,13753,177,8,8,http://localhost:8080/owners/3,4,0,0
-1716752166671,2,Find owner,200,Original REST requests 1-38,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752166669,9,POST new pet,200,Original REST requests 1-41,text,true,14741,503,8,8,http://localhost:8080/owners/2;jsessionid=728A2A750BAC2B73AE867A7A9907B4FA,5,0,1
-1716752166669,5,POST new pet-0,302,Original REST requests 1-41,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,5,0,1
-1716752166674,4,POST new pet-1,200,Original REST requests 1-41,text,true,14434,221,8,8,http://localhost:8080/owners/2;jsessionid=728A2A750BAC2B73AE867A7A9907B4FA,4,0,0
-1716752166676,6,POST new visit,200,Original REST requests 1-35,text,true,14626,490,8,8,http://localhost:8080/owners/2,2,0,0
-1716752166676,2,POST new visit-0,302,Original REST requests 1-35,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
-1716752166678,4,POST new visit-1,200,Original REST requests 1-35,text,true,14438,177,8,8,http://localhost:8080/owners/2,4,0,0
-1716752166776,2,Vets,200,Original REST requests 1-40,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752166774,6,POST Edit Owner,200,Original REST requests 1-37,text,true,14614,525,8,8,http://localhost:8080/owners/1,2,0,0
-1716752166774,2,POST Edit Owner-0,302,Original REST requests 1-37,,true,188,348,8,8,http://localhost:8080/owners/1/edit,2,0,0
-1716752166777,3,POST Edit Owner-1,200,Original REST requests 1-37,text,true,14426,177,8,8,http://localhost:8080/owners/1,3,0,0
-1716752166876,2,Find owner,200,Original REST requests 1-39,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752166873,8,POST new pet,200,Original REST requests 1-42,text,true,14736,503,8,8,http://localhost:8080/owners/3;jsessionid=13E15581383139C5D8CD9458E2666158,4,0,1
-1716752166873,4,POST new pet-0,302,Original REST requests 1-42,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,4,0,1
-1716752166877,4,POST new pet-1,200,Original REST requests 1-42,text,true,14429,221,8,8,http://localhost:8080/owners/3;jsessionid=13E15581383139C5D8CD9458E2666158,4,0,0
-1716752166881,6,POST new visit,200,Original REST requests 1-36,text,true,14621,490,8,8,http://localhost:8080/owners/3,2,0,0
-1716752166881,2,POST new visit-0,302,Original REST requests 1-36,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,2,0,0
-1716752166883,4,POST new visit-1,200,Original REST requests 1-36,text,true,14433,177,8,8,http://localhost:8080/owners/3,4,0,0
-1716752166978,2,Vets,200,Original REST requests 1-41,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752166973,8,POST Edit Owner,200,Original REST requests 1-38,text,true,14620,525,8,8,http://localhost:8080/owners/2,3,0,0
-1716752166973,3,POST Edit Owner-0,302,Original REST requests 1-38,,true,188,348,8,8,http://localhost:8080/owners/2/edit,3,0,0
-1716752166976,5,POST Edit Owner-1,200,Original REST requests 1-38,text,true,14432,177,8,8,http://localhost:8080/owners/2,5,0,0
-1716752167079,1,Find owner,200,Original REST requests 1-40,text,true,3755,180,8,8,http://localhost:8080/owners/find,1,0,0
-1716752167076,9,POST new pet,200,Original REST requests 1-43,text,true,15409,503,8,8,http://localhost:8080/owners/1;jsessionid=A2EDA3A2B8FFE5514FD635ADA37A4A3B,4,0,1
-1716752167076,4,POST new pet-0,302,Original REST requests 1-43,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,4,0,1
-1716752167081,4,POST new pet-1,200,Original REST requests 1-43,text,true,15102,221,8,8,http://localhost:8080/owners/1;jsessionid=A2EDA3A2B8FFE5514FD635ADA37A4A3B,4,0,0
-1716752167081,5,POST new visit,200,Original REST requests 1-37,text,true,15294,490,8,8,http://localhost:8080/owners/1,2,0,0
-1716752167081,2,POST new visit-0,302,Original REST requests 1-37,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,2,0,0
-1716752167083,3,POST new visit-1,200,Original REST requests 1-37,text,true,15106,177,8,8,http://localhost:8080/owners/1,3,0,0
-1716752167182,2,Vets,200,Original REST requests 1-42,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752167178,7,POST Edit Owner,200,Original REST requests 1-39,text,true,14615,525,8,8,http://localhost:8080/owners/3,3,0,0
-1716752167178,3,POST Edit Owner-0,302,Original REST requests 1-39,,true,188,348,8,8,http://localhost:8080/owners/3/edit,3,0,0
-1716752167181,4,POST Edit Owner-1,200,Original REST requests 1-39,text,true,14427,177,8,8,http://localhost:8080/owners/3,4,0,0
-1716752167280,2,Find owner,200,Original REST requests 1-41,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752167278,9,POST new pet,200,Original REST requests 1-44,text,true,15415,503,8,8,http://localhost:8080/owners/2;jsessionid=E2A3EB8BD49B72381EF9D5B72E5E303F,4,0,0
-1716752167278,4,POST new pet-0,302,Original REST requests 1-44,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,4,0,0
-1716752167282,5,POST new pet-1,200,Original REST requests 1-44,text,true,15108,221,8,8,http://localhost:8080/owners/2;jsessionid=E2A3EB8BD49B72381EF9D5B72E5E303F,5,0,0
-1716752167281,7,POST new visit,200,Original REST requests 1-38,text,true,15300,490,8,8,http://localhost:8080/owners/2,2,0,0
-1716752167281,2,POST new visit-0,302,Original REST requests 1-38,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
-1716752167283,5,POST new visit-1,200,Original REST requests 1-38,text,true,15112,177,8,8,http://localhost:8080/owners/2,5,0,0
-1716752167386,2,Vets,200,Original REST requests 1-43,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752167382,7,POST Edit Owner,200,Original REST requests 1-40,text,true,15288,525,8,8,http://localhost:8080/owners/1,2,0,0
-1716752167382,2,POST Edit Owner-0,302,Original REST requests 1-40,,true,188,348,8,8,http://localhost:8080/owners/1/edit,2,0,0
-1716752167384,5,POST Edit Owner-1,200,Original REST requests 1-40,text,true,15100,177,8,8,http://localhost:8080/owners/1,5,0,0
-1716752167484,2,Find owner,200,Original REST requests 1-42,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752167480,9,POST new pet,200,Original REST requests 1-45,text,true,15410,503,8,8,http://localhost:8080/owners/3;jsessionid=3BA590E84CFB913BAB8EF7EC31041475,4,0,1
-1716752167480,4,POST new pet-0,302,Original REST requests 1-45,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,4,0,1
-1716752167485,4,POST new pet-1,200,Original REST requests 1-45,text,true,15103,221,8,8,http://localhost:8080/owners/3;jsessionid=3BA590E84CFB913BAB8EF7EC31041475,4,0,0
-1716752167486,9,POST new visit,200,Original REST requests 1-39,text,true,15295,490,8,8,http://localhost:8080/owners/3,3,0,0
-1716752167486,3,POST new visit-0,302,Original REST requests 1-39,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
-1716752167489,6,POST new visit-1,200,Original REST requests 1-39,text,true,15107,177,8,8,http://localhost:8080/owners/3,6,0,0
-1716752167588,2,Vets,200,Original REST requests 1-44,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752167583,8,POST Edit Owner,200,Original REST requests 1-41,text,true,15294,525,8,8,http://localhost:8080/owners/2,3,0,0
-1716752167583,3,POST Edit Owner-0,302,Original REST requests 1-41,,true,188,348,8,8,http://localhost:8080/owners/2/edit,3,0,0
-1716752167586,5,POST Edit Owner-1,200,Original REST requests 1-41,text,true,15106,177,8,8,http://localhost:8080/owners/2,5,0,0
-1716752167689,2,Find owner,200,Original REST requests 1-43,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752167685,10,POST new pet,200,Original REST requests 1-46,text,true,16083,503,8,8,http://localhost:8080/owners/1;jsessionid=67DE97641D3149E9200AFE1521C384F1,4,0,0
-1716752167685,4,POST new pet-0,302,Original REST requests 1-46,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,4,0,0
-1716752167689,6,POST new pet-1,200,Original REST requests 1-46,text,true,15776,221,8,8,http://localhost:8080/owners/1;jsessionid=67DE97641D3149E9200AFE1521C384F1,6,0,0
-1716752167691,8,POST new visit,200,Original REST requests 1-40,text,true,15968,490,8,8,http://localhost:8080/owners/1,3,0,0
-1716752167691,3,POST new visit-0,302,Original REST requests 1-40,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
-1716752167694,5,POST new visit-1,200,Original REST requests 1-40,text,true,15780,177,8,8,http://localhost:8080/owners/1,5,0,0
-1716752167790,3,Vets,200,Original REST requests 1-45,text,true,4264,178,7,7,http://localhost:8080/vets.html,3,0,0
-1716752167787,10,POST Edit Owner,200,Original REST requests 1-42,text,true,15289,525,8,8,http://localhost:8080/owners/3,4,0,0
-1716752167787,4,POST Edit Owner-0,302,Original REST requests 1-42,,true,188,348,8,8,http://localhost:8080/owners/3/edit,4,0,0
-1716752167791,6,POST Edit Owner-1,200,Original REST requests 1-42,text,true,15101,177,8,8,http://localhost:8080/owners/3,6,0,0
-1716752167903,4,Find owner,200,Original REST requests 1-44,text,true,3755,180,8,8,http://localhost:8080/owners/find,4,0,0
-1716752167888,22,POST new pet,200,Original REST requests 1-47,text,true,16089,503,8,8,http://localhost:8080/owners/2;jsessionid=03CCC0A5C9DE76C2941A4D4823D049A4,16,0,1
-1716752167888,16,POST new pet-0,302,Original REST requests 1-47,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,16,0,1
-1716752167904,6,POST new pet-1,200,Original REST requests 1-47,text,true,15782,221,8,8,http://localhost:8080/owners/2;jsessionid=03CCC0A5C9DE76C2941A4D4823D049A4,6,0,0
-1716752167903,11,POST new visit,200,Original REST requests 1-41,text,true,15974,490,8,8,http://localhost:8080/owners/2,5,0,0
-1716752167903,5,POST new visit-0,302,Original REST requests 1-41,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,5,0,0
-1716752167908,6,POST new visit-1,200,Original REST requests 1-41,text,true,15786,177,8,8,http://localhost:8080/owners/2,6,0,0
-1716752167997,5,Vets,200,Original REST requests 1-46,text,true,4264,178,8,8,http://localhost:8080/vets.html,5,0,0
-1716752167997,12,POST Edit Owner,200,Original REST requests 1-43,text,true,15962,525,8,8,http://localhost:8080/owners/1,7,0,0
-1716752167997,7,POST Edit Owner-0,302,Original REST requests 1-43,,true,188,348,8,8,http://localhost:8080/owners/1/edit,7,0,0
-1716752168004,5,POST Edit Owner-1,200,Original REST requests 1-43,text,true,15774,177,8,8,http://localhost:8080/owners/1,5,0,0
-1716752168099,7,POST new visit,200,Original REST requests 1-42,text,true,15969,490,8,8,http://localhost:8080/owners/3,3,0,0
-1716752168095,11,POST new pet,200,Original REST requests 1-48,text,true,16084,503,8,8,http://localhost:8080/owners/3;jsessionid=57B78EE2F8BC3BFBA5DF986EA71E9F3B,5,0,1
-1716752168099,3,POST new visit-0,302,Original REST requests 1-42,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
-1716752168095,5,POST new pet-0,302,Original REST requests 1-48,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,5,0,1
-1716752168102,4,POST new visit-1,200,Original REST requests 1-42,text,true,15781,177,8,8,http://localhost:8080/owners/3,4,0,0
-1716752168100,6,POST new pet-1,200,Original REST requests 1-48,text,true,15777,221,8,8,http://localhost:8080/owners/3;jsessionid=57B78EE2F8BC3BFBA5DF986EA71E9F3B,6,0,0
-1716752168106,2,Find owner,200,Original REST requests 1-45,text,true,3755,180,7,7,http://localhost:8080/owners/find,2,0,0
-1716752168211,2,Vets,200,Original REST requests 1-47,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
-1716752168208,7,POST Edit Owner,200,Original REST requests 1-44,text,true,15968,525,8,8,http://localhost:8080/owners/2,3,0,0
-1716752168208,3,POST Edit Owner-0,302,Original REST requests 1-44,,true,188,348,8,8,http://localhost:8080/owners/2/edit,3,0,0
-1716752168211,4,POST Edit Owner-1,200,Original REST requests 1-44,text,true,15780,177,8,8,http://localhost:8080/owners/2,4,0,0
-1716752168292,9,POST new pet,200,Original REST requests 1-49,text,true,16757,503,8,8,http://localhost:8080/owners/1;jsessionid=C9BAD6A5CB30E1CABBBA762A49F7376C,4,0,0
-1716752168292,4,POST new pet-0,302,Original REST requests 1-49,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,4,0,0
-1716752168296,5,POST new pet-1,200,Original REST requests 1-49,text,true,16450,221,8,8,http://localhost:8080/owners/1;jsessionid=C9BAD6A5CB30E1CABBBA762A49F7376C,5,0,0
-1716752168302,2,Find owner,200,Original REST requests 1-46,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
-1716752168311,8,POST new visit,200,Original REST requests 1-43,text,true,16642,490,8,8,http://localhost:8080/owners/1,3,0,0
-1716752168311,3,POST new visit-0,302,Original REST requests 1-43,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
-1716752168314,5,POST new visit-1,200,Original REST requests 1-43,text,true,16454,177,8,8,http://localhost:8080/owners/1,5,0,0
-1716752168407,2,Vets,200,Original REST requests 1-48,text,true,4264,178,7,7,http://localhost:8080/vets.html,2,0,0
-1716752168409,6,POST Edit Owner,200,Original REST requests 1-45,text,true,15963,525,7,7,http://localhost:8080/owners/3,2,0,0
-1716752168409,2,POST Edit Owner-0,302,Original REST requests 1-45,,true,188,348,7,7,http://localhost:8080/owners/3/edit,2,0,0
-1716752168411,4,POST Edit Owner-1,200,Original REST requests 1-45,text,true,15775,177,7,7,http://localhost:8080/owners/3,4,0,0
-1716752168501,9,POST new pet,200,Original REST requests 1-50,text,true,16763,503,7,7,http://localhost:8080/owners/2;jsessionid=03C94A3788631BADBB330D36CCFF2561,4,0,1
-1716752168501,4,POST new pet-0,302,Original REST requests 1-50,,true,307,282,7,7,http://localhost:8080/owners/2/pets/new,4,0,1
-1716752168505,5,POST new pet-1,200,Original REST requests 1-50,text,true,16456,221,7,7,http://localhost:8080/owners/2;jsessionid=03C94A3788631BADBB330D36CCFF2561,5,0,0
-1716752168516,2,Find owner,200,Original REST requests 1-47,text,true,3755,180,7,7,http://localhost:8080/owners/find,2,0,0
-1716752168516,8,POST new visit,200,Original REST requests 1-44,text,true,16648,490,7,7,http://localhost:8080/owners/2,3,0,0
-1716752168516,3,POST new visit-0,302,Original REST requests 1-44,,true,188,313,7,7,http://localhost:8080/owners/2/pets/2/visits/new,3,0,0
-1716752168519,5,POST new visit-1,200,Original REST requests 1-44,text,true,16460,177,7,7,http://localhost:8080/owners/2,4,0,0
-1716752168609,3,Vets,200,Original REST requests 1-49,text,true,4264,178,6,6,http://localhost:8080/vets.html,3,0,0
-1716752168609,7,POST Edit Owner,200,Original REST requests 1-46,text,true,16636,525,6,6,http://localhost:8080/owners/1,3,0,0
-1716752168609,3,POST Edit Owner-0,302,Original REST requests 1-46,,true,188,348,6,6,http://localhost:8080/owners/1/edit,3,0,0
-1716752168612,4,POST Edit Owner-1,200,Original REST requests 1-46,text,true,16448,177,6,6,http://localhost:8080/owners/1,4,0,0
-1716752168719,3,Find owner,200,Original REST requests 1-48,text,true,3755,180,6,6,http://localhost:8080/owners/find,3,0,0
-1716752168719,8,POST new visit,200,Original REST requests 1-45,text,true,15969,490,6,6,http://localhost:8080/owners/3,3,0,0
-1716752168719,3,POST new visit-0,302,Original REST requests 1-45,,true,188,313,6,6,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
-1716752168723,4,POST new visit-1,200,Original REST requests 1-45,text,true,15781,177,6,6,http://localhost:8080/owners/3,4,0,0
-1716752168814,3,Vets,200,Original REST requests 1-50,text,true,4264,178,5,5,http://localhost:8080/vets.html,3,0,0
-1716752168830,7,POST Edit Owner,200,Original REST requests 1-47,text,true,16642,525,5,5,http://localhost:8080/owners/2,2,0,0
-1716752168830,2,POST Edit Owner-0,302,Original REST requests 1-47,,true,188,348,5,5,http://localhost:8080/owners/2/edit,2,0,0
-1716752168832,5,POST Edit Owner-1,200,Original REST requests 1-47,text,true,16454,177,5,5,http://localhost:8080/owners/2,4,0,0
-1716752168925,1,Find owner,200,Original REST requests 1-49,text,true,3755,180,5,5,http://localhost:8080/owners/find,1,0,0
-1716752168924,7,POST new visit,200,Original REST requests 1-46,text,true,16642,490,5,5,http://localhost:8080/owners/1,3,0,0
-1716752168924,3,POST new visit-0,302,Original REST requests 1-46,,true,188,313,5,5,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
-1716752168927,4,POST new visit-1,200,Original REST requests 1-46,text,true,16454,177,5,5,http://localhost:8080/owners/1,4,0,0
-1716752169035,8,POST Edit Owner,200,Original REST requests 1-48,text,true,15963,525,4,4,http://localhost:8080/owners/3,3,0,0
-1716752169035,3,POST Edit Owner-0,302,Original REST requests 1-48,,true,188,348,4,4,http://localhost:8080/owners/3/edit,3,0,0
-1716752169038,5,POST Edit Owner-1,200,Original REST requests 1-48,text,true,15775,177,4,4,http://localhost:8080/owners/3,5,0,0
-1716752169129,3,Find owner,200,Original REST requests 1-50,text,true,3755,180,4,4,http://localhost:8080/owners/find,3,0,0
-1716752169145,11,POST new visit,200,Original REST requests 1-47,text,true,16648,490,4,4,http://localhost:8080/owners/2,4,0,0
-1716752169145,4,POST new visit-0,302,Original REST requests 1-47,,true,188,313,4,4,http://localhost:8080/owners/2/pets/2/visits/new,4,0,0
-1716752169149,7,POST new visit-1,200,Original REST requests 1-47,text,true,16460,177,4,4,http://localhost:8080/owners/2,7,0,0
-1716752169238,8,POST Edit Owner,200,Original REST requests 1-49,text,true,16636,525,3,3,http://localhost:8080/owners/1,3,0,0
-1716752169238,3,POST Edit Owner-0,302,Original REST requests 1-49,,true,188,348,3,3,http://localhost:8080/owners/1/edit,3,0,0
-1716752169242,4,POST Edit Owner-1,200,Original REST requests 1-49,text,true,16448,177,3,3,http://localhost:8080/owners/1,4,0,0
-1716752169349,7,POST new visit,200,Original REST requests 1-48,text,true,15969,490,3,3,http://localhost:8080/owners/3,3,0,0
-1716752169349,3,POST new visit-0,302,Original REST requests 1-48,,true,188,313,3,3,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
-1716752169352,4,POST new visit-1,200,Original REST requests 1-48,text,true,15781,177,3,3,http://localhost:8080/owners/3,4,0,0
-1716752169443,7,POST Edit Owner,200,Original REST requests 1-50,text,true,16642,525,2,2,http://localhost:8080/owners/2,2,0,0
-1716752169443,2,POST Edit Owner-0,302,Original REST requests 1-50,,true,188,348,2,2,http://localhost:8080/owners/2/edit,2,0,0
-1716752169446,4,POST Edit Owner-1,200,Original REST requests 1-50,text,true,16454,177,2,2,http://localhost:8080/owners/2,4,0,0
-1716752169553,6,POST new visit,200,Original REST requests 1-49,text,true,16642,490,2,2,http://localhost:8080/owners/1,2,0,0
-1716752169553,2,POST new visit-0,302,Original REST requests 1-49,,true,188,313,2,2,http://localhost:8080/owners/1/pets/1/visits/new,2,0,0
-1716752169555,4,POST new visit-1,200,Original REST requests 1-49,text,true,16454,177,2,2,http://localhost:8080/owners/1,4,0,0
-1716752169758,6,POST new visit,200,Original REST requests 1-50,text,true,16648,490,1,1,http://localhost:8080/owners/2,2,0,0
-1716752169758,2,POST new visit-0,302,Original REST requests 1-50,,true,188,313,1,1,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
-1716752169760,4,POST new visit-1,200,Original REST requests 1-50,text,true,16460,177,1,1,http://localhost:8080/owners/2,3,0,0
+1716844983283,128,POST new pet,200,Original REST requests 1-3,text,true,4521,503,5,5,http://localhost:8080/owners/3;jsessionid=E54F816A96E18A6C1608EEBA65EC621F,9,0,1
+1716844983078,333,POST new pet,200,Original REST requests 1-2,text,true,4517,503,5,5,http://localhost:8080/owners/2;jsessionid=0ED1C7A9FC0927DBDA49BD1C87518C08,97,0,1
+1716844983283,9,POST new pet-0,302,Original REST requests 1-3,,true,307,282,5,5,http://localhost:8080/owners/3/pets/new,9,0,1
+1716844983078,100,POST new pet-0,302,Original REST requests 1-2,,true,307,282,5,5,http://localhost:8080/owners/2/pets/new,97,0,1
+1716844982921,490,POST new pet,200,Original REST requests 1-1,text,true,4518,503,5,5,http://localhost:8080/owners/1;jsessionid=A8C1EB8AA7127F75786389E1484C48EF,253,0,17
+1716844983181,230,POST new pet-1,200,Original REST requests 1-2,text,true,4210,221,5,5,http://localhost:8080/owners/2;jsessionid=0ED1C7A9FC0927DBDA49BD1C87518C08,230,0,0
+1716844983292,119,POST new pet-1,200,Original REST requests 1-3,text,true,4214,221,5,5,http://localhost:8080/owners/3;jsessionid=E54F816A96E18A6C1608EEBA65EC621F,119,0,0
+1716844982921,256,POST new pet-0,302,Original REST requests 1-1,,true,307,282,5,5,http://localhost:8080/owners/1/pets/new,253,0,17
+1716844983181,230,POST new pet-1,200,Original REST requests 1-1,text,true,4211,221,5,5,http://localhost:8080/owners/1;jsessionid=A8C1EB8AA7127F75786389E1484C48EF,230,0,0
+1716844983489,16,POST new pet,200,Original REST requests 1-4,text,true,4518,503,5,5,http://localhost:8080/owners/1;jsessionid=76399FB9C1069B7579CD5E71031B8619,8,0,1
+1716844983489,8,POST new pet-0,302,Original REST requests 1-4,,true,307,282,5,5,http://localhost:8080/owners/1/pets/new,8,0,1
+1716844983497,8,POST new pet-1,200,Original REST requests 1-4,text,true,4211,221,5,5,http://localhost:8080/owners/1;jsessionid=76399FB9C1069B7579CD5E71031B8619,8,0,0
+1716844983694,16,POST new pet,200,Original REST requests 1-5,text,true,4517,503,6,6,http://localhost:8080/owners/2;jsessionid=0EB15BFCA0615FEBACA551B409360C97,8,0,0
+1716844983694,8,POST new pet-0,302,Original REST requests 1-5,,true,307,282,6,6,http://localhost:8080/owners/2/pets/new,8,0,0
+1716844983702,8,POST new pet-1,200,Original REST requests 1-5,text,true,4210,221,6,6,http://localhost:8080/owners/2;jsessionid=0EB15BFCA0615FEBACA551B409360C97,8,0,0
+1716844983717,56,Vets,200,Original REST requests 1-3,text,true,4264,178,6,6,http://localhost:8080/vets.html,55,0,0
+1716844983714,59,Vets,200,Original REST requests 1-2,text,true,4264,178,6,6,http://localhost:8080/vets.html,58,0,0
+1716844983714,59,Vets,200,Original REST requests 1-1,text,true,4264,178,6,6,http://localhost:8080/vets.html,58,0,0
+1716844983807,6,Vets,200,Original REST requests 1-4,text,true,4264,178,7,7,http://localhost:8080/vets.html,6,0,0
+1716844983900,12,POST new pet,200,Original REST requests 1-6,text,true,4521,503,7,7,http://localhost:8080/owners/3;jsessionid=A42CB324C30A058556201F878B345D40,7,0,1
+1716844983900,7,POST new pet-0,302,Original REST requests 1-6,,true,307,282,7,7,http://localhost:8080/owners/3/pets/new,7,0,1
+1716844983907,5,POST new pet-1,200,Original REST requests 1-6,text,true,4214,221,7,7,http://localhost:8080/owners/3;jsessionid=A42CB324C30A058556201F878B345D40,5,0,0
+1716844984013,5,Vets,200,Original REST requests 1-5,text,true,4264,178,8,8,http://localhost:8080/vets.html,5,0,0
+1716844984074,12,Find owner,200,Original REST requests 1-2,text,true,3755,180,8,8,http://localhost:8080/owners/find,12,0,0
+1716844984074,12,Find owner,200,Original REST requests 1-3,text,true,3755,180,8,8,http://localhost:8080/owners/find,12,0,0
+1716844984074,12,Find owner,200,Original REST requests 1-1,text,true,3755,180,8,8,http://localhost:8080/owners/find,12,0,0
+1716844984114,3,Find owner,200,Original REST requests 1-4,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844984104,15,POST new pet,200,Original REST requests 1-7,text,true,4518,503,8,8,http://localhost:8080/owners/1;jsessionid=AE41E166FB62F598608A5CBD8B1C68CC,8,0,1
+1716844984104,8,POST new pet-0,302,Original REST requests 1-7,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,8,0,1
+1716844984113,6,POST new pet-1,200,Original REST requests 1-7,text,true,4211,221,8,8,http://localhost:8080/owners/1;jsessionid=AE41E166FB62F598608A5CBD8B1C68CC,6,0,0
+1716844984215,5,Vets,200,Original REST requests 1-6,text,true,4264,178,9,9,http://localhost:8080/vets.html,5,0,0
+1716844984320,4,Find owner,200,Original REST requests 1-5,text,true,3755,180,9,9,http://localhost:8080/owners/find,3,0,0
+1716844984310,15,POST new pet,200,Original REST requests 1-8,text,true,4517,503,9,9,http://localhost:8080/owners/2;jsessionid=A2C27BBDB3631027C86CB2A5D34AFC73,9,0,0
+1716844984310,9,POST new pet-0,302,Original REST requests 1-8,,true,307,282,9,9,http://localhost:8080/owners/2/pets/new,9,0,0
+1716844984319,6,POST new pet-1,200,Original REST requests 1-8,text,true,4210,221,9,9,http://localhost:8080/owners/2;jsessionid=A2C27BBDB3631027C86CB2A5D34AFC73,6,0,0
+1716844984420,4,Vets,200,Original REST requests 1-7,text,true,4264,178,10,10,http://localhost:8080/vets.html,3,0,0
+1716844984387,44,POST Edit Owner,200,Original REST requests 1-1,text,true,4383,525,10,10,http://localhost:8080/owners/1,32,0,0
+1716844984387,44,POST Edit Owner,200,Original REST requests 1-3,text,true,4383,525,10,10,http://localhost:8080/owners/3,32,0,0
+1716844984387,32,POST Edit Owner-0,302,Original REST requests 1-3,,true,188,348,10,10,http://localhost:8080/owners/3/edit,32,0,0
+1716844984387,32,POST Edit Owner-0,302,Original REST requests 1-1,,true,188,348,10,10,http://localhost:8080/owners/1/edit,32,0,0
+1716844984419,12,POST Edit Owner-1,200,Original REST requests 1-3,text,true,4195,177,10,10,http://localhost:8080/owners/3,11,0,0
+1716844984419,12,POST Edit Owner-1,200,Original REST requests 1-1,text,true,4195,177,10,10,http://localhost:8080/owners/1,11,0,0
+1716844984387,44,POST Edit Owner,200,Original REST requests 1-2,text,true,4383,525,10,10,http://localhost:8080/owners/2,32,0,0
+1716844984387,32,POST Edit Owner-0,302,Original REST requests 1-2,,true,188,348,10,10,http://localhost:8080/owners/2/edit,32,0,0
+1716844984419,12,POST Edit Owner-1,200,Original REST requests 1-2,text,true,4195,177,10,10,http://localhost:8080/owners/2,11,0,0
+1716844984419,19,POST Edit Owner,200,Original REST requests 1-4,text,true,4383,525,10,10,http://localhost:8080/owners/1,5,0,0
+1716844984419,5,POST Edit Owner-0,302,Original REST requests 1-4,,true,188,348,10,10,http://localhost:8080/owners/1/edit,5,0,0
+1716844984424,14,POST Edit Owner-1,200,Original REST requests 1-4,text,true,4195,177,10,10,http://localhost:8080/owners/1,14,0,0
+1716844984521,4,Find owner,200,Original REST requests 1-6,text,true,3755,180,10,10,http://localhost:8080/owners/find,4,0,0
+1716844984516,15,POST new pet,200,Original REST requests 1-9,text,true,4504,503,10,10,http://localhost:8080/owners/3;jsessionid=10676733ABF6831B4D33887AE03CB449,10,0,1
+1716844984516,10,POST new pet-0,302,Original REST requests 1-9,,true,307,282,10,10,http://localhost:8080/owners/3/pets/new,10,0,1
+1716844984526,5,POST new pet-1,200,Original REST requests 1-9,text,true,4197,221,10,10,http://localhost:8080/owners/3;jsessionid=10676733ABF6831B4D33887AE03CB449,5,0,0
+1716844984625,4,Vets,200,Original REST requests 1-8,text,true,4264,178,11,11,http://localhost:8080/vets.html,4,0,0
+1716844984624,12,POST Edit Owner,200,Original REST requests 1-5,text,true,4383,525,11,11,http://localhost:8080/owners/2,6,0,0
+1716844984624,6,POST Edit Owner-0,302,Original REST requests 1-5,,true,188,348,11,11,http://localhost:8080/owners/2/edit,6,0,0
+1716844984631,5,POST Edit Owner-1,200,Original REST requests 1-5,text,true,4195,177,11,11,http://localhost:8080/owners/2,5,0,0
+1716844984724,3,Find owner,200,Original REST requests 1-7,text,true,3755,180,11,11,http://localhost:8080/owners/find,3,0,0
+1716844984720,15,POST new pet,200,Original REST requests 1-10,text,true,4504,503,11,11,http://localhost:8080/owners/1;jsessionid=B7C759E3DD6F60775A16A3F5F03A10E9,9,0,1
+1716844984720,9,POST new pet-0,302,Original REST requests 1-10,,true,307,282,11,11,http://localhost:8080/owners/1/pets/new,9,0,1
+1716844984729,6,POST new pet-1,200,Original REST requests 1-10,text,true,4197,221,11,11,http://localhost:8080/owners/1;jsessionid=B7C759E3DD6F60775A16A3F5F03A10E9,6,0,0
+1716844984739,15,POST new visit,200,Original REST requests 1-4,text,true,4389,490,11,11,http://localhost:8080/owners/1,9,0,0
+1716844984732,22,POST new visit,200,Original REST requests 1-1,text,true,4389,490,11,11,http://localhost:8080/owners/1,16,0,0
+1716844984739,9,POST new visit-0,302,Original REST requests 1-4,,true,188,313,11,11,http://localhost:8080/owners/1/pets/1/visits/new,9,0,0
+1716844984732,22,POST new visit,200,Original REST requests 1-3,text,true,4389,490,11,11,http://localhost:8080/owners/3,17,0,0
+1716844984733,21,POST new visit,200,Original REST requests 1-2,text,true,4389,490,11,11,http://localhost:8080/owners/2,16,0,0
+1716844984732,16,POST new visit-0,302,Original REST requests 1-1,,true,188,313,11,11,http://localhost:8080/owners/1/pets/1/visits/new,16,0,0
+1716844984732,17,POST new visit-0,302,Original REST requests 1-3,,true,188,313,11,11,http://localhost:8080/owners/3/pets/3/visits/new,17,0,0
+1716844984733,16,POST new visit-0,302,Original REST requests 1-2,,true,188,313,11,11,http://localhost:8080/owners/2/pets/2/visits/new,16,0,0
+1716844984749,5,POST new visit-1,200,Original REST requests 1-4,text,true,4201,177,11,11,http://localhost:8080/owners/1,5,0,0
+1716844984749,5,POST new visit-1,200,Original REST requests 1-3,text,true,4201,177,11,11,http://localhost:8080/owners/3,5,0,0
+1716844984749,5,POST new visit-1,200,Original REST requests 1-1,text,true,4201,177,11,11,http://localhost:8080/owners/1,5,0,0
+1716844984749,5,POST new visit-1,200,Original REST requests 1-2,text,true,4201,177,11,11,http://localhost:8080/owners/2,5,0,0
+1716844984826,11,POST Edit Owner,200,Original REST requests 1-6,text,true,4383,525,8,8,http://localhost:8080/owners/3,6,0,0
+1716844984826,6,POST Edit Owner-0,302,Original REST requests 1-6,,true,188,348,8,8,http://localhost:8080/owners/3/edit,6,0,0
+1716844984832,5,POST Edit Owner-1,200,Original REST requests 1-6,text,true,4195,177,8,8,http://localhost:8080/owners/3,4,0,0
+1716844984833,4,Vets,200,Original REST requests 1-9,text,true,4264,178,8,8,http://localhost:8080/vets.html,4,0,0
+1716844984930,3,Find owner,200,Original REST requests 1-8,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844984925,13,POST new pet,200,Original REST requests 1-11,text,true,4504,503,8,8,http://localhost:8080/owners/2;jsessionid=7526B1C892045CD2A11A5D8D931EA12D,7,0,1
+1716844984925,7,POST new pet-0,302,Original REST requests 1-11,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,7,0,1
+1716844984932,6,POST new pet-1,200,Original REST requests 1-11,text,true,4197,221,8,8,http://localhost:8080/owners/2;jsessionid=7526B1C892045CD2A11A5D8D931EA12D,5,0,0
+1716844984937,11,POST new visit,200,Original REST requests 1-5,text,true,4389,490,8,8,http://localhost:8080/owners/2,5,0,0
+1716844984937,5,POST new visit-0,302,Original REST requests 1-5,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,5,0,0
+1716844984943,5,POST new visit-1,200,Original REST requests 1-5,text,true,4201,177,8,8,http://localhost:8080/owners/2,5,0,0
+1716844985028,10,POST Edit Owner,200,Original REST requests 1-7,text,true,4383,525,8,8,http://localhost:8080/owners/1,5,0,0
+1716844985028,5,POST Edit Owner-0,302,Original REST requests 1-7,,true,188,348,8,8,http://localhost:8080/owners/1/edit,5,0,0
+1716844985033,5,POST Edit Owner-1,200,Original REST requests 1-7,text,true,4195,177,8,8,http://localhost:8080/owners/1,4,0,0
+1716844985037,3,Vets,200,Original REST requests 1-10,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844985138,4,Find owner,200,Original REST requests 1-9,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844985131,13,POST new pet,200,Original REST requests 1-12,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=0989CA9FAFBB171EFB927B5FFB8EAFEA,7,0,1
+1716844985131,7,POST new pet-0,302,Original REST requests 1-12,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,7,0,1
+1716844985139,5,POST new pet-1,200,Original REST requests 1-12,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=0989CA9FAFBB171EFB927B5FFB8EAFEA,5,0,0
+1716844985139,9,POST new visit,200,Original REST requests 1-6,text,true,4389,490,8,8,http://localhost:8080/owners/3,4,0,0
+1716844985139,4,POST new visit-0,302,Original REST requests 1-6,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
+1716844985143,5,POST new visit-1,200,Original REST requests 1-6,text,true,4201,177,8,8,http://localhost:8080/owners/3,5,0,0
+1716844985234,9,POST Edit Owner,200,Original REST requests 1-8,text,true,4383,525,8,8,http://localhost:8080/owners/2,4,0,0
+1716844985240,3,Vets,200,Original REST requests 1-11,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844985234,4,POST Edit Owner-0,302,Original REST requests 1-8,,true,188,348,8,8,http://localhost:8080/owners/2/edit,4,0,0
+1716844985238,5,POST Edit Owner-1,200,Original REST requests 1-8,text,true,4195,177,8,8,http://localhost:8080/owners/2,5,0,0
+1716844985340,3,Find owner,200,Original REST requests 1-10,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844985339,9,POST new visit,200,Original REST requests 1-7,text,true,4389,490,8,8,http://localhost:8080/owners/1,5,0,0
+1716844985339,5,POST new visit-0,302,Original REST requests 1-7,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,5,0,0
+1716844985344,4,POST new visit-1,200,Original REST requests 1-7,text,true,4201,177,8,8,http://localhost:8080/owners/1,4,0,0
+1716844985337,11,POST new pet,200,Original REST requests 1-13,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=66436C76A1A6DF3026FBDD511C2FA319,7,0,1
+1716844985337,7,POST new pet-0,302,Original REST requests 1-13,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,7,0,1
+1716844985344,4,POST new pet-1,200,Original REST requests 1-13,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=66436C76A1A6DF3026FBDD511C2FA319,4,0,0
+1716844985445,4,Vets,200,Original REST requests 1-12,text,true,4264,178,8,8,http://localhost:8080/vets.html,4,0,0
+1716844985443,12,POST Edit Owner,200,Original REST requests 1-9,text,true,4383,525,8,8,http://localhost:8080/owners/3,6,0,0
+1716844985443,6,POST Edit Owner-0,302,Original REST requests 1-9,,true,188,348,8,8,http://localhost:8080/owners/3/edit,6,0,0
+1716844985450,5,POST Edit Owner-1,200,Original REST requests 1-9,text,true,4195,177,8,8,http://localhost:8080/owners/3,5,0,0
+1716844985543,4,Find owner,200,Original REST requests 1-11,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844985543,11,POST new visit,200,Original REST requests 1-8,text,true,4389,490,8,8,http://localhost:8080/owners/2,6,0,0
+1716844985543,6,POST new visit-0,302,Original REST requests 1-8,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,6,0,0
+1716844985549,5,POST new visit-1,200,Original REST requests 1-8,text,true,4201,177,8,8,http://localhost:8080/owners/2,5,0,0
+1716844985543,14,POST new pet,200,Original REST requests 1-14,text,true,4504,503,7,7,http://localhost:8080/owners/2;jsessionid=856D976883F791E5833AD219458F7F78,7,0,1
+1716844985543,7,POST new pet-0,302,Original REST requests 1-14,,true,307,282,7,7,http://localhost:8080/owners/2/pets/new,7,0,1
+1716844985550,7,POST new pet-1,200,Original REST requests 1-14,text,true,4197,221,7,7,http://localhost:8080/owners/2;jsessionid=856D976883F791E5833AD219458F7F78,6,0,0
+1716844985649,5,Vets,200,Original REST requests 1-13,text,true,4264,178,8,8,http://localhost:8080/vets.html,5,0,0
+1716844985645,15,POST Edit Owner,200,Original REST requests 1-10,text,true,4383,525,8,8,http://localhost:8080/owners/1,7,0,0
+1716844985645,7,POST Edit Owner-0,302,Original REST requests 1-10,,true,188,348,8,8,http://localhost:8080/owners/1/edit,7,0,0
+1716844985652,8,POST Edit Owner-1,200,Original REST requests 1-10,text,true,4195,177,8,8,http://localhost:8080/owners/1,8,0,0
+1716844985750,3,Find owner,200,Original REST requests 1-12,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844985748,12,POST new pet,200,Original REST requests 1-15,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=426EAF8582FE21B730E3966C67AEA343,7,0,1
+1716844985748,7,POST new pet-0,302,Original REST requests 1-15,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,7,0,1
+1716844985756,4,POST new pet-1,200,Original REST requests 1-15,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=426EAF8582FE21B730E3966C67AEA343,4,0,0
+1716844985757,8,POST new visit,200,Original REST requests 1-9,text,true,4389,490,8,8,http://localhost:8080/owners/3,4,0,0
+1716844985757,4,POST new visit-0,302,Original REST requests 1-9,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
+1716844985761,4,POST new visit-1,200,Original REST requests 1-9,text,true,4201,177,8,8,http://localhost:8080/owners/3,4,0,0
+1716844985848,9,POST Edit Owner,200,Original REST requests 1-11,text,true,4383,525,8,8,http://localhost:8080/owners/2,4,0,0
+1716844985848,4,POST Edit Owner-0,302,Original REST requests 1-11,,true,188,348,8,8,http://localhost:8080/owners/2/edit,4,0,0
+1716844985852,5,POST Edit Owner-1,200,Original REST requests 1-11,text,true,4195,177,8,8,http://localhost:8080/owners/2,4,0,0
+1716844985858,3,Vets,200,Original REST requests 1-14,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844985957,3,Find owner,200,Original REST requests 1-13,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844985954,12,POST new pet,200,Original REST requests 1-16,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=8680DE4B99C23E7B99C7092A9A1CC147,8,0,1
+1716844985954,8,POST new pet-0,302,Original REST requests 1-16,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,8,0,1
+1716844985962,4,POST new pet-1,200,Original REST requests 1-16,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=8680DE4B99C23E7B99C7092A9A1CC147,3,0,0
+1716844985961,9,POST new visit,200,Original REST requests 1-10,text,true,4389,490,8,8,http://localhost:8080/owners/1,4,0,0
+1716844985961,4,POST new visit-0,302,Original REST requests 1-10,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,4,0,0
+1716844985965,5,POST new visit-1,200,Original REST requests 1-10,text,true,4201,177,8,8,http://localhost:8080/owners/1,5,0,0
+1716844986053,10,POST Edit Owner,200,Original REST requests 1-12,text,true,4383,525,8,8,http://localhost:8080/owners/3,5,0,0
+1716844986053,5,POST Edit Owner-0,302,Original REST requests 1-12,,true,188,348,8,8,http://localhost:8080/owners/3/edit,5,0,0
+1716844986058,5,POST Edit Owner-1,200,Original REST requests 1-12,text,true,4195,177,8,8,http://localhost:8080/owners/3,5,0,0
+1716844986061,3,Vets,200,Original REST requests 1-15,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844986162,2,Find owner,200,Original REST requests 1-14,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844986158,7,POST new visit,200,Original REST requests 1-11,text,true,4389,490,8,8,http://localhost:8080/owners/2,3,0,0
+1716844986158,3,POST new visit-0,302,Original REST requests 1-11,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,3,0,0
+1716844986162,3,POST new visit-1,200,Original REST requests 1-11,text,true,4201,177,8,8,http://localhost:8080/owners/2,3,0,0
+1716844986157,9,POST new pet,200,Original REST requests 1-17,text,true,4504,503,7,7,http://localhost:8080/owners/2;jsessionid=A66EBC620DF78B8B3E01134A7FDDD42D,5,0,1
+1716844986157,5,POST new pet-0,302,Original REST requests 1-17,,true,307,282,7,7,http://localhost:8080/owners/2/pets/new,5,0,1
+1716844986162,4,POST new pet-1,200,Original REST requests 1-17,text,true,4197,221,7,7,http://localhost:8080/owners/2;jsessionid=A66EBC620DF78B8B3E01134A7FDDD42D,4,0,0
+1716844986266,3,Vets,200,Original REST requests 1-16,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844986261,10,POST Edit Owner,200,Original REST requests 1-13,text,true,4383,525,8,8,http://localhost:8080/owners/1,5,0,0
+1716844986261,5,POST Edit Owner-0,302,Original REST requests 1-13,,true,188,348,8,8,http://localhost:8080/owners/1/edit,5,0,0
+1716844986266,5,POST Edit Owner-1,200,Original REST requests 1-13,text,true,4195,177,8,8,http://localhost:8080/owners/1,4,0,0
+1716844986364,3,Find owner,200,Original REST requests 1-15,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844986364,9,POST new visit,200,Original REST requests 1-12,text,true,4389,490,8,8,http://localhost:8080/owners/3,5,0,0
+1716844986362,11,POST new pet,200,Original REST requests 1-18,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=3E4270810D30BCE87AE60A6D0A7D164D,7,0,1
+1716844986364,5,POST new visit-0,302,Original REST requests 1-12,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,5,0,0
+1716844986362,7,POST new pet-0,302,Original REST requests 1-18,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,7,0,1
+1716844986369,4,POST new visit-1,200,Original REST requests 1-12,text,true,4201,177,8,8,http://localhost:8080/owners/3,4,0,0
+1716844986369,4,POST new pet-1,200,Original REST requests 1-18,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=3E4270810D30BCE87AE60A6D0A7D164D,4,0,0
+1716844986468,3,Vets,200,Original REST requests 1-17,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844986465,8,POST Edit Owner,200,Original REST requests 1-14,text,true,4383,525,8,8,http://localhost:8080/owners/2,4,0,0
+1716844986465,4,POST Edit Owner-0,302,Original REST requests 1-14,,true,188,348,8,8,http://localhost:8080/owners/2/edit,4,0,0
+1716844986469,4,POST Edit Owner-1,200,Original REST requests 1-14,text,true,4195,177,8,8,http://localhost:8080/owners/2,4,0,0
+1716844986571,2,Find owner,200,Original REST requests 1-16,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844986566,9,POST new pet,200,Original REST requests 1-19,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=5B345CE4053A91208991676A0BEF7836,6,0,1
+1716844986566,6,POST new pet-0,302,Original REST requests 1-19,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,6,0,1
+1716844986572,3,POST new pet-1,200,Original REST requests 1-19,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=5B345CE4053A91208991676A0BEF7836,3,0,0
+1716844986571,9,POST new visit,200,Original REST requests 1-13,text,true,4389,490,8,8,http://localhost:8080/owners/1,4,0,0
+1716844986571,4,POST new visit-0,302,Original REST requests 1-13,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,4,0,0
+1716844986576,4,POST new visit-1,200,Original REST requests 1-13,text,true,4201,177,8,8,http://localhost:8080/owners/1,4,0,0
+1716844986674,2,Vets,200,Original REST requests 1-18,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844986669,8,POST Edit Owner,200,Original REST requests 1-15,text,true,4383,525,8,8,http://localhost:8080/owners/3,4,0,0
+1716844986669,4,POST Edit Owner-0,302,Original REST requests 1-15,,true,188,348,8,8,http://localhost:8080/owners/3/edit,4,0,0
+1716844986673,4,POST Edit Owner-1,200,Original REST requests 1-15,text,true,4195,177,8,8,http://localhost:8080/owners/3,4,0,0
+1716844986773,5,Find owner,200,Original REST requests 1-17,text,true,3755,180,8,8,http://localhost:8080/owners/find,4,0,0
+1716844986771,13,POST new pet,200,Original REST requests 1-20,text,true,4504,503,8,8,http://localhost:8080/owners/2;jsessionid=23672226D0CCBAD7EE1C4096F000E0A6,8,0,0
+1716844986771,8,POST new pet-0,302,Original REST requests 1-20,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,8,0,0
+1716844986779,5,POST new pet-1,200,Original REST requests 1-20,text,true,4197,221,8,8,http://localhost:8080/owners/2;jsessionid=23672226D0CCBAD7EE1C4096F000E0A6,5,0,0
+1716844986774,10,POST new visit,200,Original REST requests 1-14,text,true,4389,490,8,8,http://localhost:8080/owners/2,6,0,0
+1716844986774,6,POST new visit-0,302,Original REST requests 1-14,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,6,0,0
+1716844986780,4,POST new visit-1,200,Original REST requests 1-14,text,true,4201,177,8,8,http://localhost:8080/owners/2,4,0,0
+1716844986877,3,Vets,200,Original REST requests 1-19,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844986873,9,POST Edit Owner,200,Original REST requests 1-16,text,true,4383,525,8,8,http://localhost:8080/owners/1,5,0,0
+1716844986873,5,POST Edit Owner-0,302,Original REST requests 1-16,,true,188,348,8,8,http://localhost:8080/owners/1/edit,5,0,0
+1716844986878,4,POST Edit Owner-1,200,Original REST requests 1-16,text,true,4195,177,8,8,http://localhost:8080/owners/1,4,0,0
+1716844986977,2,Find owner,200,Original REST requests 1-18,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844986977,9,POST new visit,200,Original REST requests 1-15,text,true,4389,490,8,8,http://localhost:8080/owners/3,4,0,0
+1716844986977,4,POST new visit-0,302,Original REST requests 1-15,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
+1716844986981,5,POST new visit-1,200,Original REST requests 1-15,text,true,4201,177,8,8,http://localhost:8080/owners/3,5,0,0
+1716844986976,10,POST new pet,200,Original REST requests 1-21,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=45EBFF749AFB81F6D9C6AB2C099F04D4,6,0,1
+1716844986976,6,POST new pet-0,302,Original REST requests 1-21,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,6,0,1
+1716844986982,4,POST new pet-1,200,Original REST requests 1-21,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=45EBFF749AFB81F6D9C6AB2C099F04D4,4,0,0
+1716844987079,8,POST Edit Owner,200,Original REST requests 1-17,text,true,4383,525,8,8,http://localhost:8080/owners/2,4,0,0
+1716844987079,4,POST Edit Owner-0,302,Original REST requests 1-17,,true,188,348,8,8,http://localhost:8080/owners/2/edit,4,0,0
+1716844987083,4,POST Edit Owner-1,200,Original REST requests 1-17,text,true,4195,177,8,8,http://localhost:8080/owners/2,4,0,0
+1716844987085,2,Vets,200,Original REST requests 1-20,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844987180,3,Find owner,200,Original REST requests 1-19,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844987183,8,POST new visit,200,Original REST requests 1-16,text,true,4389,490,8,8,http://localhost:8080/owners/1,5,0,0
+1716844987178,13,POST new pet,200,Original REST requests 1-22,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=A44BC5D48522BC3373631CC75B5D4735,9,0,1
+1716844987183,5,POST new visit-0,302,Original REST requests 1-16,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,5,0,0
+1716844987178,9,POST new pet-0,302,Original REST requests 1-22,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,9,0,1
+1716844987188,3,POST new visit-1,200,Original REST requests 1-16,text,true,4201,177,8,8,http://localhost:8080/owners/1,3,0,0
+1716844987187,4,POST new pet-1,200,Original REST requests 1-22,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=A44BC5D48522BC3373631CC75B5D4735,4,0,0
+1716844987281,8,POST Edit Owner,200,Original REST requests 1-18,text,true,4383,525,8,8,http://localhost:8080/owners/3,4,0,0
+1716844987281,4,POST Edit Owner-0,302,Original REST requests 1-18,,true,188,348,8,8,http://localhost:8080/owners/3/edit,4,0,0
+1716844987285,4,POST Edit Owner-1,200,Original REST requests 1-18,text,true,4195,177,8,8,http://localhost:8080/owners/3,4,0,0
+1716844987287,3,Vets,200,Original REST requests 1-21,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844987389,3,Find owner,200,Original REST requests 1-20,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844987384,11,POST new pet,200,Original REST requests 1-23,text,true,4504,503,8,8,http://localhost:8080/owners/2;jsessionid=B8C55705F13E71AFD82D28A9C486CFF1,7,0,1
+1716844987384,7,POST new pet-0,302,Original REST requests 1-23,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,7,0,1
+1716844987391,4,POST new pet-1,200,Original REST requests 1-23,text,true,4197,221,8,8,http://localhost:8080/owners/2;jsessionid=B8C55705F13E71AFD82D28A9C486CFF1,4,0,0
+1716844987389,10,POST new visit,200,Original REST requests 1-17,text,true,4389,490,8,8,http://localhost:8080/owners/2,5,0,0
+1716844987389,5,POST new visit-0,302,Original REST requests 1-17,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,5,0,0
+1716844987394,5,POST new visit-1,200,Original REST requests 1-17,text,true,4201,177,8,8,http://localhost:8080/owners/2,5,0,0
+1716844987484,12,POST Edit Owner,200,Original REST requests 1-19,text,true,4383,525,8,8,http://localhost:8080/owners/1,6,0,0
+1716844987484,6,POST Edit Owner-0,302,Original REST requests 1-19,,true,188,348,8,8,http://localhost:8080/owners/1/edit,6,0,0
+1716844987490,6,POST Edit Owner-1,200,Original REST requests 1-19,text,true,4195,177,8,8,http://localhost:8080/owners/1,6,0,0
+1716844987493,3,Vets,200,Original REST requests 1-22,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844987590,2,Find owner,200,Original REST requests 1-21,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844987590,7,POST new visit,200,Original REST requests 1-18,text,true,4389,490,8,8,http://localhost:8080/owners/3,4,0,0
+1716844987590,4,POST new visit-0,302,Original REST requests 1-18,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
+1716844987594,3,POST new visit-1,200,Original REST requests 1-18,text,true,4201,177,8,8,http://localhost:8080/owners/3,3,0,0
+1716844987588,9,POST new pet,200,Original REST requests 1-24,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=8E4F5CDD5C61D0B0A8610078542F458E,6,0,1
+1716844987588,6,POST new pet-0,302,Original REST requests 1-24,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,6,0,1
+1716844987594,3,POST new pet-1,200,Original REST requests 1-24,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=8E4F5CDD5C61D0B0A8610078542F458E,3,0,0
+1716844987696,2,Vets,200,Original REST requests 1-23,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844987695,7,POST Edit Owner,200,Original REST requests 1-20,text,true,4383,525,8,8,http://localhost:8080/owners/2,3,0,0
+1716844987695,3,POST Edit Owner-0,302,Original REST requests 1-20,,true,188,348,8,8,http://localhost:8080/owners/2/edit,3,0,0
+1716844987699,3,POST Edit Owner-1,200,Original REST requests 1-20,text,true,4195,177,8,8,http://localhost:8080/owners/2,3,0,0
+1716844987797,3,Find owner,200,Original REST requests 1-22,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844987793,10,POST new pet,200,Original REST requests 1-25,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=1D190B251A03B3E06E3EF1064FA09910,6,0,0
+1716844987793,6,POST new pet-0,302,Original REST requests 1-25,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,6,0,0
+1716844987799,4,POST new pet-1,200,Original REST requests 1-25,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=1D190B251A03B3E06E3EF1064FA09910,4,0,0
+1716844987797,9,POST new visit,200,Original REST requests 1-19,text,true,4389,490,8,8,http://localhost:8080/owners/1,4,0,0
+1716844987797,4,POST new visit-0,302,Original REST requests 1-19,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,4,0,0
+1716844987802,4,POST new visit-1,200,Original REST requests 1-19,text,true,4201,177,8,8,http://localhost:8080/owners/1,3,0,0
+1716844987898,2,Vets,200,Original REST requests 1-24,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844987893,7,POST Edit Owner,200,Original REST requests 1-21,text,true,4383,525,8,8,http://localhost:8080/owners/3,4,0,0
+1716844987893,4,POST Edit Owner-0,302,Original REST requests 1-21,,true,188,348,8,8,http://localhost:8080/owners/3/edit,4,0,0
+1716844987897,3,POST Edit Owner-1,200,Original REST requests 1-21,text,true,4195,177,8,8,http://localhost:8080/owners/3,3,0,0
+1716844987999,2,Find owner,200,Original REST requests 1-23,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844987997,8,POST new pet,200,Original REST requests 1-26,text,true,4504,503,8,8,http://localhost:8080/owners/2;jsessionid=867905772E65A6495186D7A122F87205,5,0,1
+1716844987997,5,POST new pet-0,302,Original REST requests 1-26,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,5,0,1
+1716844988002,3,POST new pet-1,200,Original REST requests 1-26,text,true,4197,221,8,8,http://localhost:8080/owners/2;jsessionid=867905772E65A6495186D7A122F87205,3,0,0
+1716844988003,5,POST new visit,200,Original REST requests 1-20,text,true,4389,490,8,8,http://localhost:8080/owners/2,2,0,0
+1716844988003,2,POST new visit-0,302,Original REST requests 1-20,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
+1716844988005,3,POST new visit-1,200,Original REST requests 1-20,text,true,4201,177,8,8,http://localhost:8080/owners/2,3,0,0
+1716844988104,3,Vets,200,Original REST requests 1-25,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844988102,9,POST Edit Owner,200,Original REST requests 1-22,text,true,4383,525,8,8,http://localhost:8080/owners/1,4,0,0
+1716844988102,4,POST Edit Owner-0,302,Original REST requests 1-22,,true,188,348,8,8,http://localhost:8080/owners/1/edit,4,0,0
+1716844988106,5,POST Edit Owner-1,200,Original REST requests 1-22,text,true,4195,177,8,8,http://localhost:8080/owners/1,4,0,0
+1716844988201,3,Find owner,200,Original REST requests 1-24,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844988201,16,POST new visit,200,Original REST requests 1-21,text,true,4389,490,8,8,http://localhost:8080/owners/3,4,0,0
+1716844988201,4,POST new visit-0,302,Original REST requests 1-21,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,4,0,0
+1716844988205,12,POST new visit-1,200,Original REST requests 1-21,text,true,4201,177,8,8,http://localhost:8080/owners/3,12,0,0
+1716844988201,17,POST new pet,200,Original REST requests 1-27,text,true,4504,503,7,7,http://localhost:8080/owners/3;jsessionid=789083593DA65A2E83FBC91A206579C8,5,0,0
+1716844988201,5,POST new pet-0,302,Original REST requests 1-27,,true,307,282,7,7,http://localhost:8080/owners/3/pets/new,5,0,0
+1716844988206,12,POST new pet-1,200,Original REST requests 1-27,text,true,4197,221,7,7,http://localhost:8080/owners/3;jsessionid=789083593DA65A2E83FBC91A206579C8,12,0,0
+1716844988307,5,Vets,200,Original REST requests 1-26,text,true,4264,178,8,8,http://localhost:8080/vets.html,5,0,0
+1716844988303,14,POST Edit Owner,200,Original REST requests 1-23,text,true,4383,525,8,8,http://localhost:8080/owners/2,9,0,0
+1716844988303,9,POST Edit Owner-0,302,Original REST requests 1-23,,true,188,348,8,8,http://localhost:8080/owners/2/edit,9,0,0
+1716844988312,5,POST Edit Owner-1,200,Original REST requests 1-23,text,true,4195,177,8,8,http://localhost:8080/owners/2,5,0,0
+1716844988408,2,Find owner,200,Original REST requests 1-25,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844988406,10,POST new pet,200,Original REST requests 1-28,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=24C1B094155D1E62D717216A7C32F631,6,0,0
+1716844988406,6,POST new pet-0,302,Original REST requests 1-28,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,6,0,0
+1716844988412,4,POST new pet-1,200,Original REST requests 1-28,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=24C1B094155D1E62D717216A7C32F631,4,0,0
+1716844988411,9,POST new visit,200,Original REST requests 1-22,text,true,4389,490,8,8,http://localhost:8080/owners/1,4,0,0
+1716844988411,4,POST new visit-0,302,Original REST requests 1-22,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,4,0,0
+1716844988416,4,POST new visit-1,200,Original REST requests 1-22,text,true,4201,177,8,8,http://localhost:8080/owners/1,4,0,0
+1716844988504,7,POST Edit Owner,200,Original REST requests 1-24,text,true,4383,525,7,7,http://localhost:8080/owners/3,4,0,0
+1716844988504,4,POST Edit Owner-0,302,Original REST requests 1-24,,true,188,348,7,7,http://localhost:8080/owners/3/edit,4,0,0
+1716844988508,3,POST Edit Owner-1,200,Original REST requests 1-24,text,true,4195,177,7,7,http://localhost:8080/owners/3,3,0,0
+1716844988519,3,Vets,200,Original REST requests 1-27,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844988612,2,Find owner,200,Original REST requests 1-26,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844988611,10,POST new pet,200,Original REST requests 1-29,text,true,4504,503,8,8,http://localhost:8080/owners/2;jsessionid=1140711BF737E9E312ABFFD347FB4B73,5,0,1
+1716844988611,5,POST new pet-0,302,Original REST requests 1-29,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,5,0,1
+1716844988616,5,POST new pet-1,200,Original REST requests 1-29,text,true,4197,221,8,8,http://localhost:8080/owners/2;jsessionid=1140711BF737E9E312ABFFD347FB4B73,5,0,0
+1716844988617,9,POST new visit,200,Original REST requests 1-23,text,true,4389,490,8,8,http://localhost:8080/owners/2,4,0,0
+1716844988617,4,POST new visit-0,302,Original REST requests 1-23,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,4,0,0
+1716844988621,5,POST new visit-1,200,Original REST requests 1-23,text,true,4201,177,8,8,http://localhost:8080/owners/2,5,0,0
+1716844988711,10,POST Edit Owner,200,Original REST requests 1-25,text,true,4383,525,8,8,http://localhost:8080/owners/1,4,0,0
+1716844988717,4,Vets,200,Original REST requests 1-28,text,true,4264,178,8,8,http://localhost:8080/vets.html,4,0,0
+1716844988711,4,POST Edit Owner-0,302,Original REST requests 1-25,,true,188,348,8,8,http://localhost:8080/owners/1/edit,4,0,0
+1716844988715,6,POST Edit Owner-1,200,Original REST requests 1-25,text,true,4195,177,8,8,http://localhost:8080/owners/1,6,0,0
+1716844988814,9,POST new pet,200,Original REST requests 1-30,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=2B7C41446302E171025BA1E3B8F05FBD,5,0,1
+1716844988814,5,POST new pet-0,302,Original REST requests 1-30,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,5,0,1
+1716844988820,3,POST new pet-1,200,Original REST requests 1-30,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=2B7C41446302E171025BA1E3B8F05FBD,3,0,0
+1716844988824,2,Find owner,200,Original REST requests 1-27,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844988820,8,POST new visit,200,Original REST requests 1-24,text,true,4389,490,8,8,http://localhost:8080/owners/3,3,0,0
+1716844988820,3,POST new visit-0,302,Original REST requests 1-24,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
+1716844988823,5,POST new visit-1,200,Original REST requests 1-24,text,true,4201,177,8,8,http://localhost:8080/owners/3,5,0,0
+1716844988915,8,POST Edit Owner,200,Original REST requests 1-26,text,true,4383,525,8,8,http://localhost:8080/owners/2,5,0,0
+1716844988915,5,POST Edit Owner-0,302,Original REST requests 1-26,,true,188,348,8,8,http://localhost:8080/owners/2/edit,5,0,0
+1716844988920,3,POST Edit Owner-1,200,Original REST requests 1-26,text,true,4195,177,8,8,http://localhost:8080/owners/2,3,0,0
+1716844988922,2,Vets,200,Original REST requests 1-29,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844989021,2,Find owner,200,Original REST requests 1-28,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844989017,6,POST new pet,200,Original REST requests 1-31,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=9E296006CA30EDF05FFC4D94AB77D073,5,0,1
+1716844989017,5,POST new pet-0,302,Original REST requests 1-31,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,5,0,1
+1716844989022,1,POST new pet-1,200,Original REST requests 1-31,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=9E296006CA30EDF05FFC4D94AB77D073,1,0,0
+1716844989021,5,POST new visit,200,Original REST requests 1-25,text,true,4389,490,8,8,http://localhost:8080/owners/1,3,0,0
+1716844989021,3,POST new visit-0,302,Original REST requests 1-25,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
+1716844989024,2,POST new visit-1,200,Original REST requests 1-25,text,true,4201,177,8,8,http://localhost:8080/owners/1,2,0,0
+1716844989125,2,Vets,200,Original REST requests 1-30,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844989128,5,POST Edit Owner,200,Original REST requests 1-27,text,true,4383,525,8,8,http://localhost:8080/owners/3,2,0,0
+1716844989128,2,POST Edit Owner-0,302,Original REST requests 1-27,,true,188,348,8,8,http://localhost:8080/owners/3/edit,2,0,0
+1716844989130,3,POST Edit Owner-1,200,Original REST requests 1-27,text,true,4195,177,8,8,http://localhost:8080/owners/3,3,0,0
+1716844989226,1,Find owner,200,Original REST requests 1-29,text,true,3755,180,8,8,http://localhost:8080/owners/find,1,0,0
+1716844989221,7,POST new pet,200,Original REST requests 1-32,text,true,4504,503,8,8,http://localhost:8080/owners/2;jsessionid=ADA4CB52F775954BE1594922FE287CA2,5,0,1
+1716844989221,5,POST new pet-0,302,Original REST requests 1-32,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,5,0,1
+1716844989226,2,POST new pet-1,200,Original REST requests 1-32,text,true,4197,221,8,8,http://localhost:8080/owners/2;jsessionid=ADA4CB52F775954BE1594922FE287CA2,1,0,0
+1716844989225,5,POST new visit,200,Original REST requests 1-26,text,true,4389,490,8,8,http://localhost:8080/owners/2,2,0,0
+1716844989225,2,POST new visit-0,302,Original REST requests 1-26,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
+1716844989228,2,POST new visit-1,200,Original REST requests 1-26,text,true,4201,177,8,8,http://localhost:8080/owners/2,2,0,0
+1716844989325,4,Vets,200,Original REST requests 1-31,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844989325,6,POST Edit Owner,200,Original REST requests 1-28,text,true,4383,525,8,8,http://localhost:8080/owners/1,4,0,0
+1716844989325,4,POST Edit Owner-0,302,Original REST requests 1-28,,true,188,348,8,8,http://localhost:8080/owners/1/edit,4,0,0
+1716844989329,2,POST Edit Owner-1,200,Original REST requests 1-28,text,true,4195,177,8,8,http://localhost:8080/owners/1,2,0,0
+1716844989429,2,Find owner,200,Original REST requests 1-30,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844989426,7,POST new pet,200,Original REST requests 1-33,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=65A1B1B82F50C34BFA5D55B508943BCF,4,0,0
+1716844989426,4,POST new pet-0,302,Original REST requests 1-33,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,4,0,0
+1716844989430,3,POST new pet-1,200,Original REST requests 1-33,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=65A1B1B82F50C34BFA5D55B508943BCF,3,0,0
+1716844989434,5,POST new visit,200,Original REST requests 1-27,text,true,4389,490,8,8,http://localhost:8080/owners/3,2,0,0
+1716844989434,2,POST new visit-0,302,Original REST requests 1-27,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,2,0,0
+1716844989437,2,POST new visit-1,200,Original REST requests 1-27,text,true,4201,177,8,8,http://localhost:8080/owners/3,2,0,0
+1716844989528,3,Vets,200,Original REST requests 1-32,text,true,4264,178,7,7,http://localhost:8080/vets.html,3,0,0
+1716844989528,7,POST Edit Owner,200,Original REST requests 1-29,text,true,4383,525,8,8,http://localhost:8080/owners/2,4,0,0
+1716844989528,4,POST Edit Owner-0,302,Original REST requests 1-29,,true,188,348,8,8,http://localhost:8080/owners/2/edit,4,0,0
+1716844989532,3,POST Edit Owner-1,200,Original REST requests 1-29,text,true,4195,177,8,8,http://localhost:8080/owners/2,2,0,0
+1716844989629,2,Find owner,200,Original REST requests 1-31,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844989632,5,POST new visit,200,Original REST requests 1-28,text,true,4389,490,8,8,http://localhost:8080/owners/1,3,0,0
+1716844989630,7,POST new pet,200,Original REST requests 1-34,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=5CF2B23709C3CBE54E10B5460F10C167,5,0,1
+1716844989632,3,POST new visit-0,302,Original REST requests 1-28,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
+1716844989635,2,POST new visit-1,200,Original REST requests 1-28,text,true,4201,177,8,8,http://localhost:8080/owners/1,2,0,0
+1716844989630,5,POST new pet-0,302,Original REST requests 1-34,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,5,0,1
+1716844989635,2,POST new pet-1,200,Original REST requests 1-34,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=5CF2B23709C3CBE54E10B5460F10C167,2,0,0
+1716844989734,2,Vets,200,Original REST requests 1-33,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844989733,6,POST Edit Owner,200,Original REST requests 1-30,text,true,4383,525,8,8,http://localhost:8080/owners/3,4,0,0
+1716844989733,4,POST Edit Owner-0,302,Original REST requests 1-30,,true,188,348,8,8,http://localhost:8080/owners/3/edit,4,0,0
+1716844989737,2,POST Edit Owner-1,200,Original REST requests 1-30,text,true,4195,177,8,8,http://localhost:8080/owners/3,2,0,0
+1716844989833,2,Find owner,200,Original REST requests 1-32,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844989834,7,POST new pet,200,Original REST requests 1-35,text,true,4504,503,8,8,http://localhost:8080/owners/2;jsessionid=266D5A44E28DC2874155A0A0BD5DD13D,4,0,1
+1716844989834,4,POST new pet-0,302,Original REST requests 1-35,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,4,0,1
+1716844989838,3,POST new pet-1,200,Original REST requests 1-35,text,true,4197,221,8,8,http://localhost:8080/owners/2;jsessionid=266D5A44E28DC2874155A0A0BD5DD13D,3,0,0
+1716844989837,5,POST new visit,200,Original REST requests 1-29,text,true,4389,490,8,8,http://localhost:8080/owners/2,2,0,0
+1716844989837,2,POST new visit-0,302,Original REST requests 1-29,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
+1716844989839,3,POST new visit-1,200,Original REST requests 1-29,text,true,4201,177,8,8,http://localhost:8080/owners/2,2,0,0
+1716844989932,7,POST Edit Owner,200,Original REST requests 1-31,text,true,4383,525,8,8,http://localhost:8080/owners/1,3,0,0
+1716844989932,3,POST Edit Owner-0,302,Original REST requests 1-31,,true,188,348,8,8,http://localhost:8080/owners/1/edit,3,0,0
+1716844989935,4,POST Edit Owner-1,200,Original REST requests 1-31,text,true,4195,177,8,8,http://localhost:8080/owners/1,4,0,0
+1716844989938,4,Vets,200,Original REST requests 1-34,text,true,4264,178,8,8,http://localhost:8080/vets.html,4,0,0
+1716844990038,4,Find owner,200,Original REST requests 1-33,text,true,3755,180,8,8,http://localhost:8080/owners/find,4,0,0
+1716844990040,11,POST new visit,200,Original REST requests 1-30,text,true,4389,490,8,8,http://localhost:8080/owners/3,6,0,0
+1716844990036,15,POST new pet,200,Original REST requests 1-36,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=5659BB454967679557B25568E2589050,8,0,1
+1716844990040,6,POST new visit-0,302,Original REST requests 1-30,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,6,0,0
+1716844990036,8,POST new pet-0,302,Original REST requests 1-36,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,8,0,1
+1716844990045,6,POST new pet-1,200,Original REST requests 1-36,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=5659BB454967679557B25568E2589050,5,0,0
+1716844990046,5,POST new visit-1,200,Original REST requests 1-30,text,true,4201,177,8,8,http://localhost:8080/owners/3,4,0,0
+1716844990141,4,Vets,200,Original REST requests 1-35,text,true,4264,178,8,8,http://localhost:8080/vets.html,4,0,0
+1716844990137,11,POST Edit Owner,200,Original REST requests 1-32,text,true,4383,525,8,8,http://localhost:8080/owners/2,6,0,0
+1716844990137,6,POST Edit Owner-0,302,Original REST requests 1-32,,true,188,348,8,8,http://localhost:8080/owners/2/edit,6,0,0
+1716844990143,5,POST Edit Owner-1,200,Original REST requests 1-32,text,true,4195,177,8,8,http://localhost:8080/owners/2,5,0,0
+1716844990244,2,Find owner,200,Original REST requests 1-34,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844990240,6,POST new visit,200,Original REST requests 1-31,text,true,4389,490,8,8,http://localhost:8080/owners/1,3,0,0
+1716844990240,3,POST new visit-0,302,Original REST requests 1-31,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
+1716844990243,3,POST new visit-1,200,Original REST requests 1-31,text,true,4201,177,8,8,http://localhost:8080/owners/1,3,0,0
+1716844990239,8,POST new pet,200,Original REST requests 1-37,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=CBA96110FD8EC2BCF620111B5E04569C,4,0,1
+1716844990239,4,POST new pet-0,302,Original REST requests 1-37,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,4,0,1
+1716844990243,4,POST new pet-1,200,Original REST requests 1-37,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=CBA96110FD8EC2BCF620111B5E04569C,3,0,0
+1716844990344,5,POST Edit Owner,200,Original REST requests 1-33,text,true,4383,525,8,8,http://localhost:8080/owners/3,3,0,0
+1716844990344,3,POST Edit Owner-0,302,Original REST requests 1-33,,true,188,348,8,8,http://localhost:8080/owners/3/edit,3,0,0
+1716844990347,2,POST Edit Owner-1,200,Original REST requests 1-33,text,true,4195,177,8,8,http://localhost:8080/owners/3,2,0,0
+1716844990352,2,Vets,200,Original REST requests 1-36,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844990446,2,Find owner,200,Original REST requests 1-35,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844990442,7,POST new pet,200,Original REST requests 1-38,text,true,4504,503,8,8,http://localhost:8080/owners/2;jsessionid=5058447AF0724AEF1229E7A1F82EC9F0,4,0,0
+1716844990442,4,POST new pet-0,302,Original REST requests 1-38,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,4,0,0
+1716844990446,3,POST new pet-1,200,Original REST requests 1-38,text,true,4197,221,8,8,http://localhost:8080/owners/2;jsessionid=5058447AF0724AEF1229E7A1F82EC9F0,3,0,0
+1716844990449,5,POST new visit,200,Original REST requests 1-32,text,true,4389,490,8,8,http://localhost:8080/owners/2,3,0,0
+1716844990449,3,POST new visit-0,302,Original REST requests 1-32,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,3,0,0
+1716844990452,2,POST new visit-1,200,Original REST requests 1-32,text,true,4201,177,8,8,http://localhost:8080/owners/2,2,0,0
+1716844990548,2,Vets,200,Original REST requests 1-37,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844990548,4,POST Edit Owner,200,Original REST requests 1-34,text,true,4383,525,8,8,http://localhost:8080/owners/1,2,0,0
+1716844990548,2,POST Edit Owner-0,302,Original REST requests 1-34,,true,188,348,8,8,http://localhost:8080/owners/1/edit,2,0,0
+1716844990550,2,POST Edit Owner-1,200,Original REST requests 1-34,text,true,4195,177,8,8,http://localhost:8080/owners/1,2,0,0
+1716844990645,7,POST new pet,200,Original REST requests 1-39,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=6D87A417B63C349A449D74084638C9CA,4,0,1
+1716844990645,4,POST new pet-0,302,Original REST requests 1-39,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,4,0,1
+1716844990649,3,POST new pet-1,200,Original REST requests 1-39,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=6D87A417B63C349A449D74084638C9CA,2,0,0
+1716844990650,5,POST new visit,200,Original REST requests 1-33,text,true,4389,490,8,8,http://localhost:8080/owners/3,2,0,0
+1716844990650,2,POST new visit-0,302,Original REST requests 1-33,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,2,0,0
+1716844990652,3,POST new visit-1,200,Original REST requests 1-33,text,true,4201,177,8,8,http://localhost:8080/owners/3,3,0,0
+1716844990655,2,Find owner,200,Original REST requests 1-36,text,true,3755,180,7,7,http://localhost:8080/owners/find,2,0,0
+1716844990751,2,Vets,200,Original REST requests 1-38,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844990751,3,POST Edit Owner,200,Original REST requests 1-35,text,true,4383,525,8,8,http://localhost:8080/owners/2,1,0,0
+1716844990751,1,POST Edit Owner-0,302,Original REST requests 1-35,,true,188,348,8,8,http://localhost:8080/owners/2/edit,1,0,0
+1716844990753,1,POST Edit Owner-1,200,Original REST requests 1-35,text,true,4195,177,8,8,http://localhost:8080/owners/2,1,0,0
+1716844990851,1,Find owner,200,Original REST requests 1-37,text,true,3755,180,8,8,http://localhost:8080/owners/find,1,0,0
+1716844990849,6,POST new pet,200,Original REST requests 1-40,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=34553B70C546DD3CC46CD2909A8DE714,4,0,1
+1716844990849,4,POST new pet-0,302,Original REST requests 1-40,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,4,0,1
+1716844990853,2,POST new pet-1,200,Original REST requests 1-40,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=34553B70C546DD3CC46CD2909A8DE714,2,0,0
+1716844990853,4,POST new visit,200,Original REST requests 1-34,text,true,4389,490,8,8,http://localhost:8080/owners/1,2,0,0
+1716844990853,2,POST new visit-0,302,Original REST requests 1-34,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,2,0,0
+1716844990855,2,POST new visit-1,200,Original REST requests 1-34,text,true,4201,177,8,8,http://localhost:8080/owners/1,2,0,0
+1716844990953,3,Vets,200,Original REST requests 1-39,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844990957,4,POST Edit Owner,200,Original REST requests 1-36,text,true,4383,525,8,8,http://localhost:8080/owners/3,3,0,0
+1716844990957,3,POST Edit Owner-0,302,Original REST requests 1-36,,true,188,348,8,8,http://localhost:8080/owners/3/edit,3,0,0
+1716844990960,1,POST Edit Owner-1,200,Original REST requests 1-36,text,true,4195,177,8,8,http://localhost:8080/owners/3,1,0,0
+1716844991053,2,Find owner,200,Original REST requests 1-38,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844991051,6,POST new pet,200,Original REST requests 1-41,text,true,4504,503,8,8,http://localhost:8080/owners/2;jsessionid=FC5633F5E448823ED545A09921518835,4,0,1
+1716844991051,4,POST new pet-0,302,Original REST requests 1-41,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,4,0,1
+1716844991055,2,POST new pet-1,200,Original REST requests 1-41,text,true,4197,221,8,8,http://localhost:8080/owners/2;jsessionid=FC5633F5E448823ED545A09921518835,2,0,0
+1716844991055,4,POST new visit,200,Original REST requests 1-35,text,true,4389,490,8,8,http://localhost:8080/owners/2,2,0,0
+1716844991055,2,POST new visit-0,302,Original REST requests 1-35,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
+1716844991057,2,POST new visit-1,200,Original REST requests 1-35,text,true,4201,177,8,8,http://localhost:8080/owners/2,2,0,0
+1716844991156,2,Vets,200,Original REST requests 1-40,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844991153,5,POST Edit Owner,200,Original REST requests 1-37,text,true,4383,525,8,8,http://localhost:8080/owners/1,3,0,0
+1716844991153,3,POST Edit Owner-0,302,Original REST requests 1-37,,true,188,348,8,8,http://localhost:8080/owners/1/edit,3,0,0
+1716844991156,2,POST Edit Owner-1,200,Original REST requests 1-37,text,true,4195,177,8,8,http://localhost:8080/owners/1,2,0,0
+1716844991256,2,Find owner,200,Original REST requests 1-39,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844991255,6,POST new pet,200,Original REST requests 1-42,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=3D2DF10023E77EFB693DA1AC90549EAA,4,0,1
+1716844991255,4,POST new pet-0,302,Original REST requests 1-42,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,4,0,1
+1716844991259,2,POST new pet-1,200,Original REST requests 1-42,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=3D2DF10023E77EFB693DA1AC90549EAA,2,0,0
+1716844991262,4,POST new visit,200,Original REST requests 1-36,text,true,4389,490,8,8,http://localhost:8080/owners/3,3,0,0
+1716844991262,3,POST new visit-0,302,Original REST requests 1-36,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
+1716844991265,1,POST new visit-1,200,Original REST requests 1-36,text,true,4201,177,8,8,http://localhost:8080/owners/3,1,0,0
+1716844991358,2,Vets,200,Original REST requests 1-41,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844991355,5,POST Edit Owner,200,Original REST requests 1-38,text,true,4383,525,8,8,http://localhost:8080/owners/2,3,0,0
+1716844991355,3,POST Edit Owner-0,302,Original REST requests 1-38,,true,188,348,8,8,http://localhost:8080/owners/2/edit,3,0,0
+1716844991358,2,POST Edit Owner-1,200,Original REST requests 1-38,text,true,4195,177,8,8,http://localhost:8080/owners/2,2,0,0
+1716844991459,2,Find owner,200,Original REST requests 1-40,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844991459,4,POST new visit,200,Original REST requests 1-37,text,true,4389,490,8,8,http://localhost:8080/owners/1,2,0,0
+1716844991459,2,POST new visit-0,302,Original REST requests 1-37,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,2,0,0
+1716844991461,2,POST new visit-1,200,Original REST requests 1-37,text,true,4201,177,8,8,http://localhost:8080/owners/1,2,0,0
+1716844991458,6,POST new pet,200,Original REST requests 1-43,text,true,4504,503,7,7,http://localhost:8080/owners/1;jsessionid=36DE593F2D58CC2F6A2786982E6E48D7,4,0,1
+1716844991458,4,POST new pet-0,302,Original REST requests 1-43,,true,307,282,7,7,http://localhost:8080/owners/1/pets/new,4,0,1
+1716844991462,2,POST new pet-1,200,Original REST requests 1-43,text,true,4197,221,7,7,http://localhost:8080/owners/1;jsessionid=36DE593F2D58CC2F6A2786982E6E48D7,2,0,0
+1716844991558,5,POST Edit Owner,200,Original REST requests 1-39,text,true,4383,525,8,8,http://localhost:8080/owners/3,3,0,0
+1716844991558,3,POST Edit Owner-0,302,Original REST requests 1-39,,true,188,348,8,8,http://localhost:8080/owners/3/edit,3,0,0
+1716844991561,2,POST Edit Owner-1,200,Original REST requests 1-39,text,true,4195,177,8,8,http://localhost:8080/owners/3,2,0,0
+1716844991562,1,Vets,200,Original REST requests 1-42,text,true,4264,178,8,8,http://localhost:8080/vets.html,1,0,0
+1716844991661,2,Find owner,200,Original REST requests 1-41,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844991661,4,POST new visit,200,Original REST requests 1-38,text,true,4389,490,8,8,http://localhost:8080/owners/2,2,0,0
+1716844991661,2,POST new visit-0,302,Original REST requests 1-38,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
+1716844991663,2,POST new visit-1,200,Original REST requests 1-38,text,true,4201,177,8,8,http://localhost:8080/owners/2,2,0,0
+1716844991661,6,POST new pet,200,Original REST requests 1-44,text,true,4504,503,7,7,http://localhost:8080/owners/2;jsessionid=0427800496BA04A20A836DB34DA7C803,4,0,0
+1716844991661,4,POST new pet-0,302,Original REST requests 1-44,,true,307,282,7,7,http://localhost:8080/owners/2/pets/new,4,0,0
+1716844991665,2,POST new pet-1,200,Original REST requests 1-44,text,true,4197,221,7,7,http://localhost:8080/owners/2;jsessionid=0427800496BA04A20A836DB34DA7C803,2,0,0
+1716844991765,2,Vets,200,Original REST requests 1-43,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844991763,4,POST Edit Owner,200,Original REST requests 1-40,text,true,4383,525,8,8,http://localhost:8080/owners/1,2,0,0
+1716844991763,2,POST Edit Owner-0,302,Original REST requests 1-40,,true,188,348,8,8,http://localhost:8080/owners/1/edit,2,0,0
+1716844991765,2,POST Edit Owner-1,200,Original REST requests 1-40,text,true,4195,177,8,8,http://localhost:8080/owners/1,2,0,0
+1716844991865,2,Find owner,200,Original REST requests 1-42,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844991863,5,POST new visit,200,Original REST requests 1-39,text,true,4389,490,8,8,http://localhost:8080/owners/3,3,0,0
+1716844991863,3,POST new visit-0,302,Original REST requests 1-39,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
+1716844991866,2,POST new visit-1,200,Original REST requests 1-39,text,true,4201,177,8,8,http://localhost:8080/owners/3,2,0,0
+1716844991863,7,POST new pet,200,Original REST requests 1-45,text,true,4504,503,7,7,http://localhost:8080/owners/3;jsessionid=0B20D5FB304123AF8E876B3D2208C07C,4,0,0
+1716844991863,4,POST new pet-0,302,Original REST requests 1-45,,true,307,282,7,7,http://localhost:8080/owners/3/pets/new,4,0,0
+1716844991867,3,POST new pet-1,200,Original REST requests 1-45,text,true,4197,221,7,7,http://localhost:8080/owners/3;jsessionid=0B20D5FB304123AF8E876B3D2208C07C,2,0,0
+1716844991968,3,Vets,200,Original REST requests 1-44,text,true,4264,178,8,8,http://localhost:8080/vets.html,3,0,0
+1716844991964,8,POST Edit Owner,200,Original REST requests 1-41,text,true,4383,525,8,8,http://localhost:8080/owners/2,4,0,0
+1716844991964,4,POST Edit Owner-0,302,Original REST requests 1-41,,true,188,348,8,8,http://localhost:8080/owners/2/edit,4,0,0
+1716844991968,4,POST Edit Owner-1,200,Original REST requests 1-41,text,true,4195,177,8,8,http://localhost:8080/owners/2,4,0,0
+1716844992068,2,Find owner,200,Original REST requests 1-43,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844992064,9,POST new pet,200,Original REST requests 1-46,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=DAC64903A8681F10933AF095806E8D3C,6,0,1
+1716844992064,6,POST new pet-0,302,Original REST requests 1-46,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,6,0,1
+1716844992070,3,POST new pet-1,200,Original REST requests 1-46,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=DAC64903A8681F10933AF095806E8D3C,3,0,0
+1716844992068,5,POST new visit,200,Original REST requests 1-40,text,true,4389,490,8,8,http://localhost:8080/owners/1,3,0,0
+1716844992068,3,POST new visit-0,302,Original REST requests 1-40,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,3,0,0
+1716844992071,2,POST new visit-1,200,Original REST requests 1-40,text,true,4201,177,8,8,http://localhost:8080/owners/1,2,0,0
+1716844992170,3,Vets,200,Original REST requests 1-45,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844992169,8,POST Edit Owner,200,Original REST requests 1-42,text,true,4383,525,8,8,http://localhost:8080/owners/3,4,0,0
+1716844992169,4,POST Edit Owner-0,302,Original REST requests 1-42,,true,188,348,8,8,http://localhost:8080/owners/3/edit,4,0,0
+1716844992174,3,POST Edit Owner-1,200,Original REST requests 1-42,text,true,4195,177,8,8,http://localhost:8080/owners/3,2,0,0
+1716844992272,3,Find owner,200,Original REST requests 1-44,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844992268,12,POST new pet,200,Original REST requests 1-47,text,true,4504,503,8,8,http://localhost:8080/owners/2;jsessionid=B8DC1B49A274728A9500155A95F8713E,7,0,1
+1716844992268,7,POST new pet-0,302,Original REST requests 1-47,,true,307,282,8,8,http://localhost:8080/owners/2/pets/new,7,0,1
+1716844992275,5,POST new pet-1,200,Original REST requests 1-47,text,true,4197,221,8,8,http://localhost:8080/owners/2;jsessionid=B8DC1B49A274728A9500155A95F8713E,4,0,0
+1716844992274,10,POST new visit,200,Original REST requests 1-41,text,true,4389,490,8,8,http://localhost:8080/owners/2,6,0,0
+1716844992274,6,POST new visit-0,302,Original REST requests 1-41,,true,188,313,8,8,http://localhost:8080/owners/2/pets/2/visits/new,6,0,0
+1716844992281,3,POST new visit-1,200,Original REST requests 1-41,text,true,4201,177,8,8,http://localhost:8080/owners/2,3,0,0
+1716844992374,2,Vets,200,Original REST requests 1-46,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844992371,5,POST Edit Owner,200,Original REST requests 1-43,text,true,4383,525,8,8,http://localhost:8080/owners/1,3,0,0
+1716844992371,3,POST Edit Owner-0,302,Original REST requests 1-43,,true,188,348,8,8,http://localhost:8080/owners/1/edit,3,0,0
+1716844992374,2,POST Edit Owner-1,200,Original REST requests 1-43,text,true,4195,177,8,8,http://localhost:8080/owners/1,2,0,0
+1716844992474,3,Find owner,200,Original REST requests 1-45,text,true,3755,180,8,8,http://localhost:8080/owners/find,3,0,0
+1716844992471,7,POST new pet,200,Original REST requests 1-48,text,true,4504,503,8,8,http://localhost:8080/owners/3;jsessionid=12C4B27EA8F332EDE736FD6600ECF472,4,0,0
+1716844992471,4,POST new pet-0,302,Original REST requests 1-48,,true,307,282,8,8,http://localhost:8080/owners/3/pets/new,4,0,0
+1716844992475,3,POST new pet-1,200,Original REST requests 1-48,text,true,4197,221,8,8,http://localhost:8080/owners/3;jsessionid=12C4B27EA8F332EDE736FD6600ECF472,3,0,0
+1716844992489,8,POST new visit,200,Original REST requests 1-42,text,true,4389,490,8,8,http://localhost:8080/owners/3,5,0,0
+1716844992489,5,POST new visit-0,302,Original REST requests 1-42,,true,188,313,8,8,http://localhost:8080/owners/3/pets/3/visits/new,5,0,0
+1716844992494,3,POST new visit-1,200,Original REST requests 1-42,text,true,4201,177,8,8,http://localhost:8080/owners/3,3,0,0
+1716844992583,2,Vets,200,Original REST requests 1-47,text,true,4264,178,8,8,http://localhost:8080/vets.html,2,0,0
+1716844992583,4,POST Edit Owner,200,Original REST requests 1-44,text,true,4383,525,8,8,http://localhost:8080/owners/2,2,0,0
+1716844992583,2,POST Edit Owner-0,302,Original REST requests 1-44,,true,188,348,8,8,http://localhost:8080/owners/2/edit,2,0,0
+1716844992585,2,POST Edit Owner-1,200,Original REST requests 1-44,text,true,4195,177,8,8,http://localhost:8080/owners/2,2,0,0
+1716844992671,6,POST new pet,200,Original REST requests 1-49,text,true,4504,503,8,8,http://localhost:8080/owners/1;jsessionid=287B055D1BA6E2C3095DE8802FED3059,4,0,0
+1716844992671,4,POST new pet-0,302,Original REST requests 1-49,,true,307,282,8,8,http://localhost:8080/owners/1/pets/new,4,0,0
+1716844992675,2,POST new pet-1,200,Original REST requests 1-49,text,true,4197,221,8,8,http://localhost:8080/owners/1;jsessionid=287B055D1BA6E2C3095DE8802FED3059,2,0,0
+1716844992677,2,Find owner,200,Original REST requests 1-46,text,true,3755,180,8,8,http://localhost:8080/owners/find,2,0,0
+1716844992677,7,POST new visit,200,Original REST requests 1-43,text,true,4389,490,8,8,http://localhost:8080/owners/1,4,0,0
+1716844992677,4,POST new visit-0,302,Original REST requests 1-43,,true,188,313,8,8,http://localhost:8080/owners/1/pets/1/visits/new,4,0,0
+1716844992681,3,POST new visit-1,200,Original REST requests 1-43,text,true,4201,177,8,8,http://localhost:8080/owners/1,3,0,0
+1716844992779,2,Vets,200,Original REST requests 1-48,text,true,4264,178,7,7,http://localhost:8080/vets.html,2,0,0
+1716844992778,6,POST Edit Owner,200,Original REST requests 1-45,text,true,4383,525,7,7,http://localhost:8080/owners/3,3,0,0
+1716844992778,3,POST Edit Owner-0,302,Original REST requests 1-45,,true,188,348,7,7,http://localhost:8080/owners/3/edit,3,0,0
+1716844992781,3,POST Edit Owner-1,200,Original REST requests 1-45,text,true,4195,177,7,7,http://localhost:8080/owners/3,3,0,0
+1716844992881,7,POST new pet,200,Original REST requests 1-50,text,true,4504,503,7,7,http://localhost:8080/owners/2;jsessionid=BBB55801144D69C635E87495BA70F7C5,4,0,0
+1716844992881,4,POST new pet-0,302,Original REST requests 1-50,,true,307,282,7,7,http://localhost:8080/owners/2/pets/new,4,0,0
+1716844992885,3,POST new pet-1,200,Original REST requests 1-50,text,true,4197,221,7,7,http://localhost:8080/owners/2;jsessionid=BBB55801144D69C635E87495BA70F7C5,3,0,0
+1716844992896,2,Find owner,200,Original REST requests 1-47,text,true,3755,180,7,7,http://localhost:8080/owners/find,2,0,0
+1716844992896,4,POST new visit,200,Original REST requests 1-44,text,true,4389,490,7,7,http://localhost:8080/owners/2,2,0,0
+1716844992896,2,POST new visit-0,302,Original REST requests 1-44,,true,188,313,7,7,http://localhost:8080/owners/2/pets/2/visits/new,2,0,0
+1716844992898,2,POST new visit-1,200,Original REST requests 1-44,text,true,4201,177,7,7,http://localhost:8080/owners/2,2,0,0
+1716844992988,3,Vets,200,Original REST requests 1-49,text,true,4264,178,6,6,http://localhost:8080/vets.html,2,0,0
+1716844992988,4,POST Edit Owner,200,Original REST requests 1-46,text,true,4383,525,6,6,http://localhost:8080/owners/1,2,0,0
+1716844992988,2,POST Edit Owner-0,302,Original REST requests 1-46,,true,188,348,6,6,http://localhost:8080/owners/1/edit,2,0,0
+1716844992990,2,POST Edit Owner-1,200,Original REST requests 1-46,text,true,4195,177,6,6,http://localhost:8080/owners/1,2,0,0
+1716844993082,2,Find owner,200,Original REST requests 1-48,text,true,3755,180,6,6,http://localhost:8080/owners/find,2,0,0
+1716844993097,5,POST new visit,200,Original REST requests 1-45,text,true,4389,490,6,6,http://localhost:8080/owners/3,3,0,0
+1716844993097,3,POST new visit-0,302,Original REST requests 1-45,,true,188,313,6,6,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
+1716844993100,2,POST new visit-1,200,Original REST requests 1-45,text,true,4201,177,6,6,http://localhost:8080/owners/3,2,0,0
+1716844993192,2,Vets,200,Original REST requests 1-50,text,true,4264,178,5,5,http://localhost:8080/vets.html,2,0,0
+1716844993207,5,POST Edit Owner,200,Original REST requests 1-47,text,true,4383,525,5,5,http://localhost:8080/owners/2,3,0,0
+1716844993207,3,POST Edit Owner-0,302,Original REST requests 1-47,,true,188,348,5,5,http://localhost:8080/owners/2/edit,3,0,0
+1716844993210,2,POST Edit Owner-1,200,Original REST requests 1-47,text,true,4195,177,5,5,http://localhost:8080/owners/2,2,0,0
+1716844993300,1,Find owner,200,Original REST requests 1-49,text,true,3755,180,5,5,http://localhost:8080/owners/find,1,0,0
+1716844993300,4,POST new visit,200,Original REST requests 1-46,text,true,4389,490,5,5,http://localhost:8080/owners/1,2,0,0
+1716844993300,2,POST new visit-0,302,Original REST requests 1-46,,true,188,313,5,5,http://localhost:8080/owners/1/pets/1/visits/new,2,0,0
+1716844993302,2,POST new visit-1,200,Original REST requests 1-46,text,true,4201,177,5,5,http://localhost:8080/owners/1,2,0,0
+1716844993395,7,POST Edit Owner,200,Original REST requests 1-48,text,true,4383,525,4,4,http://localhost:8080/owners/3,4,0,0
+1716844993395,4,POST Edit Owner-0,302,Original REST requests 1-48,,true,188,348,4,4,http://localhost:8080/owners/3/edit,4,0,0
+1716844993399,3,POST Edit Owner-1,200,Original REST requests 1-48,text,true,4195,177,4,4,http://localhost:8080/owners/3,3,0,0
+1716844993504,2,Find owner,200,Original REST requests 1-50,text,true,3755,180,4,4,http://localhost:8080/owners/find,2,0,0
+1716844993519,6,POST new visit,200,Original REST requests 1-47,text,true,4389,490,4,4,http://localhost:8080/owners/2,4,0,0
+1716844993519,4,POST new visit-0,302,Original REST requests 1-47,,true,188,313,4,4,http://localhost:8080/owners/2/pets/2/visits/new,4,0,0
+1716844993523,2,POST new visit-1,200,Original REST requests 1-47,text,true,4201,177,4,4,http://localhost:8080/owners/2,2,0,0
+1716844993613,6,POST Edit Owner,200,Original REST requests 1-49,text,true,4383,525,3,3,http://localhost:8080/owners/1,3,0,0
+1716844993613,3,POST Edit Owner-0,302,Original REST requests 1-49,,true,188,348,3,3,http://localhost:8080/owners/1/edit,3,0,0
+1716844993616,3,POST Edit Owner-1,200,Original REST requests 1-49,text,true,4195,177,3,3,http://localhost:8080/owners/1,3,0,0
+1716844993709,6,POST new visit,200,Original REST requests 1-48,text,true,4389,490,3,3,http://localhost:8080/owners/3,3,0,0
+1716844993709,3,POST new visit-0,302,Original REST requests 1-48,,true,188,313,3,3,http://localhost:8080/owners/3/pets/3/visits/new,3,0,0
+1716844993712,3,POST new visit-1,200,Original REST requests 1-48,text,true,4201,177,3,3,http://localhost:8080/owners/3,3,0,0
+1716844993819,4,POST Edit Owner,200,Original REST requests 1-50,text,true,4383,525,2,2,http://localhost:8080/owners/2,2,0,0
+1716844993819,2,POST Edit Owner-0,302,Original REST requests 1-50,,true,188,348,2,2,http://localhost:8080/owners/2/edit,2,0,0
+1716844993821,2,POST Edit Owner-1,200,Original REST requests 1-50,text,true,4195,177,2,2,http://localhost:8080/owners/2,2,0,0
+1716844993928,4,POST new visit,200,Original REST requests 1-49,text,true,4389,490,2,2,http://localhost:8080/owners/1,2,0,0
+1716844993928,2,POST new visit-0,302,Original REST requests 1-49,,true,188,313,2,2,http://localhost:8080/owners/1/pets/1/visits/new,2,0,0
+1716844993930,2,POST new visit-1,200,Original REST requests 1-49,text,true,4201,177,2,2,http://localhost:8080/owners/1,2,0,0
+1716844994130,5,POST new visit,200,Original REST requests 1-50,text,true,4389,490,1,1,http://localhost:8080/owners/2,3,0,0
+1716844994130,3,POST new visit-0,302,Original REST requests 1-50,,true,188,313,1,1,http://localhost:8080/owners/2/pets/2/visits/new,3,0,0
+1716844994133,2,POST new visit-1,200,Original REST requests 1-50,text,true,4201,177,1,1,http://localhost:8080/owners/2,2,0,0
