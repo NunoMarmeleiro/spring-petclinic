@@ -2,7 +2,7 @@ package org.springframework.samples.petclinic.owner.application;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.samples.petclinic.pet.DeletedOwner;
+import org.springframework.samples.petclinic.owner.DeletedOwner;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

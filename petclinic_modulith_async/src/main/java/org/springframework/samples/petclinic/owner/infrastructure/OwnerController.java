@@ -15,7 +15,6 @@
  */
 package org.springframework.samples.petclinic.owner.infrastructure;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,8 +23,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.samples.petclinic.owner.domain.Owner;
 import org.springframework.samples.petclinic.owner.application.OwnerManagement;
-import org.springframework.samples.petclinic.pet.PetAux;
-import org.springframework.samples.petclinic.pet.domain.Pet;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -51,12 +48,9 @@ class OwnerController {
 
 	private final OwnerManagement ownerManagement;
 
-	private final PetAux petManagement;
-
-	public OwnerController(OwnerRepository clinicService, OwnerManagement ownerManagement, PetAux petManagement) {
+	public OwnerController(OwnerRepository clinicService, OwnerManagement ownerManagement) {
 		this.owners = clinicService;
 		this.ownerManagement = ownerManagement;
-		this.petManagement = petManagement;
 	}
 
 	@InitBinder
@@ -121,17 +115,11 @@ class OwnerController {
 
 	private String addPaginationModel(int page, Model model, Page<Owner> paginated) {
 		List<Owner> listOwners = paginated.getContent();
-		Map<Owner, List<Pet>> petMap = new HashMap<>();
 
-		for (Owner owner : listOwners) {
-			List<Pet> pets = this.petManagement.findByOwnerId(owner.getId());
-			petMap.put(owner, pets);
-		}
 		model.addAttribute("currentPage", page);
 		model.addAttribute("totalPages", paginated.getTotalPages());
 		model.addAttribute("totalItems", paginated.getTotalElements());
 		model.addAttribute("listOwners", listOwners);
-		model.addAttribute("petMap", petMap);
 		return "owners/ownersList";
 	}
 
@@ -171,10 +159,7 @@ class OwnerController {
 	public ModelAndView showOwner(@PathVariable("ownerId") int ownerId) {
 		ModelAndView mav = new ModelAndView("owners/ownerDetails");
 		Owner owner = this.owners.findById(ownerId);
-		List<Pet> pets = this.petManagement.findByOwnerId(ownerId);
-
 		mav.addObject(owner);
-		mav.addObject("pets", pets);
 		return mav;
 	}
 

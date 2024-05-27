@@ -3,7 +3,7 @@ package org.springframework.samples.petclinic.pet.application;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.modulith.ApplicationModuleListener;
-import org.springframework.samples.petclinic.pet.DeletedOwner;
+import org.springframework.samples.petclinic.owner.DeletedOwner;
 import org.springframework.samples.petclinic.pet.DeletedPet;
 import org.springframework.samples.petclinic.pet.DeletedPets;
 import org.springframework.samples.petclinic.pet.domain.Pet;

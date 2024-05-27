@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.pet;
+package org.springframework.samples.petclinic.owner;
 
 import org.jmolecules.event.types.DomainEvent;
 

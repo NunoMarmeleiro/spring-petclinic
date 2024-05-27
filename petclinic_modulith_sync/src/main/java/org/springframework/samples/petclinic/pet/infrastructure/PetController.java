@@ -17,6 +17,7 @@ package org.springframework.samples.petclinic.pet.infrastructure;
 
 import java.time.LocalDate;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.samples.petclinic.pet.domain.Pet;
 import org.springframework.samples.petclinic.pet.domain.PetType;
@@ -30,6 +31,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
@@ -148,6 +150,14 @@ class PetController {
 		this.visitManagement.deleteVisits(pet.getId());
 		this.pets.deletePetById(pet.getId());
 		return "redirect:/owners/{ownerId}";
+	}
+
+	@GetMapping("/pets")
+	public ModelAndView showPets(@PathVariable("ownerId") int ownerId) {
+		ModelAndView mav = new ModelAndView("pets/petsList");
+		List<Pet> pets = this.pets.findByOwnerId(ownerId);
+		mav.addObject("pets", pets);
+		return mav;
 	}
 
 }

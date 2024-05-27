@@ -28,6 +28,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
@@ -175,6 +176,14 @@ class PetController {
 		}
 		this.owners.deletePetById(pet.getId());
 		return "redirect:/owners/{ownerId}";
+	}
+
+	@GetMapping("/pets")
+	public ModelAndView showPets(@PathVariable("ownerId") int ownerId) {
+		ModelAndView mav = new ModelAndView("pets/petsList");
+		List<Pet> pets = this.owners.findById(ownerId).getPets();
+		mav.addObject("pets", pets);
+		return mav;
 	}
 
 }

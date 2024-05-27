@@ -24,9 +24,4 @@ public class PetManagementImpl implements PetManagement {
 		}
 		this.pets.deletePetByOwnerId(ownerId);
 	}
-
-	@Override
-	public List<Pet> findByOwnerId(int ownerId) {
-		return this.pets.findByOwnerId(ownerId);
-	}
 }

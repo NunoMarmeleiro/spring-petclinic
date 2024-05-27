@@ -13,7 +13,6 @@
     <th style="width: 200px;">Address</th>
     <th>City</th>
     <th style="width: 120px">Telephone</th>
-    <th>Pets</th>
   </tr>
   </thead>
   <tbody>
@@ -24,7 +23,6 @@
     <td th:text="${owner.address}"/>
     <td th:text="${owner.city}"/>
     <td th:text="${owner.telephone}"/>
-    <td><span th:text="${#strings.listJoin(petMap.get(owner), ', ')}"/></td>
   </tr>
   </tbody>
 </table>
