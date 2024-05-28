@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.visit.application;
+package org.springframework.samples.petclinic.visit.infrastructure;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.samples.petclinic.visit.VisitManagement;
@@ -15,4 +15,5 @@ public class VisitManagementImpl implements VisitManagement {
 	public void deleteVisits(int petId) {
 		this.visits.deleteVisitByPetId(petId);
 	}
+
 }

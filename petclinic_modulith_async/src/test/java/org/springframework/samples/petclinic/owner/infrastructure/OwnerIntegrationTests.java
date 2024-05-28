@@ -5,9 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.modulith.test.ApplicationModuleTest;
 import org.springframework.modulith.test.Scenario;
-import org.springframework.samples.petclinic.owner.application.OwnerManagement;
 import org.springframework.samples.petclinic.owner.DeletedOwner;
-
 
 @ApplicationModuleTest
 @RequiredArgsConstructor
@@ -23,4 +21,5 @@ public class OwnerIntegrationTests {
 			.matchingMappedValue(DeletedOwner::ownerId, 1)
 			.toArrive();
 	}
+
 }

@@ -158,7 +158,8 @@ class PetController {
 	}
 
 	@GetMapping("/pets/{petId}/delete")
-	public String initDeletePetForm(@PathVariable("ownerId") int ownerId, @PathVariable("petId") int petId, ModelMap model) {
+	public String initDeletePetForm(@PathVariable("ownerId") int ownerId, @PathVariable("petId") int petId,
+			ModelMap model) {
 		Pet pet = this.owners.findById(ownerId).getPet(petId);
 		System.out.println("pet: " + pet);
 		System.out.println("petId: " + petId);
@@ -168,10 +169,11 @@ class PetController {
 	}
 
 	@DeleteMapping("/pets/{petId}/delete")
-	public String processDeletePet(@PathVariable("ownerId") int ownerId, @PathVariable("petId") int petId, ModelMap model) {
+	public String processDeletePet(@PathVariable("ownerId") int ownerId, @PathVariable("petId") int petId,
+			ModelMap model) {
 		Pet pet = this.owners.findById(ownerId).getPet(petId);
 		Collection<Visit> visits = pet.getVisits();
-		for(Visit j : visits) {
+		for (Visit j : visits) {
 			this.owners.deleteVisitById(j.getId());
 		}
 		this.owners.deletePetById(pet.getId());

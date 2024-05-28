@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.pet.application;
+package org.springframework.samples.petclinic.pet.infrastructure;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;

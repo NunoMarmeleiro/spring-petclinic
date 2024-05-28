@@ -158,9 +158,9 @@ class OwnerController {
 	@DeleteMapping("/owners/{ownerId}/delete")
 	public String processDeleteOwner(@PathVariable("ownerId") int ownerId) {
 		List<Pet> pets = this.owners.findById(ownerId).getPets();
-		for(Pet i : pets) {
+		for (Pet i : pets) {
 			Collection<Visit> visits = i.getVisits();
-			for(Visit j : visits) {
+			for (Visit j : visits) {
 				this.owners.deleteVisitById(j.getId());
 			}
 			this.owners.deletePetById(i.getId());

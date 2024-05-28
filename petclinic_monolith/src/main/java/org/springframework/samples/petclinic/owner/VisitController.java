@@ -62,7 +62,7 @@ class VisitController {
 			Map<String, Object> model) {
 		Owner owner = this.owners.findById(ownerId);
 		Pet pet = owner.getPet(petId);
-		if(pet == null) {
+		if (pet == null) {
 			System.out.println("info: " + petId + ":" + ownerId);
 		}
 		model.put("pet", pet);

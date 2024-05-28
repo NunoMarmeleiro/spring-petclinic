@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.visit.application;
+package org.springframework.samples.petclinic.visit.infrastructure;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.modulith.ApplicationModuleListener;

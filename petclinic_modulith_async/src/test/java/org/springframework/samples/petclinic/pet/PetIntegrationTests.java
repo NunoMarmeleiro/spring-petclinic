@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.modulith.test.ApplicationModuleTest;
 import org.springframework.modulith.test.Scenario;
-import org.springframework.samples.petclinic.pet.application.PetManagement;
+import org.springframework.samples.petclinic.pet.infrastructure.PetManagement;
 
 @ApplicationModuleTest
 @RequiredArgsConstructor
@@ -21,4 +21,5 @@ public class PetIntegrationTests {
 			.matchingMappedValue(DeletedPet::petId, 1)
 			.toArrive();
 	}
+
 }

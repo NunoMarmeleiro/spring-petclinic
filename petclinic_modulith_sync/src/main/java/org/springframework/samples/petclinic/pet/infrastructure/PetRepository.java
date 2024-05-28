@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-
 public interface PetRepository extends Repository<Pet, Integer> {
 
 	@Query("SELECT pet FROM Pet pet WHERE pet.id =:id")
@@ -44,4 +43,5 @@ public interface PetRepository extends Repository<Pet, Integer> {
 	@Transactional
 	@Query("DELETE FROM Pet pet WHERE pet.ownerId = :id")
 	void deletePetByOwnerId(@Param("id") Integer id);
+
 }

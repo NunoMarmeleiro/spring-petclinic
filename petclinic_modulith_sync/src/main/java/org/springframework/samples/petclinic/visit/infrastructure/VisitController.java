@@ -18,7 +18,6 @@ package org.springframework.samples.petclinic.visit.infrastructure;
 import java.util.List;
 import java.util.Map;
 
-
 import org.springframework.samples.petclinic.visit.domain.Visit;
 import org.springframework.samples.petclinic.visit.infrastructure.VisitRepository;
 import org.springframework.stereotype.Controller;
@@ -42,6 +41,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  */
 @Controller
 class VisitController {
+
 	private final VisitRepository visits;
 
 	public VisitController(VisitRepository visits) {
@@ -63,14 +63,13 @@ class VisitController {
 
 	@ModelAttribute("visit")
 	public Visit loadPetWithVisit(@PathVariable("ownerId") int ownerId, @PathVariable("petId") int petId,
-								  Map<String, Object> model) {
+			Map<String, Object> model) {
 		Visit visit = new Visit();
 		visit.setId(petId);
 		List<Visit> previousVisits = this.visits.findByPetId(petId);
 		model.put("prevVisits", previousVisits);
 		return visit;
 	}
-
 
 	// Spring MVC calls method loadPetWithVisit(...) before initNewVisitForm is
 	// called
@@ -82,8 +81,8 @@ class VisitController {
 	// Spring MVC calls method loadPetWithVisit(...) before processNewVisitForm is
 	// called
 	@PostMapping("/owners/{ownerId}/pets/{petId}/visits/new")
-	public String processNewVisitForm(@PathVariable int petId, @Valid Visit visit,
-			BindingResult result, RedirectAttributes redirectAttributes) {
+	public String processNewVisitForm(@PathVariable int petId, @Valid Visit visit, BindingResult result,
+			RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "pets/createOrUpdateVisitForm";
 		}

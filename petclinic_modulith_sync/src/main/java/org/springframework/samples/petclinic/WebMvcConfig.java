@@ -11,4 +11,5 @@ public class WebMvcConfig {
 	public HiddenHttpMethodFilter hiddenHttpMethodFilter() {
 		return new HiddenHttpMethodFilter();
 	}
+
 }

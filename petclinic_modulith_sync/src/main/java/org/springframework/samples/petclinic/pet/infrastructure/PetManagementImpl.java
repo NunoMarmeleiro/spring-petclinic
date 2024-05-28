@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.pet.application;
+package org.springframework.samples.petclinic.pet.infrastructure;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.samples.petclinic.pet.domain.Pet;
@@ -14,14 +14,16 @@ import java.util.List;
 public class PetManagementImpl implements PetManagement {
 
 	private final PetRepository pets;
+
 	private final VisitManagement visitManagement;
 
 	@Override
 	public void deletePets(int ownerId) {
 		List<Pet> petIds = this.pets.findByOwnerId(ownerId);
-		for(Pet i : petIds) {
+		for (Pet i : petIds) {
 			this.visitManagement.deleteVisits(i.getId());
 		}
 		this.pets.deletePetByOwnerId(ownerId);
 	}
+
 }

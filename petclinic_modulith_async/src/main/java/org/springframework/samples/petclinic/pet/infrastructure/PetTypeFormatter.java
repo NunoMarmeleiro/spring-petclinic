@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.samples.petclinic.pet.domain;
+package org.springframework.samples.petclinic.pet.infrastructure;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.Formatter;
+import org.springframework.samples.petclinic.pet.domain.PetType;
 import org.springframework.samples.petclinic.pet.infrastructure.PetRepository;
 import org.springframework.stereotype.Component;
 

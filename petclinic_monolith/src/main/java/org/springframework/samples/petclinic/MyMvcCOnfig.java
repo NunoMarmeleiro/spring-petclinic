@@ -11,4 +11,5 @@ public class MyMvcCOnfig {
 	public HiddenHttpMethodFilter hiddenHttpMethodFilter() {
 		return new HiddenHttpMethodFilter();
 	}
+
 }

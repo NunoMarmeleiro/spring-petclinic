@@ -220,7 +220,7 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <executions>
           <execution>
-            <!-- Spring Boot Actuator displays build-related information 
+            <!-- Spring Boot Actuator displays build-related information
               if a META-INF/build-info.properties file is present -->
             <goals>
               <goal>build-info</goal>
@@ -313,6 +313,10 @@
         <enabled>false</enabled>
       </snapshots>
     </pluginRepository>
+    <pluginRepository>
+      <id>hello2morrow.maven.repository</id>
+      <url>https://maven.hello2morrow.com/repository</url>
+    </pluginRepository>
   </pluginRepositories>
 
   <profiles>
@@ -378,7 +382,7 @@
       <build>
         <pluginManagement>
           <plugins>
-            <!-- This plugin's configuration is used to store Eclipse m2e settings 
+            <!-- This plugin's configuration is used to store Eclipse m2e settings
               only. It has no influence on the Maven build itself. -->
             <plugin>
               <groupId>org.eclipse.m2e</groupId>
@@ -429,6 +433,42 @@
                   </pluginExecutions>
                 </lifecycleMappingMetadata>
               </configuration>
+            </plugin>
+            <plugin>
+              <groupId>com.hello2morrow</groupId>
+              <artifactId>sonargraph-maven-plugin</artifactId>
+              <version>13.5.2</version>
+              <configuration>
+                <systemDirectory>${basedir}/crm-domain-example.sonargraph</systemDirectory>
+                <activationCode>...</activationCode>
+                <autoUpdate>true</autoUpdate>
+                <failSet>
+                  <failOnEmptyWorkspace>true</failOnEmptyWorkspace>
+                  <includes>
+                    <include>
+                      <issueType>ArchitectureViolation</issueType>
+                    </include>
+                    <include>
+                      <issueType>any</issueType>
+                      <severity>error</severity>
+                    </include>
+                  </includes>
+                  <excludes>
+                    <exclude>
+                      <issueType>ScriptCompilationError</issueType>
+                      <resolution>none</resolution>
+                    </exclude>
+                  </excludes>
+                </failSet>
+              </configuration>
+              <executions>
+                <execution>
+                  <goals>
+                    <goal>create-report</goal>
+                    <goal>dynamic-report</goal>
+                  </goals>
+                </execution>
+              </executions>
             </plugin>
           </plugins>
         </pluginManagement>
