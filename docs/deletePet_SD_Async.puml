@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor User
+participant UserInterface
+
+box "Pet Module" #lightyellow
+    participant PetController
+    participant PetRepository
+    participant PetManagement
+    participant "event:DeletedPet"
+end box
+
+participant EventHandler
+
+box "Visit Module" #lightblue
+    participant VisitManagement
+    participant VisitRepository
+end box
+
+User -> UserInterface: Delete Pet
+UserInterface -> PetController: DELETE /owners/{ownerId}/pets/{petId}/delete
+
+PetController -> PetManagement: deleteVisits(petId)
+PetManagement --> "event:DeletedPet" **: create(petId)
+"event:DeletedPet" --> PetManagement: event
+PetManagement -> EventHandler: publishEvent(event)
+
+EventHandler -> VisitManagement: on(DeletedPet event)
+VisitManagement -> VisitRepository: deleteVisitByPetId(event.petId)
+
+PetController -> PetRepository: deletePetById(petId)
+PetController --> UserInterface: redirect:/owners/{ownerId}
+UserInterface --> User: confirms operation
+@enduml
+

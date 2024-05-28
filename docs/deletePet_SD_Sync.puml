@@ -1,0 +1,31 @@
+@startuml
+
+autonumber
+
+actor User
+participant UserInterface
+participant PetController
+participant PetRepository
+
+box "Pet Module" #lightyellow
+    participant PetController
+    participant PetRepository
+end box
+
+box "Visit Module" #lightblue
+    participant VisitManagement
+    participant VisitRepository
+end box
+
+
+User -> UserInterface: Delete Pet
+UserInterface -> PetController: DELETE /owners/{ownerId}/pets/{petId}/delete
+PetController -> VisitManagement: deleteVisits(petId)
+VisitManagement -> VisitRepository: deleteVisitsByPetId(petId)
+
+PetController -> PetRepository: deletePet(petId)
+PetController --> UserInterface: redirect:/owners/{ownerId}
+UserInterface --> User: confirms operation
+
+@enduml
+
