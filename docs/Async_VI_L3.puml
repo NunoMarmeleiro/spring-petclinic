@@ -7,6 +7,7 @@ package "PetClinic Module" {
   package "Infrastructure" {
      [Controller]
      [Repository]
+     [Module Management]
   }
 
   package "Domain" {
@@ -16,12 +17,7 @@ package "PetClinic Module" {
 
   [Controller] ..> [Repository]
   "Infrastructure" ..> "Domain"
-
+  [Controller] ..> [Module Management]
 }
 
-package "External Module" {
-  [Public API]
-}
-
-[Controller] ..> [Public API]
 @enduml
