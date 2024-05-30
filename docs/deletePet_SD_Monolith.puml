@@ -1,0 +1,31 @@
+@startuml
+
+autonumber
+
+actor User
+participant UserInterface
+participant PetController
+participant OwnerRepository
+participant "owner : Owner"
+participant "pet : Pet"
+participant "visits : Visit"
+
+User -> UserInterface: Delete Pet
+UserInterface -> PetController: DELETE /owners/{ownerId}/pets/{petId}/delete
+
+PetController -> OwnerRepository: owner = findById(ownerId)
+PetController -> "owner : Owner": pet = getPet(petId)
+PetController -> "pet : Pet": visits = getVisits()
+
+alt Loop through visits
+    loop For each visit in visits
+        PetController -> OwnerRepository: deleteVisitById(visit.id)
+    end
+end
+
+PetController -> OwnerRepository: deletePetById(petId)
+
+PetController --> UserInterface: redirect:/owners/{ownerId}
+UserInterface --> User: confirms operation
+
+@enduml
