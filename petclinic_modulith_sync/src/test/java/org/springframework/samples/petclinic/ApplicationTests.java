@@ -8,9 +8,7 @@ public class ApplicationTests {
 
 	@Test
 	void verifyModuleStructureAndGenerateDocumentation() {
-
 		var modules = ApplicationModules.of(PetClinicApplication.class).verify();
-
 		new Documenter(modules).writeModulesAsPlantUml().writeIndividualModulesAsPlantUml();
 	}
 

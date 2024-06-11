@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/component-diagram
+left to right direction
+
+package "PetClinic Application" {
+
+  [owner]
+  [pet]
+  [visit]
+  [vet]
+
+  [owner] --> [pet]: allowed
+  [pet] --> [visit]: allowed
+  [owner] -[#FF0000]-> [visit]: forbidden
+  [vet] -[#FF0000]-> [owner] : forbidden
+  [vet] -[#FF0000]-> [pet] : forbidden
+  [vet] -[#FF0000]-> [visit] : forbidden
+}
+
+@enduml

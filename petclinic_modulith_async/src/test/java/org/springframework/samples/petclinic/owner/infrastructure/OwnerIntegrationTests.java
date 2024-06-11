@@ -15,11 +15,9 @@ public class OwnerIntegrationTests {
 
 	@Test
 	void publishesOwnerDeletion(Scenario scenario) {
-
 		scenario.stimulate(() -> ownerManagement.deleteOwner(1))
 			.andWaitForEventOfType(DeletedOwner.class)
 			.matchingMappedValue(DeletedOwner::ownerId, 1)
 			.toArrive();
 	}
-
 }

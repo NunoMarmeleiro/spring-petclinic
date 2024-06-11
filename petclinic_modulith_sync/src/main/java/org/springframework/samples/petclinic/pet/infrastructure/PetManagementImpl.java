@@ -25,5 +25,4 @@ public class PetManagementImpl implements PetManagement {
 		}
 		this.pets.deletePetByOwnerId(ownerId);
 	}
-
 }

@@ -16,5 +16,4 @@ public class OwnerManagement {
 	public void deleteOwner(int ownerId) {
 		events.publishEvent(new DeletedOwner(ownerId));
 	}
-
 }
