@@ -4,9 +4,12 @@ top to bottom direction
 
 package "PetClinic Module" {
 
+  [Public API Interface]
+
   package "Infrastructure" {
      [Controller]
      [Repository]
+     [Public API Impl]
   }
 
   package "Domain" {
@@ -15,13 +18,12 @@ package "PetClinic Module" {
   }
 
   [Controller] ..> [Repository]
-  "Infrastructure" ..> "Domain"
+  [Public API Impl] ..> [Repository]
+
 
 }
 
-package "External Module" {
-  [Public API]
-}
-
-[Controller] ..> [Public API]
+"Infrastructure" ..> "Domain"
+[Aggregates] ..> [Value Objects]
+[Public API Impl] ..> [Public API Interface]
 @enduml
