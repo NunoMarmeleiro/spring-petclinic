@@ -2,15 +2,17 @@
 'https://plantuml.com/component-diagram
 left to right direction
 
-package "PetClinic" {
+package "PetClinic Application" {
 
-  package "UI Layer (View)" {
+package "UI Layer (View)" {
      [User Interface]
-  }
+}
+
+package "PetClinic Module" {
 
   package "Application Logic Layer (Controller)" {
      ControllerAPI--[Controller]
-     PublicAPI--[Public API]
+     [Public API]
   }
 
   package "Business Logic Layer (Model)" {
@@ -18,6 +20,9 @@ package "PetClinic" {
      RepoAPI--[Repository]
   }
 
+}
+PublicAPI--[Public API]
+[Controller] -( ExternalModulePublicAPI
 }
 
 [User Interface] --( ControllerAPI
