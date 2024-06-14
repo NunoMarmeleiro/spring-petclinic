@@ -1,6 +1,6 @@
 @startuml
 'https://plantuml.com/component-diagram
-
+left to right direction
 
 package "PetClinic" {
 
@@ -9,22 +9,22 @@ package "PetClinic" {
   }
 
   package "Application Logic Layer (Controller)" {
-     ControllerAPI-[Controller]
+     ControllerAPI--[Controller]
+     PublicAPI--[Public API]
   }
 
   package "Business Logic Layer (Model)" {
-     ModelAPI-[Domain Model]
-     RepoAPI-[Repository]
+     ModelAPI--[Domain Model]
+     RepoAPI--[Repository]
   }
 
-  PublicAPI-[Public API]
 }
-
-
 
 [User Interface] --( ControllerAPI
 [Controller] --( ModelAPI
 [Controller] --( RepoAPI
-[Controller] --( PublicAPI
+[Public API] --( ModelAPI
+[Public API] --( RepoAPI
+
 
 @enduml
