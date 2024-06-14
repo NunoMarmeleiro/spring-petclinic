@@ -13,6 +13,7 @@ package "Owner Module" {
 
   package "Application Logic Layer (Owner)" {
      OwnerControllerAPI--[OwnerController]
+     [OwnerManagement]
   }
 
   package "Business Logic Layer (Owner)" {
@@ -23,7 +24,8 @@ package "Owner Module" {
   [OwnerController] --( OwnerModelAPI
   [OwnerController] --( OwnerRepoAPI
   [OwnerRepository] -( OwnerModelAPI
-
+  [OwnerManagement] --( OwnerModelAPI
+  [OwnerManagement] --( OwnerRepoAPI
 }
 
 package "Pet Module" {
@@ -68,24 +70,11 @@ package "Visit Module" {
 [User Interface] --( PetControllerAPI
 [User Interface] --( VisitControllerAPI
 
-PetManagementAPI-[PetManagement]
-VisitManagementAPI-[VisitManagement]
-[OwnerController] --( PetManagementAPI
-[PetController] --( VisitManagementAPI
+
 
 [PetManagement] -[hidden]d- [OwnerController]
 [VisitManagement] -[hidden]d- [OwnerController]
 
-note right of PetManagementAPI
-Public API for Pet Module
-enabling inter-module communication
-with Owner Module
-end note
 
-note right of VisitManagementAPI
-Public API for Visit Module
-enabling inter-module communication
-with Pet Module
-end note
 }
 @enduml
