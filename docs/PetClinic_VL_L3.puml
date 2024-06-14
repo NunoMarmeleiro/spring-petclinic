@@ -12,69 +12,75 @@ package "UI Layer (View)" {
 package "Owner Module" {
 
   package "Application Logic Layer (Owner)" {
-     OwnerControllerAPI--[OwnerController]
+     [OwnerController]
   }
 
   package "Business Logic Layer (Owner)" {
-     OwnerModelAPI--[Domain Owner]
-     OwnerRepoAPI--[OwnerRepository]
+     [Domain Owner]
+     [OwnerRepository]
   }
-
+  OwnerModelAPI--[Domain Owner]
+  OwnerRepoAPI--[OwnerRepository]
   [OwnerController] --( OwnerModelAPI
   [OwnerController] --( OwnerRepoAPI
-  [OwnerRepository] -( OwnerModelAPI
+  [OwnerRepository] --( OwnerModelAPI
 
 }
+OwnerControllerAPI--[OwnerController]
 
 package "Pet Module" {
 
   package "Application Logic Layer (Pet)" {
-     PetControllerAPI--[PetController]
+     [PetController]
      [PetManagement]
   }
 
   package "Business Logic Layer (Pet)" {
-     PetModelAPI--[Domain Pet]
-     PetRepoAPI--[PetRepository]
+     [Domain Pet]
+     [PetRepository]
   }
-
+  PetModelAPI--[Domain Pet]
+  PetRepoAPI--[PetRepository]
   [PetController] --( PetModelAPI
   [PetController] --( PetRepoAPI
   [PetManagement] --( PetModelAPI
   [PetManagement] --( PetRepoAPI
-  [PetRepository] -( PetModelAPI
+  [PetRepository] --( PetModelAPI
 }
+PetControllerAPI--[PetController]
 
 package "Visit Module" {
 
   package "Application Logic Layer (Visit)" {
-     VisitControllerAPI--[VisitController]
+     [VisitController]
      [VisitManagement]
   }
 
   package "Business Logic Layer (Visit)" {
-     VisitModelAPI--[Domain Visit]
-     VisitRepoAPI--[VisitRepository]
+     [Domain Visit]
+     [VisitRepository]
   }
-
+  VisitModelAPI--[Domain Visit]
+  VisitRepoAPI--[VisitRepository]
   [VisitController] --( VisitModelAPI
   [VisitController] --( VisitRepoAPI
   [VisitManagement] --( VisitModelAPI
   [VisitManagement] --( VisitRepoAPI
-  [VisitRepository] -( VisitModelAPI
+  [VisitRepository] --( VisitModelAPI
 }
+VisitControllerAPI--[VisitController]
 
 [User Interface] --( OwnerControllerAPI
 [User Interface] --( PetControllerAPI
 [User Interface] --( VisitControllerAPI
 
-PetManagementAPI-[PetManagement]
-VisitManagementAPI-[VisitManagement]
+PetManagementAPI--[PetManagement]
+VisitManagementAPI--[VisitManagement]
 [OwnerController] --( PetManagementAPI
 [PetController] --( VisitManagementAPI
 
-[PetManagement] -[hidden]d- [OwnerController]
-[VisitManagement] -[hidden]d- [OwnerController]
+[VisitController] -[hidden]d- [OwnerController]
+
 
 note right of PetManagementAPI
 Public API for Pet Module
