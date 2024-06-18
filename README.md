@@ -21,6 +21,7 @@ The Spring PetClinic sample application is released under version 2.0 of the [Ap
 
 This version of PetClinic, consists in migrating the original version developed in a monolith architecture to a modular modulith one using the latest technology Spring Modulith.
 After the migration, the application is divided in two versions, based on the type of inter-module communication used: synchronous or asynchronous.
+
 In addition to these major changes, several minor modifications were made to the original PetClinic application:
   - Adjustments to the User Interface to minimize coupling.
   - Added two functionalities: Delete an Owner and Delete a Pet, to enable implementation and testing of inter-module communications.
