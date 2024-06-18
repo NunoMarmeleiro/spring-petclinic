@@ -31,3 +31,6 @@ In addition to these major changes, several minor modifications were made to the
 ### Logic View Diagram Level 3 - Synchronous
 ![Synchronous](./docs/svg/PetClinic_VL_L3.svg)
 
+### Logic View Diagram Level 3 - Asynchronous
+![Asynchronous](./docs/svg/PetClinic_VL_L3_Async.svg)
+
