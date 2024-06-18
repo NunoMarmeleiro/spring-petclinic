@@ -26,3 +26,8 @@ In addition to these major changes, several minor modifications were made to the
   - Adjustments to the User Interface to minimize coupling.
   - Added two functionalities: Delete an Owner and Delete a Pet, to enable implementation and testing of inter-module communications.
 
+## Design Spring Modulith PetClinic
+
+### Logic View Diagram Level 3 - Synchronous
+![Synchronous](./docs/svg/PetClinic_VL_L3.svg)
+
