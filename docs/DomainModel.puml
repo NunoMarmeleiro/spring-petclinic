@@ -30,10 +30,10 @@ package "<<aggregate>> Visit" {
     class VisitDate <<(V,#FF8B40) value object>> {}
 }
 
-Pet ---> "1" PetType: belongs
-Pet ---> "1" BirthDate: has
-Visit ---> "1" VisitDate: has
-Vet ---> "*" Speciality: possesses
+Pet "*" ---> "1" PetType: belongs
+Pet "1" o--- "1" BirthDate: has
+Visit "1" o--- "1" VisitDate: has
+Vet "*" ---> "*" Speciality: possesses
 Pet "*" --- "1" Owner: owned >
 Visit "*" --- "1" Pet: belongs >
 
