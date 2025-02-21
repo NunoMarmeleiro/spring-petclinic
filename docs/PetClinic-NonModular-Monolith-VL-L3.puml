@@ -1,0 +1,69 @@
+@startuml nonmodular
+'https://plantuml.com/component-diagram
+left to right direction
+skinparam linetype polyline
+
+package "PetClinic Application" {
+
+   package "UI Layer (View)" {
+      [User Interface]
+   }
+
+
+
+   package "Application Logic Layer" {
+      package OwnerAppLogicLayer as "Owner" {
+         [OwnerController]
+         [VisitController]
+      }
+      
+      package PetAppLogicLayer as "Pet" {
+         [PetController]
+      }      
+      
+      
+   }
+
+   package "Business Logic Layer" {
+      package OwnerBusinLogicLayer as "Owner" {
+         [Domain Owner]
+         [OwnerRepository]
+         [Domain Visit]
+         [VisitRepository]
+      }
+      package PetBusinLogicLayer as "Pet" {
+         [Domain Pet]
+         [PetRepository]
+      }
+      
+      
+   }
+   OwnerModelAPI--[Domain Owner]
+   OwnerRepoAPI--[OwnerRepository]
+   [OwnerController] --( OwnerModelAPI
+   [OwnerController] --( OwnerRepoAPI
+   [OwnerRepository] --( OwnerModelAPI
+   PetModelAPI--[Domain Pet]
+   PetRepoAPI--[PetRepository]
+   [PetController] --( PetModelAPI
+   [PetController] --( PetRepoAPI
+   [PetRepository] --( PetModelAPI
+   OwnerControllerAPI--[OwnerController]
+   PetControllerAPI--[PetController]
+
+   VisitControllerAPI--[VisitController]
+
+   [User Interface] --( OwnerControllerAPI
+   [User Interface] --( PetControllerAPI
+   [User Interface] --( VisitControllerAPI
+
+   [VisitController] -[hidden]d- [OwnerController]
+
+   VisitModelAPI--[Domain Visit]
+   VisitRepoAPI--[VisitRepository]
+   [VisitController] --( VisitModelAPI
+   [VisitController] --( VisitRepoAPI
+   [VisitRepository] --( VisitModelAPI
+
+}
+@enduml
