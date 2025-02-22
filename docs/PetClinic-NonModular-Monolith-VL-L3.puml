@@ -29,7 +29,6 @@ package "PetClinic Application" {
          [Domain Owner]
          [OwnerRepository]
          [Domain Visit]
-         [VisitRepository]
       }
       package PetBusinLogicLayer as "Pet" {
          [Domain Pet]
@@ -42,11 +41,14 @@ package "PetClinic Application" {
    OwnerRepoAPI--[OwnerRepository]
    [OwnerController] --( OwnerModelAPI
    [OwnerController] --( OwnerRepoAPI
+   [OwnerController] --( PetRepoAPI
    [OwnerRepository] --( OwnerModelAPI
    PetModelAPI--[Domain Pet]
    PetRepoAPI--[PetRepository]
    [PetController] --( PetModelAPI
    [PetController] --( PetRepoAPI
+   [PetController] --( OwnerRepoAPI
+
    [PetRepository] --( PetModelAPI
    OwnerControllerAPI--[OwnerController]
    PetControllerAPI--[PetController]
@@ -60,10 +62,9 @@ package "PetClinic Application" {
    [VisitController] -[hidden]d- [OwnerController]
 
    VisitModelAPI--[Domain Visit]
-   VisitRepoAPI--[VisitRepository]
    [VisitController] --( VisitModelAPI
-   [VisitController] --( VisitRepoAPI
-   [VisitRepository] --( VisitModelAPI
+   [VisitController] --( OwnerRepoAPI
+   [OwnerRepository] --( VisitModelAPI
 
 }
 @enduml
