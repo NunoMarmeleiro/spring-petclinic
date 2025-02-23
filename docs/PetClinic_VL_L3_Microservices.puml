@@ -1,0 +1,37 @@
+@startuml PETCLINIC MICROSERVICES
+
+left to right direction
+skinparam linetype ortho
+
+package "Microservices PetClinic Application"{
+
+
+    package "UI Layer (View)" {
+        [User Interface]
+    }
+
+    package ApiGatewayPackage as "API Gateway" {
+        [API Gateway]
+    }
+    APIGateawayAPI--[API Gateway]
+
+    package "Visit Service" {
+
+    }
+
+    package "Pet Service" {
+
+    }
+
+    package "Owner Service" {
+
+    }
+
+    package ""
+
+    [User Interface] --( APIGateawayAPI
+
+
+}
+
+@enduml

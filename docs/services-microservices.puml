@@ -1,0 +1,15 @@
+@startuml services-microservices
+
+left to right direction
+
+package "Microservices PetClinic Application" {
+    [Visit] <<Service>>
+    [Pet] <<Service>>
+    [Owner] <<Service>>
+    [Vet] <<Service>>
+
+    [Visit] --> [Pet] : "listens to"
+    [Pet] --> [Owner] : "listens to"
+}
+
+@enduml

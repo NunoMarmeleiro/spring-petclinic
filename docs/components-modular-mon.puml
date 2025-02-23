@@ -1,0 +1,15 @@
+@startuml components-modular-mon
+
+left to right direction
+
+package "Modular PetClinic Application" {
+    [Visit] <<Module>>
+    [Pet] <<Module>>
+    [Owner] <<Module>>
+    [Vet] <<Module>>
+
+    [Visit] --> [Pet] : "listens to"
+    [Pet] --> [Owner] : "listens to"
+}
+
+@enduml
