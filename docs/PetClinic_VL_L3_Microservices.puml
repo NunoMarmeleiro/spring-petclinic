@@ -1,4 +1,4 @@
-@startuml PETCLINIC MICROSERVICES
+@startuml PETCLINIC MICROSERVICES VL L3
 
 left to right direction
 'skinparam linetype ortho
@@ -22,12 +22,14 @@ package "Microservices PetClinic Application"{
         [API Gateway]
     }
     APIGateawayAPI--[API Gateway]
-    ApiGatewayPackage --> [Eureka Discovery]  : registers
-    ApiGatewayPackage --> [Spring Cloud Config] : fetch configuration
+    ApiGatewayPackage -> [Eureka Discovery]  : registers
+    ApiGatewayPackage -> [Spring Cloud Config] : fetch configuration
 
     package "Visit Service" {
         package "Application Logic Layer (Visit)" {
             [VisitController]
+            VisitManagementAPI--[VisitManagement]
+            [VisitController] -( VisitManagementAPI
         }
 
         package "Business Logic Layer (Visit)" {
@@ -39,14 +41,19 @@ package "Microservices PetClinic Application"{
         [VisitController] --( VisitModelAPI
         [VisitController] --( VisitRepoAPI
         [VisitRepository] --( VisitModelAPI
+        [VisitManagement] --( VisitModelAPI
+        [VisitManagement] --( VisitRepoAPI
+
     }
     VisitControllerAPI -- [VisitController]
-    "Visit Service" --> [Eureka Discovery] : registers
-    "Visit Service"--> [Spring Cloud Config] : fetch configuration
+    "Visit Service" -> [Eureka Discovery] : registers
+    "Visit Service" -> [Spring Cloud Config] : fetch configuration
 
     package "Pet Service" {
         package "Application Logic Layer (Pet)" {
             [PetController]
+            PetManagementAPI--[PetManagement]
+            [PetController] -( PetManagementAPI
             
         }
 
@@ -59,15 +66,19 @@ package "Microservices PetClinic Application"{
         [PetController] --( PetModelAPI
         [PetController] --( PetRepoAPI
         [PetRepository] --( PetModelAPI
+        [PetManagement] --( PetModelAPI
+        [PetManagement] --( PetRepoAPI
     }
     PetControllerAPI -- [PetController]
-    "Pet Service" --> [Eureka Discovery]: registers
-    "Pet Service" --> [Spring Cloud Config] : fetch configuration
+    "Pet Service" -> [Eureka Discovery]: registers
+    "Pet Service" -> [Spring Cloud Config] : fetch configuration
     
 
     package "Owner Service" {
         package "Application Logic Layer (Owner)" {
             [OwnerController]
+            OwnerManagementAPI--[OwnerManagement]
+            [OwnerController] -( OwnerManagementAPI
         }
 
         package "Business Logic Layer (Onwer)" {
@@ -79,10 +90,12 @@ package "Microservices PetClinic Application"{
         [OwnerController] --( OwnerModelAPI
         [OwnerController] --( OwnerRepoAPI
         [OwnerRepository] --( OwnerModelAPI
+        [OwnerManagement] --( OwnerModelAPI
+        [OwnerManagement] --( OwnerRepoAPI
     }
     OwnerControllerAPI -- [OwnerController]
-    "Owner Service" --> [Eureka Discovery] : registers
-    "Owner Service" --> [Spring Cloud Config] : fetch configuration
+    "Owner Service" -> [Eureka Discovery] : registers
+    "Owner Service" -> [Spring Cloud Config] : fetch configuration
 
     
     database VisitDB as "Visit\n(RDMBS)"
