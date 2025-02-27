@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.springframework.samples.petclinic.client</groupId>
-	<artifactId>spring-petclinic-customers-service</artifactId>
-	<packaging>jar</packaging>
-	<description>Spring PetClinic Customers Service</description>
+    <groupId>org.springframework.samples.petclinic.client</groupId>
+    <artifactId>spring-petclinic-pets-service</artifactId>
+    <packaging>jar</packaging>
+    <description>Spring PetClinic Pets Service</description>
 
-	<parent>
-		<groupId>org.springframework.samples</groupId>
-		<artifactId>spring-petclinic-microservices</artifactId>
+    <parent>
+        <groupId>org.springframework.samples</groupId>
+        <artifactId>spring-petclinic-microservices</artifactId>
         <version>3.4.1</version>
-	</parent>
+    </parent>
 
     <properties>
-        <docker.image.exposed.port>8081</docker.image.exposed.port>
+        <docker.image.exposed.port>8086</docker.image.exposed.port>
         <docker.image.dockerfile.dir>${basedir}/../docker</docker.image.dockerfile.dir>
     </properties>
 
@@ -126,4 +127,5 @@
             </build>
         </profile>
     </profiles>
+
 </project>
