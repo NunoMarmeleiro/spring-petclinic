@@ -21,6 +21,7 @@ import jakarta.validation.constraints.Min;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.samples.petclinic.owners.dto.OwnerRequest;
 import org.springframework.samples.petclinic.owners.mapper.OwnerEntityMapper;
 import org.springframework.samples.petclinic.owners.domain.Owner;
@@ -43,13 +44,14 @@ import java.util.Optional;
 class OwnerController {
 
     private static final Logger log = LoggerFactory.getLogger(OwnerController.class);
-
     private final OwnerRepository ownerRepository;
     private final OwnerEntityMapper ownerEntityMapper;
+    private final KafkaTemplate<String, Integer> kafkaTemplate;
 
-    OwnerController(OwnerRepository ownerRepository, OwnerEntityMapper ownerEntityMapper) {
+    OwnerController(OwnerRepository ownerRepository, OwnerEntityMapper ownerEntityMapper, KafkaTemplate<String, Integer> kafkaTemplate) {
         this.ownerRepository = ownerRepository;
         this.ownerEntityMapper = ownerEntityMapper;
+        this.kafkaTemplate = kafkaTemplate;
     }
 
     /**
@@ -89,5 +91,12 @@ class OwnerController {
         ownerEntityMapper.map(ownerModel, ownerRequest);
         log.info("Saving owner {}", ownerModel);
         ownerRepository.save(ownerModel);
+    }
+
+    @DeleteMapping(value = "/{ownerId}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteOwner(@PathVariable("ownerId") @Min(1) int ownerId) {
+        kafkaTemplate.send("ownerDeleted", ownerId);
+        ownerRepository.deleteById(ownerId);
     }
 }
