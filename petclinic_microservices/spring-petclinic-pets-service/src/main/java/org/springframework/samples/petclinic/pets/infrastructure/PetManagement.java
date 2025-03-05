@@ -30,9 +30,9 @@ public class PetManagement {
         containerFactory = "kafkaListenerContainerFactory"
     )
     public void listenOwnerDeleted(Integer ownerId) {
+        List<Integer> petsId = petRepository.findByOwnerId(ownerId).stream().map(Pet::getId).toList();
         petRepository.deleteByOwnerId(ownerId);
-        List<Integer> petIds = petRepository.findByOwnerId(ownerId).stream().map(Pet::getId).toList();
-        for (Integer petId : petIds) {
+        for (Integer petId : petsId) {
             sendPetDeleted(petId);
         }
     }
