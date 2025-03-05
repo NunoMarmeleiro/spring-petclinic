@@ -1,24 +1,58 @@
 package org.springframework.samples.petclinic.pets.infrastructure;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.SendResult;
+import org.springframework.samples.petclinic.pets.domain.Pet;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @Component
 public class PetManagement {
 
 
     private final PetRepository petRepository;
+    private final KafkaTemplate<String, Integer> kafkaTemplate;
+    private static final Logger log = LoggerFactory.getLogger(PetController.class);
 
-    public PetManagement(PetRepository petRepository) {
+    public PetManagement(PetRepository petRepository, KafkaTemplate<String, Integer> kafkaTemplate) {
         this.petRepository = petRepository;
+        this.kafkaTemplate = kafkaTemplate;
     }
 
     @KafkaListener(
         topics = "ownerDeleted",
-        groupId = "kafka-group"
+        groupId = "kafka-group",
+        containerFactory = "kafkaListenerContainerFactory"
     )
     public void listenOwnerDeleted(Integer ownerId) {
-        petRepository.deleteByOwnerId(ownerId);
+        petRepository.deleteById(ownerId);
+        if(petRepository.existsById(ownerId)){
+            log.error("Pet not deleted");
+            return;
+        }
+        List<Integer> petIds = petRepository.findByOwnerId(ownerId).stream().map(Pet::getId).toList();
+        for (Integer petId : petIds) {
+            sendPetDeletedKafka(petId);
+        }
+        System.out.println("Received event from Kafka Listener: " + ownerId);
     }
+
+    private void sendPetDeletedKafka(final Integer data) {
+        CompletableFuture<SendResult<String, Integer>> future = kafkaTemplate.send("petDeleted",data);
+        future.whenComplete((result, ex) -> {
+            if (ex == null) {
+                log.info("Sending message to Kafka Listener: " + data);
+            }
+            else {
+                log.error("Failed to send message to Kafka Listener: " + data, ex);
+            }
+        });
+    }
+
+
 }

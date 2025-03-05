@@ -20,7 +20,6 @@ import jakarta.validation.constraints.Min;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
-//import org.springframework.samples.petclinic.customers.model.*;
 import org.springframework.samples.petclinic.pets.dto.PetDetails;
 import org.springframework.samples.petclinic.pets.dto.PetRequest;
 import org.springframework.samples.petclinic.pets.domain.Pet;
@@ -97,6 +96,10 @@ public class PetController {
         return new PetDetails(pet);
     }
 
+    @GetMapping("pets")
+    public List<Pet> findAll() {
+        return petRepository.findAll();
+    }
 
     private Pet findPetById(int petId) {
         return petRepository.findById(petId)
