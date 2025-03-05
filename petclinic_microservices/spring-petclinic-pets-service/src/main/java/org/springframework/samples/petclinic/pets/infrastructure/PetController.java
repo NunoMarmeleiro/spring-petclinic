@@ -43,11 +43,11 @@ public class PetController {
     private static final Logger log = LoggerFactory.getLogger(PetController.class);
 
     private final PetRepository petRepository;
-   // private final OwnerRepository ownerRepository;
+    private final PetManagement petManagement;
 
-    PetController(PetRepository petRepository/*, OwnerRepository ownerRepository*/) {
+    PetController(PetRepository petRepository, PetManagement petManagement) {
         this.petRepository = petRepository;
-        //this.ownerRepository = ownerRepository;
+        this.petManagement = petManagement;
     }
 
     @GetMapping("/petTypes")
@@ -105,5 +105,15 @@ public class PetController {
         return petRepository.findById(petId)
             .orElseThrow(() -> new ResourceNotFoundException("Pet " + petId + " not found"));
     }
+
+    @DeleteMapping("owners/{ownerId}/pets/{petId}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deletePet(@PathVariable("ownerId") Integer ownerId, @PathVariable("petId") int petId) {
+        petRepository.deleteById(petId);
+        petManagement.sendPetDeleted(petId);
+    }
+
+
+
 
 }

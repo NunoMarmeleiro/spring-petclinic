@@ -36,4 +36,6 @@ public interface VisitRepository extends JpaRepository<Visit, Integer> {
     List<Visit> findByPetId(int petId);
 
     List<Visit> findByPetIdIn(Collection<Integer> petIds);
+
+    void deleteByPetId(Integer petId);
 }

@@ -47,5 +47,7 @@ public interface PetRepository extends JpaRepository<Pet, Integer> {
     Optional<PetType> findPetTypeById(@Param("typeId") int typeId);
 
     List<Pet> findByOwnerId(Integer ownerId);
+
+    void deleteByOwnerId(Integer ownerId);
 }
 

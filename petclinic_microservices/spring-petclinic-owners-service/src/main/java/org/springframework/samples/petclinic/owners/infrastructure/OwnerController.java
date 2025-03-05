@@ -21,8 +21,6 @@ import jakarta.validation.constraints.Min;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
-import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.support.SendResult;
 import org.springframework.samples.petclinic.owners.dto.OwnerRequest;
 import org.springframework.samples.petclinic.owners.mapper.OwnerEntityMapper;
 import org.springframework.samples.petclinic.owners.domain.Owner;
@@ -31,7 +29,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
 
 /**
  * @author Juergen Hoeller
@@ -48,12 +45,12 @@ class OwnerController {
     private static final Logger log = LoggerFactory.getLogger(OwnerController.class);
     private final OwnerRepository ownerRepository;
     private final OwnerEntityMapper ownerEntityMapper;
-    private final KafkaTemplate<String, Integer> kafkaTemplate;
-
-    OwnerController(OwnerRepository ownerRepository, OwnerEntityMapper ownerEntityMapper, KafkaTemplate<String, Integer> kafkaTemplate) {
+    private final OwnerManagement ownerManagement;
+    OwnerController(OwnerRepository ownerRepository, OwnerEntityMapper ownerEntityMapper,OwnerManagement ownerManagement) {
         this.ownerRepository = ownerRepository;
         this.ownerEntityMapper = ownerEntityMapper;
-        this.kafkaTemplate = kafkaTemplate;
+        this.ownerManagement = ownerManagement;
+
     }
 
     /**
@@ -99,21 +96,8 @@ class OwnerController {
     @ResponseStatus(HttpStatus.OK)
     public void deleteOwner(@PathVariable("ownerId") @Min(1) int ownerId) {
         ownerRepository.deleteById(ownerId);
-        if(ownerRepository.existsById(ownerId)) {
-            throw new RuntimeException("Owner not deleted");
-        }
-        sendOwnerDeletedKafka(ownerId);
+        ownerManagement.sendOwnerDeleted(ownerId);
     }
 
-    private void sendOwnerDeletedKafka(final Integer data) {
-        CompletableFuture<SendResult<String, Integer>> future = kafkaTemplate.send("ownerDeleted",data);
-        future.whenComplete((result, ex) -> {
-            if (ex == null) {
-                log.info("Sending message to Kafka Listener: " + data);
-            }
-            else {
-                log.error("Failed to send message to Kafka Listener: " + data, ex);
-            }
-        });
-    }
+
 }

@@ -30,26 +30,21 @@ public class PetManagement {
         containerFactory = "kafkaListenerContainerFactory"
     )
     public void listenOwnerDeleted(Integer ownerId) {
-        petRepository.deleteById(ownerId);
-        if(petRepository.existsById(ownerId)){
-            log.error("Pet not deleted");
-            return;
-        }
+        petRepository.deleteByOwnerId(ownerId);
         List<Integer> petIds = petRepository.findByOwnerId(ownerId).stream().map(Pet::getId).toList();
         for (Integer petId : petIds) {
-            sendPetDeletedKafka(petId);
+            sendPetDeleted(petId);
         }
-        System.out.println("Received event from Kafka Listener: " + ownerId);
     }
 
-    private void sendPetDeletedKafka(final Integer data) {
+    void sendPetDeleted(final Integer data) {
         CompletableFuture<SendResult<String, Integer>> future = kafkaTemplate.send("petDeleted",data);
         future.whenComplete((result, ex) -> {
             if (ex == null) {
-                log.info("Sending message to Kafka Listener: " + data);
+                log.info("Sending message to Kafka Listener: {}", data);
             }
             else {
-                log.error("Failed to send message to Kafka Listener: " + data, ex);
+                log.error("Failed to send message to Kafka Listener: {}", data, ex);
             }
         });
     }
