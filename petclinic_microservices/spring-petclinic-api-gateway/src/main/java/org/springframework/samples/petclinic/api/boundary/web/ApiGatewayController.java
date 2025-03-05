@@ -18,9 +18,13 @@ package org.springframework.samples.petclinic.api.boundary.web;
 import org.springframework.cloud.client.circuitbreaker.ReactiveCircuitBreaker;
 import org.springframework.cloud.client.circuitbreaker.ReactiveCircuitBreakerFactory;
 import org.springframework.samples.petclinic.api.application.CustomersServiceClient;
+import org.springframework.samples.petclinic.api.application.OwnersServiceClient;
+import org.springframework.samples.petclinic.api.application.PetsServiceClient;
 import org.springframework.samples.petclinic.api.application.VisitsServiceClient;
 import org.springframework.samples.petclinic.api.dto.OwnerDetails;
+import org.springframework.samples.petclinic.api.dto.PetDetails;
 import org.springframework.samples.petclinic.api.dto.Visits;
+import org.springframework.samples.petclinic.api.dto.Pets;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,20 +41,27 @@ import java.util.function.Function;
 @RequestMapping("/api/gateway")
 public class ApiGatewayController {
 
-    private final CustomersServiceClient customersServiceClient;
+    //private final CustomersServiceClient customersServiceClient;
 
     private final VisitsServiceClient visitsServiceClient;
+    private final PetsServiceClient petsServiceClient;
+    private final OwnersServiceClient ownersServiceClient;
 
     private final ReactiveCircuitBreakerFactory cbFactory;
 
-    public ApiGatewayController(CustomersServiceClient customersServiceClient,
+    public ApiGatewayController(//CustomersServiceClient customersServiceClient,
                                 VisitsServiceClient visitsServiceClient,
+                                OwnersServiceClient ownersServiceClient,
+                                PetsServiceClient petsServiceClient,
                                 ReactiveCircuitBreakerFactory cbFactory) {
-        this.customersServiceClient = customersServiceClient;
+        //this.customersServiceClient = customersServiceClient;
         this.visitsServiceClient = visitsServiceClient;
         this.cbFactory = cbFactory;
+        this.ownersServiceClient = ownersServiceClient;
+        this.petsServiceClient = petsServiceClient;
     }
 
+    /*
     @GetMapping(value = "owners/{ownerId}")
     public Mono<OwnerDetails> getOwnerDetails(final @PathVariable int ownerId) {
         return customersServiceClient.getOwner(ownerId)
@@ -63,6 +74,35 @@ public class ApiGatewayController {
                     .map(addVisitsToOwner(owner))
             );
 
+    }
+
+
+
+    */
+/*
+    @GetMapping(value = "owners/{ownerId}")
+    public Mono<OwnerDetails> getOwnerDetails(@PathVariable int ownerId) {
+        return ownersServiceClient.getOwner(ownerId)
+            .flatMap(owner ->
+                petsServiceClient.getPetsForOwner(ownerId)  // Fetch pets first
+                    .flatMap(pets -> {
+                        pets.addPetsToOwner(owner);
+
+                        return visitsServiceClient.getVisitsForPets(petIds) // Fetch visits after pets
+                            .transform(it -> {
+                                ReactiveCircuitBreaker cb = cbFactory.create("getOwnerDetails");
+                                return cb.run(it, throwable -> emptyVisitsForPets());
+                            })
+                            .map(visits -> addVisitsToOwner(owner)); // Enrich response
+                    })
+            );
+    }
+ */
+    private Function<Pets, OwnerDetails> addPetsToOwner(OwnerDetails owner){
+        return pets  -> {
+            owner.pets().addAll(pets.items().stream().toList());
+            return owner;
+        };
     }
 
     private Function<Visits, OwnerDetails> addVisitsToOwner(OwnerDetails owner) {

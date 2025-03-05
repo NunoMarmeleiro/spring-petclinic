@@ -69,6 +69,13 @@ public class PetController {
         return save(pet, petRequest,ownerId);
     }
 
+    @GetMapping("/owners/{ownerId}/pets")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Pet> getPetsByOwnerId(
+        @PathVariable("ownerId") @Min(1) Integer ownerId) {
+        return petRepository.findByOwnerId(ownerId);
+    }
+
     @PutMapping("/owners/{ownerId}/pets/{petId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void processUpdateForm(@RequestBody PetRequest petRequest,@PathVariable("ownerId") @Min(1) Integer ownerId) {
@@ -91,6 +98,7 @@ public class PetController {
     }
 
     @GetMapping("owners/*/pets/{petId}")
+    @ResponseStatus(HttpStatus.OK)
     public PetDetails findPet(@PathVariable("petId") int petId) {
         Pet pet = findPetById(petId);
         return new PetDetails(pet);
