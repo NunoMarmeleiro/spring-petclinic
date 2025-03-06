@@ -1,5 +1,6 @@
 package org.springframework.samples.petclinic.api.application;
 
+import org.springframework.samples.petclinic.api.dto.PetDetails;
 import org.springframework.samples.petclinic.api.dto.Pets;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -26,8 +27,12 @@ public class PetsServiceClient {
             .get()
             .uri(hostname + "/owners/{ownerId}/pets", ownerId)
             .retrieve()
-            .bodyToMono(Pets.class);
+            .bodyToFlux(PetDetails.class)
+            .collectList()
+            .map(Pets::new);
     }
+
+
 
 
     void setHostname(String hostname) {

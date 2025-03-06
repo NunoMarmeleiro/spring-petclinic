@@ -79,25 +79,28 @@ public class ApiGatewayController {
 
 
     */
-/*
-    @GetMapping(value = "owners/{ownerId}")
-    public Mono<OwnerDetails> getOwnerDetails(@PathVariable int ownerId) {
-        return ownersServiceClient.getOwner(ownerId)
-            .flatMap(owner ->
-                petsServiceClient.getPetsForOwner(ownerId)  // Fetch pets first
-                    .flatMap(pets -> {
-                        pets.addPetsToOwner(owner);
 
-                        return visitsServiceClient.getVisitsForPets(petIds) // Fetch visits after pets
+    @GetMapping(value = "owners/{ownerId}")
+    public Mono<OwnerDetails> getOwnerDetails(final @PathVariable int ownerId) {
+        Mono<OwnerDetails> result = ownersServiceClient.getOwner(ownerId)
+            .flatMap(owner ->
+                petsServiceClient.getPetsForOwner(ownerId).transform(it -> {
+                        ReactiveCircuitBreaker cb = cbFactory.create("getOwnerDetails");
+                        return cb.run(it, throwable -> emptyPetsForOwner());
+                    })
+                    .map(addPetsToOwner(owner))
+                    .flatMap(pets ->
+                        visitsServiceClient.getVisitsForPets(pets.getPetIds())
                             .transform(it -> {
                                 ReactiveCircuitBreaker cb = cbFactory.create("getOwnerDetails");
                                 return cb.run(it, throwable -> emptyVisitsForPets());
                             })
-                            .map(visits -> addVisitsToOwner(owner)); // Enrich response
-                    })
+                            .map(addVisitsToOwner(owner))
+                    )
+
             );
+        return result;
     }
- */
     private Function<Pets, OwnerDetails> addPetsToOwner(OwnerDetails owner){
         return pets  -> {
             owner.pets().addAll(pets.items().stream().toList());
@@ -119,5 +122,9 @@ public class ApiGatewayController {
 
     private Mono<Visits> emptyVisitsForPets() {
         return Mono.just(new Visits(List.of()));
+    }
+
+    private Mono<Pets> emptyPetsForOwner() {
+        return Mono.just(new Pets(List.of()));
     }
 }

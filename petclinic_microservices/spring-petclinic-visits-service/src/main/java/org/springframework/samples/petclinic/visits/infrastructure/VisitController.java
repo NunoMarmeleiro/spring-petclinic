@@ -74,6 +74,11 @@ public class VisitController {
         return new Visits(byPetIdIn);
     }
 
+    @GetMapping("visits")
+    public List<Visit> getAll() {
+        return visitRepository.findAll();
+    }
+
     record Visits(
         List<Visit> items
     ) {
