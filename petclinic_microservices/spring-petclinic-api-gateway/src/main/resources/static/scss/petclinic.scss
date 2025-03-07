@@ -20,6 +20,7 @@ $spring-dark-green: #5fa134;
 $spring-brown:      #34302D;
 $spring-grey:       #838789;
 $spring-light-grey: #f1f1f1;
+$spring-red: #d04040;
 
 $chatbox-bg-color: #f1f1f1;
 $chatbox-header-bg-color: #075E54;
@@ -80,7 +81,7 @@ $table-border-color:                      $spring-brown;
   border-width: 2px;
   transition: border 0.15s;
   color: $spring-light-grey;
-  background: $spring-brown;
+  background: $spring-red;
   border-color: $spring-green;
   -webkit-transition: border 0.15s;
   -moz-transition: border 0.15s;
@@ -93,6 +94,28 @@ $table-border-color:                      $spring-brown;
   &.active,
   .open .dropdown-toggle {
     background-color: $spring-brown;
+    border-color: $spring-brown;
+  }
+}
+
+.btn-danger {
+  margin-top: 12px;
+  border-width: 2px;
+  transition: border 0.15s;
+  color: $spring-light-grey;
+  background: $spring-red;
+  border-color: $spring-green;
+  -webkit-transition: border 0.15s;
+  -moz-transition: border 0.15s;
+  -o-transition: border 0.15s;
+  -ms-transition: border 0.15s;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle {
+    background-color: $spring-red;
     border-color: $spring-brown;
   }
 }

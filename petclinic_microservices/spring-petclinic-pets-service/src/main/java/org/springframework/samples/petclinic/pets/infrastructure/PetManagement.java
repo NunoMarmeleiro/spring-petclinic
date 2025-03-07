@@ -7,6 +7,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.samples.petclinic.pets.domain.Pet;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -29,7 +30,9 @@ public class PetManagement {
         groupId = "kafka-group",
         containerFactory = "kafkaListenerContainerFactory"
     )
+    @Transactional
     public void listenOwnerDeleted(Integer ownerId) {
+        log.info("listenOwnerDeleted(ownerId={})", ownerId);
         List<Integer> petsId = petRepository.findByOwnerId(ownerId).stream().map(Pet::getId).toList();
         petRepository.deleteByOwnerId(ownerId);
         for (Integer petId : petsId) {
