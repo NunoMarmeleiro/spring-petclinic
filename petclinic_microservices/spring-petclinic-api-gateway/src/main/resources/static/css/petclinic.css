@@ -9288,6 +9288,22 @@ textarea.form-control-lg {
     background-color: #34302D;
     border-color: #34302D; }
 
+.btn-danger {
+    margin-top: 12px;
+    border-width: 2px;
+    transition: border 0.15s;
+    color: #f1f1f1;
+    background: #d04040;
+    border-color: #6db33f;
+    -webkit-transition: border 0.15s;
+    -moz-transition: border 0.15s;
+    -o-transition: border 0.15s;
+    -ms-transition: border 0.15s; }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
+.btn-primary .open .dropdown-toggle {
+    background-color: #d04040;
+    border-color: #34302D; }
+
 .container .text-muted {
   margin: 20px 0; }
 

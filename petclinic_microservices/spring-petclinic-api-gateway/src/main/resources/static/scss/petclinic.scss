@@ -81,7 +81,7 @@ $table-border-color:                      $spring-brown;
   border-width: 2px;
   transition: border 0.15s;
   color: $spring-light-grey;
-  background: $spring-red;
+  background: $spring-brown;
   border-color: $spring-green;
   -webkit-transition: border 0.15s;
   -moz-transition: border 0.15s;
@@ -103,7 +103,7 @@ $table-border-color:                      $spring-brown;
   border-width: 2px;
   transition: border 0.15s;
   color: $spring-light-grey;
-  background: $spring-red;
+  background: $spring-;
   border-color: $spring-green;
   -webkit-transition: border 0.15s;
   -moz-transition: border 0.15s;
@@ -115,7 +115,7 @@ $table-border-color:                      $spring-brown;
   &:active,
   &.active,
   .open .dropdown-toggle {
-    background-color: $spring-red;
+    background-color: $spring-brown;
     border-color: $spring-brown;
   }
 }
