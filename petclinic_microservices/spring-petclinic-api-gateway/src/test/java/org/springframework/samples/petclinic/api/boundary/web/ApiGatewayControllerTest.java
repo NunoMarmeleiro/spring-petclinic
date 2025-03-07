@@ -9,6 +9,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.circuitbreaker.resilience4j.ReactiveResilience4JAutoConfiguration;
 import org.springframework.context.annotation.Import;
 import org.springframework.samples.petclinic.api.application.OwnersServiceClient;
+import org.springframework.samples.petclinic.api.application.PetsServiceClient;
 import org.springframework.samples.petclinic.api.application.VisitsServiceClient;
 import org.springframework.samples.petclinic.api.dto.*;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -31,6 +32,9 @@ class ApiGatewayControllerTest {
     @MockBean
     private VisitsServiceClient visitsServiceClient;
 
+    @MockBean
+    private PetsServiceClient petsServiceClient;
+
     @Autowired
     private WebTestClient client;
 
@@ -43,11 +47,16 @@ class ApiGatewayControllerTest {
             .visits(new ArrayList<>())
             .build();
         OwnerDetails owner = OwnerDetails.OwnerDetailsBuilder.anOwnerDetails()
-            .pets(List.of(cat))
+            .pets(new ArrayList<>())
             .build();
         Mockito
             .when(ownersServiceClient.getOwner(1))
             .thenReturn(Mono.just(owner));
+
+        Pets pets = new Pets(List.of(cat));
+        Mockito
+            .when(petsServiceClient.getPetsForOwner(1))
+            .thenReturn(Mono.just(pets));
 
         VisitDetails visit = new VisitDetails(300, cat.id(), null, "First visit");
         Visits visits = new Visits(List.of(visit));
@@ -75,11 +84,16 @@ class ApiGatewayControllerTest {
             .visits(new ArrayList<>())
             .build();
         OwnerDetails owner = OwnerDetails.OwnerDetailsBuilder.anOwnerDetails()
-            .pets(List.of(cat))
+            .pets(new ArrayList<>())
             .build();
         Mockito
             .when(ownersServiceClient.getOwner(1))
             .thenReturn(Mono.just(owner));
+
+        Pets pets = new Pets(List.of(cat));
+        Mockito
+            .when(petsServiceClient.getPetsForOwner(1))
+            .thenReturn(Mono.just(pets));
 
         Mockito
             .when(visitsServiceClient.getVisitsForPets(Collections.singletonList(cat.id())))
