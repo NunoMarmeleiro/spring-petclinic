@@ -34,7 +34,7 @@
     
     <div class="form-group">
         <button class="btn btn-primary" type="submit">Submit</button>
-        <button class="btn btn-danger" type="button" ng-if="$ctrl.owner.ownerId != ''" ng-click="$ctrl.deleteOwner()">Delete</button>
+        <button class="btn btn-danger" type="button" ng-if="!!($ctrl.owner.id)" ng-click="$ctrl.deleteOwner()">Delete</button>
     </div>
 
 </form>

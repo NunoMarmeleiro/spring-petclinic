@@ -38,6 +38,7 @@
             <button class="btn btn-primary" type="submit">
                 Submit
             </button>
+            <button class="btn btn-danger" type="button" ng-if="!!($ctrl.pet.id)" ng-click="$ctrl.deletePet()">Delete</button>
         </div>
     </div>
 </form>

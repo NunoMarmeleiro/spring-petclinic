@@ -49,4 +49,17 @@ angular.module('petForm')
                 $state.go('ownerDetails', {ownerId: ownerId});
             });
         };
+
+        self.deletePet = function () {
+            if (confirm("Are you sure you want to delete this owner?")) {
+                $http.delete('api/pet/owners/'+ownerId+'/pets/' + self.pet.id)
+                    .then(function () {
+                        $state.go('ownerDetails', {ownerId: ownerId});
+                    })
+                    .catch(function (error) {
+                        console.error("Error deleting owner:", error);
+                    });
+            }
+        };
+
     }]);
