@@ -61,11 +61,11 @@ public class PetController {
         @RequestBody PetRequest petRequest,
         @PathVariable("ownerId") @Min(1) Integer ownerId) {
 
+        //TODO: Do an async or sync verification to owner service to check if exists
         //Owner owner = ownerRepository.findById(ownerId)
          //   .orElseThrow(() -> new ResourceNotFoundException("Owner " + ownerId + " not found"));
 
         final Pet pet = new Pet();
-        //owner.addPet(pet);
         return save(pet, petRequest,ownerId);
     }
 

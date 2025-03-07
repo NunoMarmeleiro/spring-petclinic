@@ -17,12 +17,10 @@ package org.springframework.samples.petclinic.api.boundary.web;
 
 import org.springframework.cloud.client.circuitbreaker.ReactiveCircuitBreaker;
 import org.springframework.cloud.client.circuitbreaker.ReactiveCircuitBreakerFactory;
-import org.springframework.samples.petclinic.api.application.CustomersServiceClient;
 import org.springframework.samples.petclinic.api.application.OwnersServiceClient;
 import org.springframework.samples.petclinic.api.application.PetsServiceClient;
 import org.springframework.samples.petclinic.api.application.VisitsServiceClient;
 import org.springframework.samples.petclinic.api.dto.OwnerDetails;
-import org.springframework.samples.petclinic.api.dto.PetDetails;
 import org.springframework.samples.petclinic.api.dto.Visits;
 import org.springframework.samples.petclinic.api.dto.Pets;
 import org.springframework.web.bind.annotation.GetMapping;

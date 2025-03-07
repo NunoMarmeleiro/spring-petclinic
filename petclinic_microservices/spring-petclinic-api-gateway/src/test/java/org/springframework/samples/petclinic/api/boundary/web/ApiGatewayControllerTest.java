@@ -8,7 +8,7 @@ import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.circuitbreaker.resilience4j.ReactiveResilience4JAutoConfiguration;
 import org.springframework.context.annotation.Import;
-import org.springframework.samples.petclinic.api.application.CustomersServiceClient;
+import org.springframework.samples.petclinic.api.application.OwnersServiceClient;
 import org.springframework.samples.petclinic.api.application.VisitsServiceClient;
 import org.springframework.samples.petclinic.api.dto.*;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -26,7 +26,7 @@ import java.util.List;
 class ApiGatewayControllerTest {
 
     @MockBean
-    private CustomersServiceClient customersServiceClient;
+    private OwnersServiceClient ownersServiceClient;
 
     @MockBean
     private VisitsServiceClient visitsServiceClient;
@@ -46,7 +46,7 @@ class ApiGatewayControllerTest {
             .pets(List.of(cat))
             .build();
         Mockito
-            .when(customersServiceClient.getOwner(1))
+            .when(ownersServiceClient.getOwner(1))
             .thenReturn(Mono.just(owner));
 
         VisitDetails visit = new VisitDetails(300, cat.id(), null, "First visit");
@@ -78,7 +78,7 @@ class ApiGatewayControllerTest {
             .pets(List.of(cat))
             .build();
         Mockito
-            .when(customersServiceClient.getOwner(1))
+            .when(ownersServiceClient.getOwner(1))
             .thenReturn(Mono.just(owner));
 
         Mockito
