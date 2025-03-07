@@ -59,28 +59,7 @@ public class Owner {
     @Digits(fraction = 0, integer = 12)
     private String telephone;
 
-    /*
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "owner")
-    private Set<Pet> pets;
 
-    protected Set<Pet> getPetsInternal() {
-        if (this.pets == null) {
-            this.pets = new HashSet<>();
-        }
-        return this.pets;
-    }
-
-    public List<Pet> getPets() {
-        final List<Pet> sortedPets = new ArrayList<>(getPetsInternal());
-        PropertyComparator.sort(sortedPets, new MutableSortDefinition("name", true, true));
-        return Collections.unmodifiableList(sortedPets);
-    }
-
-    public void addPet(Pet pet) {
-        getPetsInternal().add(pet);
-        pet.setOwner(this);
-    }
-    */
     @Override
     public String toString() {
         return new ToStringCreator(this)
@@ -95,6 +74,10 @@ public class Owner {
 
     public Integer getId() {
         return this.id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getFirstName() {

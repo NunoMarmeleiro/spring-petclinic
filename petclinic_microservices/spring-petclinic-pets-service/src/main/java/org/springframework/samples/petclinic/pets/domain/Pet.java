@@ -50,12 +50,7 @@ public class Pet {
 
     @Column(name = "owner_id")
     private Integer ownerId;
-    /*
-    @ManyToOne
-    @JoinColumn(name = "owner_id")
-    @JsonIgnore
-    private Owner owner;
-     */
+
 
     @Override
     public String toString() {
@@ -64,8 +59,6 @@ public class Pet {
             .append("name", this.getName())
             .append("birthDate", this.getBirthDate())
             .append("type", this.getType().getName())
-            //.append("ownerFirstname", this.getOwner().getFirstName())
-            //.append("ownerLastname", this.getOwner().getLastName())
             .toString();
     }
 
@@ -84,11 +77,7 @@ public class Pet {
     public PetType getType() {
         return this.type;
     }
-/*
-    public Owner getOwner() {
-        return this.owner;
-    }
-*/
+
     public int getOwnerId() {
         return this.ownerId;
     }
@@ -108,11 +97,7 @@ public class Pet {
     public void setType(PetType type) {
         this.type = type;
     }
-/*
-    public void setOwner(Owner owner) {
-        this.owner = owner;
-    }
-*/
+
     public void setOwnerId(int ownerId) {
         this.ownerId = ownerId;
     }
@@ -123,8 +108,7 @@ public class Pet {
         return Objects.equals(id, pet.id)
             && Objects.equals(name, pet.name)
             && Objects.equals(birthDate, pet.birthDate)
-            && Objects.equals(type, pet.type)
-            /*&& Objects.equals(owner, pet.owner)*/;
+            && Objects.equals(type, pet.type);
     }
 
     @Override

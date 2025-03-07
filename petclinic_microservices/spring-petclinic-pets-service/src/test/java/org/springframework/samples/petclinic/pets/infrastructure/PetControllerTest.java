@@ -16,6 +16,9 @@ import org.springframework.test.web.servlet.MockMvc;
 
 
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.verify;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -35,8 +38,8 @@ class PetControllerTest {
     @MockBean
     PetRepository petRepository;
 
-    //@MockBean
-    //OwnerRepository ownerRepository;
+    @MockBean
+    PetManagement petManagement;
 
     @Test
     void shouldGetAPetInJSonFormat() throws Exception {
@@ -55,10 +58,6 @@ class PetControllerTest {
     }
 
     private Pet setupPet() {
-        //Owner owner = new Owner();
-        //owner.setFirstName("George");
-        //owner.setLastName("Bush");
-
         Pet pet = new Pet();
 
         pet.setName("Basil");
@@ -70,5 +69,21 @@ class PetControllerTest {
 
         //owner.addPet(pet);
         return pet;
+    }
+
+    @Test
+    void shouldDeletePetSuccessfully() throws Exception {
+        int ownerId = 2;
+        int petId = 2;
+
+        doNothing().when(petRepository).deleteById(petId);
+        doNothing().when(petManagement).sendPetDeleted(petId);
+
+        mvc.perform(delete("/owners/{ownerId}/pets/{petId}", ownerId, petId)
+                .accept(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk());
+
+        verify(petRepository).deleteById(petId);
+        verify(petManagement).sendPetDeleted(petId);
     }
 }
