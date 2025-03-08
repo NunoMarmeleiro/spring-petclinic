@@ -12,6 +12,7 @@ import org.springframework.samples.petclinic.api.application.OwnersServiceClient
 import org.springframework.samples.petclinic.api.application.PetsServiceClient;
 import org.springframework.samples.petclinic.api.application.VisitsServiceClient;
 import org.springframework.samples.petclinic.api.dto.*;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Mono;
@@ -26,13 +27,13 @@ import java.util.List;
 @Import({ReactiveResilience4JAutoConfiguration.class, CircuitBreakerConfiguration.class})
 class ApiGatewayControllerTest {
 
-    @MockBean
+    @MockitoBean
     private OwnersServiceClient ownersServiceClient;
 
-    @MockBean
+    @MockitoBean
     private VisitsServiceClient visitsServiceClient;
 
-    @MockBean
+    @MockitoBean
     private PetsServiceClient petsServiceClient;
 
     @Autowired
