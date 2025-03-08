@@ -2,30 +2,22 @@ package org.springframework.samples.petclinic.pets.infrastructure;
 
 import static org.mockito.Mockito.*;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.SendResult;
 import org.springframework.samples.petclinic.pets.domain.Pet;
 import org.springframework.samples.petclinic.pets.domain.PetType;
-import org.springframework.samples.petclinic.pets.infrastructure.PetRepository;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
@@ -96,7 +88,7 @@ class PetManagementTest {
     @Test
     void sendPetDeleted_ShouldLogMessageOnSuccess() throws ExecutionException, InterruptedException {
         Integer petId = 1;
-        CompletableFuture futureMock = CompletableFuture.completedFuture(null);
+        CompletableFuture<SendResult<String, Integer>> futureMock = CompletableFuture.completedFuture(null);
         when(kafkaTemplate.send("petDeleted", petId)).thenReturn(futureMock);
 
         petManagement.sendPetDeleted(petId);
@@ -107,7 +99,7 @@ class PetManagementTest {
     @Test
     void sendPetDeleted_ShouldLogErrorOnFailure() {
         Integer petId = 1;
-        CompletableFuture futureMock = new CompletableFuture<>();
+        CompletableFuture<SendResult<String, Integer>> futureMock = new CompletableFuture<>();
         futureMock.completeExceptionally(new RuntimeException("Kafka failure"));
 
         when(kafkaTemplate.send("petDeleted", petId)).thenReturn(futureMock);
