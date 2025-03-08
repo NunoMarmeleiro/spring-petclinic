@@ -1,90 +1,119 @@
 package org.springframework.samples.petclinic.pets.infrastructure;
 
+import static org.mockito.Mockito.*;
 
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.common.serialization.IntegerDeserializer;
-import org.apache.kafka.common.serialization.StringDeserializer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.test.context.EmbeddedKafka;
-import org.springframework.kafka.test.utils.KafkaTestUtils;
 import org.springframework.samples.petclinic.pets.domain.Pet;
+import org.springframework.samples.petclinic.pets.domain.PetType;
+import org.springframework.samples.petclinic.pets.infrastructure.PetRepository;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.time.Duration;
-import java.util.Collections;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
-import java.util.Properties;
-import java.util.stream.StreamSupport;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.awaitility.Awaitility.await;
+import java.util.Locale;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest
-@AutoConfigureMockMvc
-@EmbeddedKafka(partitions = 1, topics = {"ownerDeleted", "petDeleted"})
-public class PetManagementTest {
-    /*
-    TODO NOT WORKING
-    @Autowired
+@WebMvcTest(PetManagement.class)
+@ActiveProfiles("test")
+class PetManagementTest {
+
+    @MockitoBean
+    private PetRepository petRepository;
+
+    @MockitoBean
     private KafkaTemplate<String, Integer> kafkaTemplate;
 
     @Autowired
-    private PetRepository petRepository;
+    private PetManagement petManagement;
 
-    private Pet pet1, pet2;
-    private final int ownerId = 10;
+    @Captor
+    private ArgumentCaptor<Integer> petIdCaptor;
 
-    @BeforeEach
-    void setup() {
-        pet1 = new Pet();
-        pet1.setName("Basil");
+
+    @Test
+    void listenOwnerDeleted_ShouldDeletePetsAndSendEvents() throws ParseException {
+        Integer ownerId = 1;
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+        //Pet 1
+        Pet pet1 = new Pet();
+        PetType petType1 = new PetType();
+        petType1.setId(1);
+        petType1.setName("Cat");
+        pet1.setId(1);
         pet1.setOwnerId(ownerId);
-        pet1 = petRepository.save(pet1);
+        pet1.setName("Jeremias");
+        pet1.setBirthDate(formatter.parse("10-10-2010"));
+        pet1.setType(petType1);
 
-        pet2 = new Pet();
-        pet2.setName("Max");
+        //Pet 2
+        Pet pet2 = new Pet();
+        PetType petType2 = new PetType();
+        petType2.setId(1);
+        petType2.setName("Dog");
+        pet2.setId(2);
         pet2.setOwnerId(ownerId);
-        pet2 = petRepository.save(pet2);
+        pet2.setName("Alfredo");
+        pet2.setBirthDate(formatter.parse("11-11-2011"));
+        pet2.setType(petType2);
+
+        List<Pet> pets = List.of(pet1,pet2);
+
+        when(petRepository.findByOwnerId(ownerId)).thenReturn(pets);
+        doNothing().when(petRepository).deleteByOwnerId(ownerId);
+
+        CompletableFuture futureMock = mock(CompletableFuture.class);
+        when(kafkaTemplate.send(eq("petDeleted"), any(Integer.class))).thenReturn(futureMock);
+
+        petManagement.listenOwnerDeleted(ownerId);
+
+        verify(petRepository).deleteByOwnerId(ownerId);
+        verify(kafkaTemplate, times(2)).send(eq("petDeleted"), petIdCaptor.capture());
+
+        List<Integer> capturedIds = petIdCaptor.getAllValues();
+        assert capturedIds.contains(1);
+        assert capturedIds.contains(2);
     }
 
     @Test
-    void shouldDeletePetsWhenOwnerDeletedEventIsReceived() {
-        kafkaTemplate.send("ownerDeleted", ownerId);
+    void sendPetDeleted_ShouldLogMessageOnSuccess() throws ExecutionException, InterruptedException {
+        Integer petId = 1;
+        CompletableFuture futureMock = CompletableFuture.completedFuture(null);
+        when(kafkaTemplate.send("petDeleted", petId)).thenReturn(futureMock);
 
-        await().atMost(Duration.ofSeconds(5)).untilAsserted(() -> {
-            List<Pet> pets = petRepository.findByOwnerId(ownerId);
-            assertThat(pets).isEmpty();
-        });
+        petManagement.sendPetDeleted(petId);
 
-        List<Integer> deletedPetIds = consumeMessages("petDeleted");
-        assertThat(deletedPetIds).containsExactlyInAnyOrder(pet1.getId(), pet2.getId());
+        verify(kafkaTemplate).send("petDeleted", petId);
     }
 
-    private List<Integer> consumeMessages(String topic) {
-        Properties props = new Properties();
-        props.put("bootstrap.servers", "localhost:9092");
-        props.put("group.id", "test-group");
-        props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        props.put("value.deserializer", "org.apache.kafka.common.serialization.IntegerDeserializer");
-        props.put("auto.offset.reset", "earliest"); // Read from beginning
+    @Test
+    void sendPetDeleted_ShouldLogErrorOnFailure() {
+        Integer petId = 1;
+        CompletableFuture futureMock = new CompletableFuture<>();
+        futureMock.completeExceptionally(new RuntimeException("Kafka failure"));
 
-        try (KafkaConsumer<String, Integer> consumer = new KafkaConsumer<>(props, new StringDeserializer(), new IntegerDeserializer())) {
-            consumer.subscribe(Collections.singleton(topic));
+        when(kafkaTemplate.send("petDeleted", petId)).thenReturn(futureMock);
 
-            Iterable<ConsumerRecord<String, Integer>> records = KafkaTestUtils.getRecords(consumer, Duration.ofSeconds(5)).records(topic);
+        petManagement.sendPetDeleted(petId);
 
-            return StreamSupport.stream(records.spliterator(), false)
-                .map(ConsumerRecord::value)
-                .toList();
-        }
-    }*/
-
+        verify(kafkaTemplate).send("petDeleted", petId);
+    }
 }
