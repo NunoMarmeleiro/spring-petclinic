@@ -20,6 +20,7 @@ import jakarta.validation.constraints.Min;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.samples.petclinic.pets.dto.PetDetails;
 import org.springframework.samples.petclinic.pets.dto.PetRequest;
 import org.springframework.samples.petclinic.pets.domain.Pet;
@@ -28,6 +29,7 @@ import org.springframework.samples.petclinic.pets.infrastructure.exception.Resou
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author Juergen Hoeller
@@ -99,9 +101,13 @@ public class PetController {
 
     @GetMapping("owners/*/pets/{petId}")
     @ResponseStatus(HttpStatus.OK)
-    public PetDetails findPet(@PathVariable("petId") int petId) {
-        Pet pet = findPetById(petId);
-        return new PetDetails(pet);
+    public ResponseEntity<PetDetails> findPet(@PathVariable("petId") int petId) {
+        try {
+            Pet pet = findPetById(petId);
+            return ResponseEntity.ok(new PetDetails(pet));
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        }
     }
 
     @GetMapping("pets")
@@ -115,7 +121,7 @@ public class PetController {
     }
 
     @DeleteMapping("owners/{ownerId}/pets/{petId}")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletePet(@PathVariable("ownerId") Integer ownerId, @PathVariable("petId") int petId) {
         petRepository.deleteById(petId);
         petManagement.sendPetDeleted(petId);

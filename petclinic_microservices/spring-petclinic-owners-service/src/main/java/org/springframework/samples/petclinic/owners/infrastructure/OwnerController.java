@@ -21,6 +21,7 @@ import jakarta.validation.constraints.Min;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.samples.petclinic.owners.dto.OwnerRequest;
 import org.springframework.samples.petclinic.owners.mapper.OwnerEntityMapper;
 import org.springframework.samples.petclinic.owners.domain.Owner;
@@ -67,9 +68,13 @@ class OwnerController {
      * Read single Owner
      */
     @GetMapping(value = "/{ownerId}")
-    public Optional<Owner> findOwner(@PathVariable("ownerId") @Min(1) int ownerId) {
-        return ownerRepository.findById(ownerId);
+    public ResponseEntity<Owner> findOwner(@PathVariable("ownerId") @Min(1) int ownerId) {
+        Optional<Owner> owner = ownerRepository.findById(ownerId);
+
+        return owner.map(ResponseEntity::ok)
+            .orElseGet(() -> ResponseEntity.status(HttpStatus.NO_CONTENT).build());
     }
+
 
     /**
      * Read List of Owners
@@ -93,7 +98,7 @@ class OwnerController {
     }
 
     @DeleteMapping(value = "/{ownerId}")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteOwner(@PathVariable("ownerId") @Min(1) int ownerId) {
         ownerRepository.deleteById(ownerId);
         ownerManagement.sendOwnerDeleted(ownerId);
