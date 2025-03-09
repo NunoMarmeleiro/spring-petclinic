@@ -1,0 +1,1174 @@
+{
+	"info": {
+		"_postman_id": "b88d421f-3bf6-437f-b09a-b9c152f7f303",
+		"name": "PetClinic - E2E Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17811501"
+	},
+	"item": [
+		{
+			"name": "Owner",
+			"item": [
+				{
+					"name": "POST OWNER",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"pm.collectionVariables.set(\"owner_id\", response.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Nuno\",\r\n    \"lastName\": \"Marmeleiro\",\r\n    \"address\": \"Nuno Street's 101\",\r\n    \"city\": \"Porto\",\r\n    \"telephone\": \"123456789012\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/owner/owners",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"owner",
+								"owners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET OWNER",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"let storedOwnerId = parseInt(pm.collectionVariables.get(\"owner_id\"), 10)\r",
+									"pm.test(\"Owner ID matches\", function () {\r",
+									"    pm.expect(response.id).to.eql(storedOwnerId);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/owner/owners/{{owner_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"owner",
+								"owners",
+								"{{owner_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE OWNER",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/owner/owners/{{owner_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"owner",
+								"owners",
+								"{{owner_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET OWNER - After Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/owner/owners/{{owner_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"owner",
+								"owners",
+								"{{owner_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder which contains Owner Request to perform End to End tests"
+		},
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "POST PET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"pm.collectionVariables.set(\"pet_id\", response.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"birthDate\":\"2010-01-01\",\r\n    \"name\": \"Tobias\",\r\n    \"typeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pet/owners/{{owner_id}}/pets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"owners",
+								"{{owner_id}}",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"let storedPetId = parseInt(pm.collectionVariables.get(\"pet_id\"), 10)\r",
+									"pm.test(\"Pet ID matches\", function () {\r",
+									"    pm.expect(response.id).to.eql(storedPetId);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pet/owners/{{owner_id}}/pets/{{pet_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pet/owners/{{owner_id}}/pets/{{pet_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PET - After Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pet/owners/{{owner_id}}/pets/{{pet_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder which contains Pet Request to perform End to End tests"
+		},
+		{
+			"name": "Visit",
+			"item": [
+				{
+					"name": "POST VISIT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"pm.collectionVariables.set(\"visit_id\", response.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2025-03-09\",\r\n    \"description\": \"Massage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/visit/owners/{{owner_id}}/pets/{{pet_id}}/visits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"visit",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_id}}",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VISIT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"let storedVisitId = parseInt(pm.collectionVariables.get(\"visit_id\"), 10)\r",
+									"pm.test(\"Visit ID \", function () {\r",
+									"    var ids = response.map((i) => i.id);\r",
+									"    pm.expect(ids.includes(storedVisitId)).to.eql(true);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/visit/owners/{{owner_id}}/pets/{{pet_id}}/visits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"visit",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_id}}",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder which contains Visit Request to perform End to End tests"
+		},
+		{
+			"name": "Owner - Pet - Visit",
+			"item": [
+				{
+					"name": "POST OWNER",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"pm.collectionVariables.set(\"owner_id\", response.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Nuno\",\r\n    \"lastName\": \"Marmeleiro\",\r\n    \"address\": \"Nuno Street's 101\",\r\n    \"city\": \"Porto\",\r\n    \"telephone\": \"123456789012\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/owner/owners",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"owner",
+								"owners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST PET ALFREDO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"pm.collectionVariables.set(\"pet_alfredo_id\", response.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"birthDate\":\"2010-01-01\",\r\n    \"name\": \"Alfredo\",\r\n    \"typeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pet/owners/{{owner_id}}/pets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"owners",
+								"{{owner_id}}",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST VISIT ALFREDO 2025-01-01",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"let visits = pm.collectionVariables.get(\"visits_ids_list\");\r",
+									"\r",
+									"visits = [];\r",
+									"\r",
+									"visits.push(response.id);\r",
+									"\r",
+									"pm.collectionVariables.set(\"visits_ids_list\", JSON.stringify(visits));"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2025-01-01\",\r\n    \"description\": \"Massage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/visit/owners/{{owner_id}}/pets/{{pet_alfredo_id}}/visits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"visit",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_alfredo_id}}",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST VISIT ALFREDO 2025-01-02",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"let visits = pm.collectionVariables.get(\"visits_ids_list\");\r",
+									"\r",
+									"visits = visits ? JSON.parse(visits) : [];\r",
+									"\r",
+									"visits.push(response.id);\r",
+									"\r",
+									"pm.collectionVariables.set(\"visits_ids_list\", JSON.stringify(visits));"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2025-01-02\",\r\n    \"description\": \"Massage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/visit/owners/{{owner_id}}/pets/{{pet_alfredo_id}}/visits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"visit",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_alfredo_id}}",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST VISIT ALFREDO 2025-01-03",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"let visits = pm.collectionVariables.get(\"visits_ids_list\");\r",
+									"\r",
+									"visits = visits ? JSON.parse(visits) : [];\r",
+									"\r",
+									"visits.push(response.id);\r",
+									"\r",
+									"pm.collectionVariables.set(\"visits_ids_list\", JSON.stringify(visits));"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2025-01-02\",\r\n    \"description\": \"Massage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/visit/owners/{{owner_id}}/pets/{{pet_alfredo_id}}/visits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"visit",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_alfredo_id}}",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST PET JEREMIAS",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"pm.collectionVariables.set(\"pet_jeremias_id\", response.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"birthDate\":\"2010-01-01\",\r\n    \"name\": \"Jeremias\",\r\n    \"typeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pet/owners/{{owner_id}}/pets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"owners",
+								"{{owner_id}}",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST VISIT JEREMIAS 2025-01-01",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"let visits = pm.collectionVariables.get(\"visits_ids_list\");\r",
+									"\r",
+									"visits = [];\r",
+									"\r",
+									"visits.push(response.id);\r",
+									"\r",
+									"pm.collectionVariables.set(\"visits_ids_list\", JSON.stringify(visits));"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2025-01-01\",\r\n    \"description\": \"Massage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/visit/owners/{{owner_id}}/pets/{{pet_jeremias_id}}/visits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"visit",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_jeremias_id}}",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST VISIT JEREMIAS 2025-01-02",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"let visits = pm.collectionVariables.get(\"visits_ids_list\");\r",
+									"\r",
+									"visits = visits ? JSON.parse(visits) : [];\r",
+									"\r",
+									"visits.push(response.id);\r",
+									"\r",
+									"pm.collectionVariables.set(\"visits_ids_list\", JSON.stringify(visits));"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2025-01-02\",\r\n    \"description\": \"Massage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/visit/owners/{{owner_id}}/pets/{{pet_jeremias_id}}/visits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"visit",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_jeremias_id}}",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST VISIT JEREMIAS 2025-01-03",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"let visits = pm.collectionVariables.get(\"visits_ids_list\");\r",
+									"\r",
+									"visits = visits ? JSON.parse(visits) : [];\r",
+									"\r",
+									"visits.push(response.id);\r",
+									"\r",
+									"pm.collectionVariables.set(\"visits_ids_list\", JSON.stringify(visits));"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2025-01-02\",\r\n    \"description\": \"Massage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/visit/owners/{{owner_id}}/pets/{{pet_jeremias_id}}/visits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"visit",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_jeremias_id}}",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE OWNER",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/owner/owners/{{owner_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"owner",
+								"owners",
+								"{{owner_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET OWNER - After Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/owner/owners/{{owner_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"owner",
+								"owners",
+								"{{owner_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PET ALFREDO - After Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pet/owners/{{owner_id}}/pets/{{pet_alfredo_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_alfredo_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VISITS ALFREDO - After Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"pm.test(\"Visits are empty \", function () {\r",
+									"    pm.expect(response.length === 0).to.eql(true);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/visit/owners/{{owner_id}}/pets/{{pet_alfredo_id}}/visits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"visit",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_alfredo_id}}",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PET JEREMIAS - After Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pet/owners/{{owner_id}}/pets/{{pet_jeremias_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_jeremias_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VISITS JEREMIAS - After Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"pm.test(\"Visits are empty \", function () {\r",
+									"    pm.expect(response.length === 0).to.eql(true);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/visit/owners/{{owner_id}}/pets/{{pet_jeremias_id}}/visits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"visit",
+								"owners",
+								"{{owner_id}}",
+								"pets",
+								"{{pet_jeremias_id}}",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder which contains Tests for the integration between Owners, Pets and Visits Services"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "owner_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "pet_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "visit_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "visits_ids_list",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "pet_alfredo_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "pet_jeremias_id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
