@@ -154,7 +154,7 @@ or download and install the MySQL database (e.g., MySQL Community Server 5.7 GA)
 
 ### Use the Spring 'mysql' profile
 
-To use a MySQL database, you have to start 3 microservices (`visits-service`, `customers-service` and `vets-services`)
+To use a MySQL database, you have to start 4 microservices (`owners-service`, `pets-service`, `visits-service`, and `vets-services`)
 with the `mysql` Spring profile. Add the `--spring.profiles.active=mysql` as programm argument.
 
 By default, at startup, database schema will be created and data will be populated.
@@ -194,8 +194,9 @@ Spring Boot registers a lot number of core metrics: JVM, CPU, Tomcat, Logback...
 The Spring Boot auto-configuration enables the instrumentation of requests handled by Spring MVC.
 All those three REST controllers `OwnerResource`, `PetResource` and `VisitResource` have been instrumented by the `@Timed` Micrometer annotation at class level.
 
-* `customers-service` application has the following custom metrics enabled:
+* `owners-service` application has the following custom metrics enabled:
   * @Timed: `petclinic.owner`
+* `pets-service` application has the following custom metrics enabled:
   * @Timed: `petclinic.pet`
 * `visits-service` application has the following custom metrics enabled:
   * @Timed: `petclinic.visit`

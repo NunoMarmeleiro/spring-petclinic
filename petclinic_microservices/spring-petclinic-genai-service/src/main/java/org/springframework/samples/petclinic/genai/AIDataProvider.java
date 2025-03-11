@@ -24,7 +24,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class AIDataProvider {
 
 	private final VectorStore vectorStore;
-    private final String ownersHostname = "http://customers-service/";
+    private final String ownersHostname = "http://owners-service/";
+    private final String petsHostname = "http://pets-service/";
 
     private final WebClient webClient;
 
@@ -61,7 +62,7 @@ public class AIDataProvider {
 	public AddedPetResponse addPetToOwner(AddPetRequest request) {
 		return new AddedPetResponse(webClient
 	            .post()
-	            .uri(ownersHostname + "owners/"+request.ownerId()+"/pets")
+	            .uri(petsHostname + "owners/"+request.ownerId()+"/pets")
 	            .bodyValue(request.pet())
 	            .retrieve().bodyToMono(PetDetails.class).block());
 	}

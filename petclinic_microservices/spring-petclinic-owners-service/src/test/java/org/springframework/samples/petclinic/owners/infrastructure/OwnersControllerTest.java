@@ -139,7 +139,7 @@ class OwnersControllerTest {
 
         mvc.perform(delete("/owners/{ownerId}", ownerId)
                 .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk());
+            .andExpect(status().isNoContent());
 
         verify(ownerRepository).deleteById(ownerId);
         verify(ownerManagement).sendOwnerDeleted(ownerId);

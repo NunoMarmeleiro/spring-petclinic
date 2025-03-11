@@ -81,7 +81,7 @@ class PetControllerTest {
 
         mvc.perform(delete("/owners/{ownerId}/pets/{petId}", ownerId, petId)
                 .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk());
+            .andExpect(status().isNoContent());
 
         verify(petRepository).deleteById(petId);
         verify(petManagement).sendPetDeleted(petId);
