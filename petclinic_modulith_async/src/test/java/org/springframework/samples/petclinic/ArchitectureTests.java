@@ -33,7 +33,7 @@ public class ArchitectureTests {
 		.resideInAPackage("..owner..")
 		.should()
 		.onlyHaveDependentClassesThat()
-		.resideInAnyPackage("..owner..", "..visit..","..pet..");
+		.resideInAnyPackage("..owner..", "..visit..", "..pet..");
 
 	@ArchTest
 	public static final ArchRule visitRule = classes().that()

@@ -20,4 +20,5 @@ public class OwnerIntegrationTests {
 			.matchingMappedValue(DeletedOwner::ownerId, 1)
 			.toArrive();
 	}
+
 }
