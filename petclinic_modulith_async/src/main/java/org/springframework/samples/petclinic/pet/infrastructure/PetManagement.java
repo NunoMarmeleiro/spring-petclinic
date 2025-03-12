@@ -7,7 +7,6 @@ import org.springframework.samples.petclinic.owner.DeletedOwner;
 import org.springframework.samples.petclinic.pet.DeletedPet;
 import org.springframework.samples.petclinic.pet.DeletedPets;
 import org.springframework.samples.petclinic.pet.domain.Pet;
-import org.springframework.samples.petclinic.pet.infrastructure.PetRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
