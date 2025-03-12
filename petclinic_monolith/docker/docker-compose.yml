@@ -1,4 +1,20 @@
 services:
+  petclinic:
+    image: petclinic-monolith
+    container_name: petclinic-monolith
+    deploy:
+      resources:
+        limits:
+          memory: "512M"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=h2
+    restart: unless-stopped
+
   mysql:
     image: mysql:8.2
     ports:
