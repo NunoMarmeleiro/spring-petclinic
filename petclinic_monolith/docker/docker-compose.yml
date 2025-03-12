@@ -1,3 +1,5 @@
+name: petclinic_monolith
+
 services:
   petclinic:
     image: petclinic-monolith
