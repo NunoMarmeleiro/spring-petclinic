@@ -170,16 +170,16 @@ class ClinicServiceTests {
 	@Transactional
 	void shouldUpdatePetName() throws Exception {
 		Owner owner6 = this.owners.findById(6);
-		Pet pet7 = owner6.getPet(7);
-		String oldName = pet7.getName();
+		Pet pet6 = owner6.getPet(6);
+		String oldName = pet6.getName();
 
 		String newName = oldName + "X";
-		pet7.setName(newName);
+		pet6.setName(newName);
 		this.owners.save(owner6);
 
 		owner6 = this.owners.findById(6);
-		pet7 = owner6.getPet(7);
-		assertThat(pet7.getName()).isEqualTo(newName);
+		pet6 = owner6.getPet(6);
+		assertThat(pet6.getName()).isEqualTo(newName);
 	}
 
 	@Test
@@ -197,17 +197,17 @@ class ClinicServiceTests {
 	@Transactional
 	void shouldAddNewVisitForPet() {
 		Owner owner6 = this.owners.findById(6);
-		Pet pet7 = owner6.getPet(7);
-		int found = pet7.getVisits().size();
+		Pet pet6 = owner6.getPet(6);
+		int found = pet6.getVisits().size();
 		Visit visit = new Visit();
 		visit.setDescription("test");
 
-		owner6.addVisit(pet7.getId(), visit);
+		owner6.addVisit(pet6.getId(), visit);
 		this.owners.save(owner6);
 
 		owner6 = this.owners.findById(6);
 
-		assertThat(pet7.getVisits()) //
+		assertThat(pet6.getVisits()) //
 			.hasSize(found + 1) //
 			.allMatch(value -> value.getId() != null);
 	}
@@ -215,8 +215,8 @@ class ClinicServiceTests {
 	@Test
 	void shouldFindVisitsByPetId() throws Exception {
 		Owner owner6 = this.owners.findById(6);
-		Pet pet7 = owner6.getPet(7);
-		Collection<Visit> visits = pet7.getVisits();
+		Pet pet6 = owner6.getPet(6);
+		Collection<Visit> visits = pet6.getVisits();
 
 		assertThat(visits) //
 			.hasSize(2) //
