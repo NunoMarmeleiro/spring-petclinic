@@ -40,14 +40,14 @@ public class PetManagement {
         }
     }
 
-    void sendPetDeleted(final Integer data) {
-        CompletableFuture<SendResult<String, Integer>> future = kafkaTemplate.send("petDeleted",data);
+    void sendPetDeleted(final Integer petId) {
+        CompletableFuture<SendResult<String, Integer>> future = kafkaTemplate.send("petDeleted",petId);
         future.whenComplete((result, ex) -> {
             if (ex == null) {
-                log.info("Sending message to Kafka Listener: {}", data);
+                log.info("Sending message to Kafka Listener: {}", petId);
             }
             else {
-                log.error("Failed to send message to Kafka Listener: {}", data, ex);
+                log.error("Failed to send message to Kafka Listener: {}", petId, ex);
             }
         });
     }
