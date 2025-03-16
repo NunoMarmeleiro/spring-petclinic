@@ -39,44 +39,22 @@ import java.util.function.Function;
 @RequestMapping("/api/gateway")
 public class ApiGatewayController {
 
-    //private final CustomersServiceClient customersServiceClient;
-
     private final VisitsServiceClient visitsServiceClient;
     private final PetsServiceClient petsServiceClient;
     private final OwnersServiceClient ownersServiceClient;
 
     private final ReactiveCircuitBreakerFactory cbFactory;
 
-    public ApiGatewayController(//CustomersServiceClient customersServiceClient,
+    public ApiGatewayController(
                                 VisitsServiceClient visitsServiceClient,
                                 OwnersServiceClient ownersServiceClient,
                                 PetsServiceClient petsServiceClient,
                                 ReactiveCircuitBreakerFactory cbFactory) {
-        //this.customersServiceClient = customersServiceClient;
         this.visitsServiceClient = visitsServiceClient;
         this.cbFactory = cbFactory;
         this.ownersServiceClient = ownersServiceClient;
         this.petsServiceClient = petsServiceClient;
     }
-
-    /*
-    @GetMapping(value = "owners/{ownerId}")
-    public Mono<OwnerDetails> getOwnerDetails(final @PathVariable int ownerId) {
-        return customersServiceClient.getOwner(ownerId)
-            .flatMap(owner ->
-                visitsServiceClient.getVisitsForPets(owner.getPetIds())
-                    .transform(it -> {
-                        ReactiveCircuitBreaker cb = cbFactory.create("getOwnerDetails");
-                        return cb.run(it, throwable -> emptyVisitsForPets());
-                    })
-                    .map(addVisitsToOwner(owner))
-            );
-
-    }
-
-
-
-    */
 
     @GetMapping(value = "owners/{ownerId}")
     public Mono<OwnerDetails> getOwnerDetails(final @PathVariable int ownerId) {
