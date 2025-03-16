@@ -29,15 +29,10 @@ public class VisitManagementTest {
 
 
     @Test
-    void listenPetDeleted_ShouldDeleteVisits() {
-        // Given
+    void listenPetDeletedShouldDeleteVisits() {
         Integer petId = 5;
-        visitManagement = new VisitManagement(visitRepository, kafkaTemplate);
-
-        // When
+        doNothing().when(visitRepository).deleteByPetId(petId);
         visitManagement.listenPetDeleted(petId);
-
-        // Then
-        verify(visitRepository, times(1)).deleteByPetId(petId);
+        verify(visitRepository).deleteByPetId(petId);
     }
 }

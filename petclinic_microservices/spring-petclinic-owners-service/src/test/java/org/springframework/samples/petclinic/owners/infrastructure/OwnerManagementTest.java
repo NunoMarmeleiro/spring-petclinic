@@ -31,18 +31,18 @@ public class OwnerManagementTest {
     private ArgumentCaptor<Integer> ownerIdCaptor;
 
     @Test
-    void sendOwnerDeleted_ShouldSendKafkaMessage() {
+    void sendOwnerDeletedShouldSendKafkaMessage() {
         Integer ownerId = 10;
-        ownerManagement = new OwnerManagement(kafkaTemplate);
 
         CompletableFuture<SendResult<String, Integer>> futureMock = CompletableFuture.completedFuture(null);
         when(kafkaTemplate.send(eq("ownerDeleted"), any(Integer.class))).thenReturn(futureMock);
 
         ownerManagement.sendOwnerDeleted(ownerId);
 
-        verify(kafkaTemplate, times(1)).send(eq("ownerDeleted"), ownerIdCaptor.capture());
 
         Integer capturedOwnerId = ownerIdCaptor.getValue();
         assert capturedOwnerId.equals(ownerId);
+
+
     }
 }

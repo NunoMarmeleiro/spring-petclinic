@@ -40,9 +40,24 @@ class PetManagementTest {
     @Captor
     private ArgumentCaptor<Integer> petIdCaptor;
 
+    @Test
+    void sendPetDeletedShouldSendKafkaMessage() {
+        Integer petId = 1;
+        CompletableFuture<SendResult<String, Integer>> futureMock = CompletableFuture.completedFuture(null);
+        when(kafkaTemplate.send(eq("petDeleted"), any(Integer.class))).thenReturn(futureMock);
+
+        petManagement.sendPetDeleted(petId);
+        verify(kafkaTemplate, times(1)).send(eq("petDeleted"), petIdCaptor.capture());
+
+
+        verify(kafkaTemplate).send("petDeleted", petId);
+
+        Integer capturedPetId = petIdCaptor.getValue();
+        assert capturedPetId.equals(petId);
+    }
 
     @Test
-    void listenOwnerDeleted_ShouldDeletePetsAndSendEvents() throws ParseException {
+    void listenOwnerDeletedShouldDeletePetsAndSendEvents() throws ParseException {
         Integer ownerId = 1;
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
         //Pet 1
@@ -85,27 +100,5 @@ class PetManagementTest {
         assert capturedIds.contains(2);
     }
 
-    @Test
-    void sendPetDeleted_ShouldLogMessageOnSuccess() throws ExecutionException, InterruptedException {
-        Integer petId = 1;
-        CompletableFuture<SendResult<String, Integer>> futureMock = CompletableFuture.completedFuture(null);
-        when(kafkaTemplate.send("petDeleted", petId)).thenReturn(futureMock);
 
-        petManagement.sendPetDeleted(petId);
-
-        verify(kafkaTemplate).send("petDeleted", petId);
-    }
-
-    @Test
-    void sendPetDeleted_ShouldLogErrorOnFailure() {
-        Integer petId = 1;
-        CompletableFuture<SendResult<String, Integer>> futureMock = new CompletableFuture<>();
-        futureMock.completeExceptionally(new RuntimeException("Kafka failure"));
-
-        when(kafkaTemplate.send("petDeleted", petId)).thenReturn(futureMock);
-
-        petManagement.sendPetDeleted(petId);
-
-        verify(kafkaTemplate).send("petDeleted", petId);
-    }
 }

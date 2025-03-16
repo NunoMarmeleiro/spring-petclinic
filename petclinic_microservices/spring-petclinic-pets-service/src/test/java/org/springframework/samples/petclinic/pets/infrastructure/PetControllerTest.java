@@ -67,7 +67,6 @@ class PetControllerTest {
         petType.setId(6);
         pet.setType(petType);
 
-        //owner.addPet(pet);
         return pet;
     }
 
