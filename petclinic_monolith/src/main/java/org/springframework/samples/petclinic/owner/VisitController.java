@@ -92,6 +92,7 @@ class VisitController {
 		owner.addVisit(petId, visit);
 		this.owners.save(owner);
 		redirectAttributes.addFlashAttribute("message", "Your vist has been boked");
+		redirectAttributes.addFlashAttribute("newVisitId", visit.getId());
 		return "redirect:/owners/{ownerId}";
 	}
 
