@@ -10,8 +10,8 @@ services:
           cpus: 1
           memory: 512M
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ../
+      dockerfile: docker/Dockerfile
     ports:
       - "8080:8080"
     environment:

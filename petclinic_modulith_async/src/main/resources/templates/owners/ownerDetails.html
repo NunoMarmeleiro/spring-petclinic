@@ -16,7 +16,9 @@
       <span th:text="${error}"></span>
     </div>
 
-
+    <input type="hidden" id="newPetId" th:value="${newPetId}"/>
+    <input type="hidden" id="newOwnerId" th:value="${newOwnerId}"/>
+    <input type="hidden" id="newVisitId" th:value="${newVisitId}"/>
 
 
     <table class="table table-striped" th:object="${owner}">

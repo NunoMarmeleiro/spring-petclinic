@@ -88,6 +88,7 @@ class VisitController {
 		visit.setPet(petId);
 		this.visits.save(visit);
 		redirectAttributes.addFlashAttribute("message", "Your visit has been booked");
+		redirectAttributes.addFlashAttribute("newVisitId", visit.getId());
 		return "redirect:/owners/{ownerId}";
 	}
 

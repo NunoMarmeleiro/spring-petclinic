@@ -78,6 +78,7 @@ class OwnerController {
 
 		this.owners.save(owner);
 		redirectAttributes.addFlashAttribute("message", "New Owner Created");
+		redirectAttributes.addFlashAttribute("newOwnerId", owner.getId());
 		return "redirect:/owners/" + owner.getId();
 	}
 
