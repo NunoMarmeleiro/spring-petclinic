@@ -38,7 +38,7 @@ public class OwnerManagementTest {
         when(kafkaTemplate.send(eq("ownerDeleted"), any(Integer.class))).thenReturn(futureMock);
 
         ownerManagement.sendOwnerDeleted(ownerId);
-
+        verify(kafkaTemplate, times(1)).send(eq("ownerDeleted"), ownerIdCaptor.capture());
 
         Integer capturedOwnerId = ownerIdCaptor.getValue();
         assert capturedOwnerId.equals(ownerId);
