@@ -109,7 +109,7 @@ export default function () {
 
                     check(visitRes, {
                         'visit created (200)': (r) => r.status === 200,
-                        'visit confirmation': (r) => r.body.includes('Your vist has been boked'),
+                        'visit confirmation': (r) => r.body.includes('Your visit has been booked'),
                     });
 
                     const visitMatch = visitRes.body.match(/<input[^>]*id="newVisitId"[^>]*value="(\d+)"[^>]*>/);
