@@ -51,17 +51,17 @@ export default function () {
             lastName: 'LastName',
         };
 
-        const res = http.post(`${BASE_URL}/owners/new`, ownerPayload, {
+        const ownerRes = http.post(`${BASE_URL}/owners/new`, ownerPayload, {
             headers,
             tags: { name: 'create_owner' },
         });
 
-        check(res, {
+        check(ownerRes, {
             'owner created (200)': (r) => r.status === 200,
             'owner confirmation': (r) => r.body.includes('New Owner Created'),
         });
 
-        const match = res.body.match(/<input[^>]*id="newOwnerId"[^>]*value="(\d+)"[^>]*>/);
+        const match = ownerRes.body.match(/<input[^>]*id="newOwnerId"[^>]*value="(\d+)"[^>]*>/);
         if (!match?.[1]) {
             console.error('Owner ID not found!');
             return;
