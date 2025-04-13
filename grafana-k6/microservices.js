@@ -1,7 +1,7 @@
 import http from 'k6/http';
 import { check, group } from 'k6';
 
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = 'http://localhost:8080/api';
 
 const SCENARIO = __ENV.SCENARIO_TYPE || 'load';
 
@@ -18,6 +18,10 @@ if (SCENARIO === 'stress') {
         { duration: '1m', target: 250 },
         { duration: '1m', target: 0 },
     ];
+} else if (SCENARIO === 'test' ){
+    stages = [
+        { vus: VUS },
+    ]
 } else {
     stages = [
         { duration: '30s', target: VUS },
@@ -43,13 +47,13 @@ export default function () {
     const headers = { 'Content-Type': 'application/json' };
 
     group('Create Owner', () => {
-        const ownerPayload = {
+        const ownerPayload = JSON.stringify({
             address: 'Address',
             city: 'City',
             telephone: '1234567890',
             firstName: `OWNER-${__VU}-${__ITER}`,
             lastName: 'LastName',
-        };
+        });
 
         const ownerRes = http.post(`${BASE_URL}/owner/owners`, ownerPayload, {
             headers,
@@ -59,33 +63,31 @@ export default function () {
         check(ownerRes, {
             'owner created (201)': (r) => r.status === 201
         });
-
-        const ownerId = ownerRes.body.id;
+        const ownerId = JSON.parse(ownerRes.body).id;
 
         group('Add Pets and Visits', () => {
             for (let i = 0; i < NR_PETS; i++) {
                 const petType = PET_TYPES[Math.floor(Math.random() * PET_TYPES.length)];
-                const petPayload = {
+                const petPayload = JSON.stringify({
                     name: `PET-${__VU}-${__ITER}-${i}`,
                     birthDate: '2000-01-01',
-                    type: petType,
-                };
+                    typeId: petType,
+                });
 
                 const petRes = http.post(`${BASE_URL}/pet/owners/${ownerId}/pets`, petPayload, {
                     headers,
                     tags: { name: 'add_pet' },
                 });
-
                 check(petRes, {
                     'pet created (201)': (r) => r.status === 201
                 });
-                const petId = petRes.body.id;
+                const petId = JSON.parse(petRes.body).id;
 
                 for (let j = 0; j < NR_VISITS; j++) {
-                    const visitPayload = {
+                    const visitPayload = JSON.stringify({
                         date: '2010-01-01',
                         description: `VISIT-${__VU}-${__ITER}-${i}-${j}`,
-                    };
+                    });
 
                     const visitRes = http.post(`${BASE_URL}/visit/owners/${ownerId}/pets/${petId}/visits`, visitPayload, {
                         headers,
