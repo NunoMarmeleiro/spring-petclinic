@@ -1,5 +1,10 @@
 import http from 'k6/http';
 import { check, group } from 'k6';
+import { Trend } from 'k6/metrics';
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
+
+
+const deleteOwnerTrend = new Trend('delete_owner_duration', true);
 
 const BASE_URL = 'http://localhost:8080';
 
@@ -18,6 +23,10 @@ if (SCENARIO === 'stress') {
         { duration: '1m', target: 250 },
         { duration: '1m', target: 0 },
     ];
+} else if (SCENARIO === 'test' ) {
+    stages = [
+        { duration: '1s', target: 1 }
+    ];
 } else {
     stages = [
         { duration: '30s', target: VUS },
@@ -26,7 +35,22 @@ if (SCENARIO === 'stress') {
     ];
 }
 
-export let options = { stages };
+export let options = { 
+    summaryTrendStats: [
+        "avg",
+        "min",
+        "med",
+        "max",
+        "p(50)",
+        "p(90)",
+        "p(95)",
+        "p(99)",
+        "p(99.99)",
+        "count"
+      ],
+      summaryTimeUnit: "ms",
+    stages 
+};
 
 const NR_PETS = 2;
 const NR_VISITS = 2;
@@ -38,6 +62,36 @@ export function setup() {
         console.log(`VUs for loading test: ${VUS}`)
     }
 }
+
+
+
+export function handleSummary(data) {
+    const deleteCount = data.metrics.delete_owner_duration.values.count;
+
+
+    const count = data.metrics.iteration_duration.values.count;
+    const avg = data.metrics.iteration_duration.values.avg;
+    const duration = (count * avg) / 1000;
+
+    const deleteThroughput = deleteCount / duration;
+    
+
+    console.log(`Delete Requests: ${deleteCount}`);
+    console.log(`Duration: ${duration.toFixed(2)}s`);
+    console.log(`Delete Throughput: ${deleteThroughput.toFixed(2)} reqs/s`);
+
+    data.metrics.delete_owner_duration.values.rate = deleteThroughput;
+
+    const vus = __ENV.VUS || 'default';
+    const scenario = __ENV.SCENARIO_TYPE || 'load';
+
+    const filename = `nonmodular-results-${scenario}-${vus}vus.html`;
+
+    return {
+        [filename]: htmlReport(data),
+    };
+}
+
 
 export default function () {
     const headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
@@ -125,7 +179,8 @@ export default function () {
             const deleteRes = http.del(`${BASE_URL}/owners/${ownerId}/delete`, null, {
                 tags: { name: 'delete_owner' },
             });
-
+            const duration = deleteRes.timings.duration;
+            deleteOwnerTrend.add(duration);
             check(deleteRes, {
                 'owner deleted (200)': (r) => r.status === 200,
                 'delete confirmation': (r) => r.body.includes('PetClinic'),
