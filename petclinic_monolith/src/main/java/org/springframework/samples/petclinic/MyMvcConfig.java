@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 
 @Configuration
-public class MyMvcConfigs {
+public class MyMvcConfig {
 
 	@Bean
 	public HiddenHttpMethodFilter hiddenHttpMethodFilter() {
