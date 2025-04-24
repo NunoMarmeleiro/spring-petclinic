@@ -8,4 +8,5 @@
 	<suppress files="build[\\/].*" checks=".*"/>
 	<suppress files="target[\\/].*" checks=".*"/>
 	<suppress files=".+\.(jar|git|ico|p12|gif|jks|jpg|svg|log)" checks="NoHttp"/>
-	<suppress files="spring-petclinic\NonModular.sonargraph[\\/].*" checks="NoHttp"/></suppressions>
+	<suppress files=".*[\\/]?.*\.sonargraph[\\/].*" checks="NoHttp"/>
+</suppressions>
