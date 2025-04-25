@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: owners-service
+  namespace: petclinic-microservices
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: owners-service
+  template:
+    metadata:
+      labels:
+        app: owners-service
+    spec:
+      containers:
+        - name: owners-service
+          image: springcommunity/spring-petclinic-owners-service
+          ports:
+            - containerPort: 8085
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: docker
+          resources:
+            limits:
+              cpu: "1"
+              memory: "512Mi"
+            requests:
+              cpu: "0.5"
+              memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: owners-service
+  namespace: petclinic-microservices
+spec:
+  selector:
+    app: owners-service
+  ports:
+    - protocol: TCP
+      port: 8085
+      targetPort: 8085
