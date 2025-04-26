@@ -16,8 +16,12 @@ spec:
       containers:
         - name: config-server
           image: springcommunity/spring-petclinic-config-server
+          imagePullPolicy: Never
           ports:
             - containerPort: 8888
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: docker
           resources:
             limits:
               cpu: "1"

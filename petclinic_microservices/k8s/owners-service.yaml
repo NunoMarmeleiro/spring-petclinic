@@ -16,6 +16,7 @@ spec:
       containers:
         - name: owners-service
           image: springcommunity/spring-petclinic-owners-service
+          imagePullPolicy: Never
           ports:
             - containerPort: 8085
           env:
@@ -39,5 +40,5 @@ spec:
     app: owners-service
   ports:
     - protocol: TCP
-      port: 8085
+      port: 80
       targetPort: 8085

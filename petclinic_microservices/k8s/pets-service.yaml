@@ -16,6 +16,7 @@ spec:
       containers:
         - name: pets-service
           image: springcommunity/spring-petclinic-pets-service
+          imagePullPolicy: Never
           ports:
             - containerPort: 8086
           env:
@@ -39,5 +40,5 @@ spec:
     app: pets-service
   ports:
     - protocol: TCP
-      port: 8086
+      port: 80
       targetPort: 8086
