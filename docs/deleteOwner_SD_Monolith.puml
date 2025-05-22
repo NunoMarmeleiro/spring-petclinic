@@ -1,0 +1,36 @@
+@startuml deleteOwner_SD_Monolith
+
+autonumber
+
+actor User
+participant UserInterface
+participant PetController
+participant OwnerController
+participant OwnerRepository
+participant "owner : Owner"
+participant "pet : Pet"
+participant "visits : Visit"
+
+User -> UserInterface: Delete Owner
+UserInterface -> OwnerController: DELETE /owners/{ownerId}/delete
+
+
+
+OwnerController -> OwnerRepository: owner = findById(ownerId)
+OwnerController -> "owner : Owner": pets = getPets()
+
+alt Loop through pets and their visits
+    loop For each pet in pets 
+        OwnerController -> "pet : Pet": visits = getVisits()
+        loop For each visit in visits
+            OwnerController -> OwnerRepository: deleteVisitById(visit.id)
+        end
+        OwnerController -> OwnerRepository: deletePetById(petId)
+    end
+end
+
+
+OwnerController --> UserInterface: redirect:/owners
+UserInterface --> User: confirms operation
+
+@enduml

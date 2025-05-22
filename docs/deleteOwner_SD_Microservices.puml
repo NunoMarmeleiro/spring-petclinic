@@ -1,0 +1,61 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor User
+participant UserInterface
+participant APIGateway
+
+box "Owner Service" #LightGreen
+    participant OwnerController
+    participant OwnerManagement
+    participant OwnerRepository
+    participant "event:DeletedOwner"
+end box
+
+box "Pet Service" #lightyellow
+    participant PetController
+    participant PetManagement
+    participant PetRepository
+    participant "event:DeletedPets"
+end box
+
+participant EventHandler
+
+box "Visit Service" #lightblue
+    participant VisitManagement
+    participant VisitRepository
+end box
+
+User -> UserInterface: Delete Owner
+UserInterface -> OwnerController: DELETE /owners/{ownerId}/delete
+APIGateway -> OwnerController: deleteOwner(ownerId)
+
+OwnerController -> OwnerManagement: deletePets(ownerId)
+OwnerManagement --> "event:DeletedOwner" **: create(ownerId)
+"event:DeletedOwner" --> OwnerManagement: event
+OwnerManagement -> EventHandler: publishEvent(event)
+
+EventHandler -> PetManagement: on(DeletedOwner event)
+PetManagement -> PetRepository: getPetsByOwnerId(event.ownerId)
+PetManagement --> "event:DeletedPets" **: create(List<Integer> petsId)
+"event:DeletedPets" --> PetManagement: event
+PetManagement -> EventHandler: publishEvent(event)
+
+PetManagement -> PetRepository: deletePetsByOwnerId(event.ownerId)
+
+
+EventHandler -> VisitManagement: on(DeletedPets event)
+alt Loop through each pet in Pets
+    Loop for each petId in event.petsId
+        VisitManagement -> VisitRepository: deleteVisitByPetId(event.petId)
+    end
+end
+
+OwnerController -> OwnerRepository: deleteOwnerById(ownerId)
+OwnerController --> APIGateway: success
+APIGateway --> UserInterface: redirect:/owners
+UserInterface --> User: confirms operation
+@enduml
+
