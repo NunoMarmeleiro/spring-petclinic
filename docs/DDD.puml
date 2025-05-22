@@ -1,0 +1,40 @@
+@startuml DDD
+skinparam DefaultFontName Arial
+skinparam DefaultFontSize 16
+skinparam DefaultFontStyle bold
+skinparam ArrowThickness 2.5
+'!theme toy
+
+
+package "<<aggregate>> Owner"{
+    entity Owner <<entity>><<root>> {}
+}
+
+package "<<aggregate>> Pet"{
+    entity Pet <<entity>><<root>> {}
+
+    entity PetType <<entity>> {}
+
+    class BirthDate <<(V,#FF8B40) value object>> {}
+}
+
+package "<<aggregate>> Vet" {
+    entity Vet <<entity>><<root>> {}
+
+    entity Speciality <<entity>> {}
+}
+
+package "<<aggregate>> Visit" {
+    entity Visit <<entity>><<root>> {}
+
+    class VisitDate <<(V,#FF8B40) value object>> {}
+}
+
+Pet "*" ---> "1" PetType: belongs
+Pet "1" o--- "1" BirthDate: has
+Visit "1" o--- "1" VisitDate: has
+Vet "*" ---> "*" Speciality: possesses
+Pet "*" --- "1" Owner: owned >
+Visit "*" --- "1" Pet: belongs >
+
+@enduml

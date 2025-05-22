@@ -1,4 +1,4 @@
-@startuml
+@startuml DomainModel
 skinparam DefaultFontName Arial
 skinparam DefaultFontSize 16
 skinparam DefaultFontStyle bold
@@ -6,29 +6,27 @@ skinparam ArrowThickness 2.5
 '!theme toy
 
 
-package "<<aggregate>> Owner"{
-    entity Owner <<entity>><<root>> {}
-}
 
-package "<<aggregate>> Pet"{
-    entity Pet <<entity>><<root>> {}
+entity Owner <<entity>><<root>> {}
 
-    entity PetType <<entity>> {}
 
-    class BirthDate <<(V,#FF8B40) value object>> {}
-}
+entity Pet <<entity>><<root>> {}
 
-package "<<aggregate>> Vet" {
-    entity Vet <<entity>><<root>> {}
+entity PetType <<entity>> {}
 
-    entity Speciality <<entity>> {}
-}
+class BirthDate <<(V,#FF8B40) value object>> {}
 
-package "<<aggregate>> Visit" {
-    entity Visit <<entity>><<root>> {}
 
-    class VisitDate <<(V,#FF8B40) value object>> {}
-}
+
+entity Vet <<entity>><<root>> {}
+
+entity Speciality <<entity>> {}
+
+
+entity Visit <<entity>><<root>> {}
+
+class VisitDate <<(V,#FF8B40) value object>> {}
+
 
 Pet "*" ---> "1" PetType: belongs
 Pet "1" o--- "1" BirthDate: has
