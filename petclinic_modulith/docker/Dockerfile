@@ -2,7 +2,7 @@ FROM eclipse-temurin:17-jdk-alpine
 
 WORKDIR /app
 
-COPY ../target/modulith-async-*.jar app.jar
+COPY ../target/modulith-*.jar app.jar
 
 EXPOSE 8080
 
