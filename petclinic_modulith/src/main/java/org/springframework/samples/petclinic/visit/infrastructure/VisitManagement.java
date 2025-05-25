@@ -5,7 +5,7 @@ import org.springframework.modulith.ApplicationModuleListener;
 
 import org.springframework.samples.petclinic.pet.DeletedPet;
 import org.springframework.samples.petclinic.pet.DeletedPets;
-import org.springframework.samples.petclinic.visit.infrastructure.VisitRepository;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,6 +15,7 @@ public class VisitManagement {
 	private final VisitRepository visits;
 
 	@ApplicationModuleListener
+	@Async
 	void on(DeletedPets event) throws InterruptedException {
 		for (Integer i : event.petIds()) {
 			this.visits.deleteVisitByPetId(i);
@@ -22,6 +23,7 @@ public class VisitManagement {
 	}
 
 	@ApplicationModuleListener
+	@Async
 	void on(DeletedPet event) throws InterruptedException {
 		this.visits.deleteVisitByPetId(event.petId());
 	}
