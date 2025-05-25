@@ -7,25 +7,25 @@ skinparam ArrowThickness 2.5
 
 
 
-entity Owner <<entity>><<root>> {}
+class Owner {}
 
 
-entity Pet <<entity>><<root>> {}
+class Pet {}
 
-entity PetType <<entity>> {}
+class PetType {}
 
-class BirthDate <<(V,#FF8B40) value object>> {}
-
-
-
-entity Vet <<entity>><<root>> {}
-
-entity Speciality <<entity>> {}
+class BirthDate {}
 
 
-entity Visit <<entity>><<root>> {}
 
-class VisitDate <<(V,#FF8B40) value object>> {}
+class Vet {}
+
+class Speciality {}
+
+
+class Visit {}
+
+class VisitDate {}
 
 
 Pet "*" ---> "1" PetType: belongs
