@@ -23,7 +23,6 @@ public class PetManagement {
 	private final PetRepository pets;
 
 	@ApplicationModuleListener
-	@Async
 	void on(DeletedOwner event) throws InterruptedException {
 		List<Pet> pets = this.pets.findByOwnerId(event.ownerId());
 		List<Integer> petIds = new ArrayList<>();
@@ -32,17 +31,14 @@ public class PetManagement {
 		}
 		deleteVisitsFromPets(petIds);
 		this.pets.deletePetByOwnerId(event.ownerId());
-		Thread.sleep(5000);
 	}
 
 	@Transactional
-	@Async
 	public void deleteVisitsFromPets(List<Integer> petIds) {
 		events.publishEvent(new DeletedPets(petIds));
 	}
 
 	@Transactional
-	@Async
 	public void deleteVisits(int petId) {
 		events.publishEvent(new DeletedPet(petId));
 	}

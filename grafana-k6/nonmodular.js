@@ -5,6 +5,8 @@ import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporte
 
 
 const deleteOwnerTrend = new Trend('delete_owner_duration', true);
+const postOwnerTrend = new Trend('post_owner_duration', true);
+
 
 const BASE_URL = 'http://localhost:8080';
 
@@ -66,20 +68,26 @@ export function setup() {
 
 
 export function handleSummary(data) {
-    const deleteCount = data.metrics.delete_owner_duration.values.count;
 
+    const postCount = data.metrics.post_owner_duration.values.count;
+    const deleteCount = data.metrics.delete_owner_duration.values.count;
 
     const count = data.metrics.iteration_duration.values.count;
     const avg = data.metrics.iteration_duration.values.avg;
     const duration = (count * avg) / 1000;
-
+   
+    const postThroughput = postCount / duration;
     const deleteThroughput = deleteCount / duration;
-    
 
-    console.log(`Delete Requests: ${deleteCount}`);
     console.log(`Duration: ${duration.toFixed(2)}s`);
-    console.log(`Delete Throughput: ${deleteThroughput.toFixed(2)} reqs/s`);
 
+    console.log(`Post Owner Requests: ${postCount}`);
+    console.log(`Post Owner Throughput: ${postThroughput.toFixed(2)} reqs/s`);
+
+    console.log(`Delete Owner Requests: ${deleteCount}`);
+    console.log(`Delete Owner Throughput: ${deleteThroughput.toFixed(2)} reqs/s`);
+
+    data.metrics.post_owner_duration.values.rate = postThroughput;
     data.metrics.delete_owner_duration.values.rate = deleteThroughput;
 
     const vus = __ENV.VUS || 'default';
@@ -109,7 +117,8 @@ export default function () {
             headers,
             tags: { name: 'create_owner' },
         });
-
+        const duration = ownerRes.timings.duration;
+        postOwnerTrend.add(duration);
         check(ownerRes, {
             'owner created (200)': (r) => r.status === 200,
             'owner confirmation': (r) => r.body.includes('New Owner Created'),

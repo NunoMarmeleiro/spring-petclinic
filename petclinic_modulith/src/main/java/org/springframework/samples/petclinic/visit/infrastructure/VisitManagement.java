@@ -15,7 +15,6 @@ public class VisitManagement {
 	private final VisitRepository visits;
 
 	@ApplicationModuleListener
-	@Async
 	void on(DeletedPets event) throws InterruptedException {
 		for (Integer i : event.petIds()) {
 			this.visits.deleteVisitByPetId(i);
@@ -23,7 +22,6 @@ public class VisitManagement {
 	}
 
 	@ApplicationModuleListener
-	@Async
 	void on(DeletedPet event) throws InterruptedException {
 		this.visits.deleteVisitByPetId(event.petId());
 	}
