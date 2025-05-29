@@ -36,8 +36,8 @@ nonmodular <- switch(choice,
 modular <- switch(choice,
                      read.csv("modular-load-delete-10vus-treated.csv"),
                      read.csv("modular-load-delete-100vus-treated.csv"),
-                     read.csv("modular-post-delete-10vus-treated.csv"),
-                     read.csv("modular-post-delete-100vus-treated.csv")
+                     read.csv("modular-load-post-10vus-treated.csv"),
+                     read.csv("modular-load-post-100vus-treated.csv")
 )
 
 microservices <- switch(choice,

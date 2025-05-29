@@ -1,7 +1,7 @@
 services:
   kafka-server:
     image: apache/kafka:latest
-    container_name: kafka-server
+    container_name: kafka-server-local
     environment:
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
