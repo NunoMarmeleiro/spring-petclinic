@@ -22,8 +22,8 @@ box "Visit Service" #lightblue
 end box
 
 User -> UserInterface: Delete Pet
-UserInterface -> APIGateway : DELETE /owners/{ownerId}/pets/{petId}/delete
-APIGateway -> PetController: deletePet(petId)
+UserInterface -> APIGateway : DELETE api/owners/{ownerId}/pets/{petId}/delete
+APIGateway -> PetController: DELETE /owners/{ownerId}/pets/{petId}/delete
 
 PetController -> PetManagement: deleteVisits(petId)
 PetManagement --> "event:DeletedPet" **: create(petId)

@@ -1,4 +1,4 @@
-@startuml
+@startuml deleteOwner_SD_Microservices
 'https://plantuml.com/sequence-diagram
 
 autonumber
@@ -29,8 +29,8 @@ box "Visit Service" #lightblue
 end box
 
 User -> UserInterface: Delete Owner
-UserInterface -> OwnerController: DELETE /owners/{ownerId}/delete
-APIGateway -> OwnerController: deleteOwner(ownerId)
+UserInterface -> APIGateway: DELETE api/owners/{ownerId}/delete
+APIGateway -> OwnerController: DELETE /owners/{ownerId}/delete
 
 OwnerController -> OwnerManagement: deletePets(ownerId)
 OwnerManagement --> "event:DeletedOwner" **: create(ownerId)

@@ -1,0 +1,21 @@
+@startuml createOwner_SD_Monolith
+
+autonumber
+
+actor User
+participant UserInterface
+participant OwnerController
+participant OwnerRepository
+participant "owner : Owner"
+
+User -> UserInterface: Create Owner
+UserInterface -> OwnerController: POST /owners
+
+
+
+OwnerController -> OwnerRepository: save(owner)
+
+OwnerController --> UserInterface: redirect:/owners
+UserInterface --> User: confirms operation
+
+@enduml

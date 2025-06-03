@@ -1,0 +1,23 @@
+@startuml deleteOwner_SD_Async
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor User
+participant UserInterface
+
+
+box "Owner Module" #LightGreen
+    participant OwnerController
+    participant OwnerRepository
+end box
+
+User -> UserInterface: Create Owner
+UserInterface -> OwnerController: POST /owners
+
+
+OwnerController -> OwnerRepository: save(owner)
+OwnerController --> UserInterface: redirect:/owners
+UserInterface --> User: confirms operation
+@enduml
+

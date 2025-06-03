@@ -1,0 +1,26 @@
+@startuml createOwner_SD_Microservices
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor User
+participant UserInterface
+participant APIGateway
+
+box "Owner Service" #LightGreen
+    participant OwnerController
+    participant OwnerRepository
+end box
+
+
+User -> UserInterface: Create Owner
+UserInterface -> APIGateway: POST api/owners
+APIGateway -> OwnerController: POST /owners
+
+
+OwnerController -> OwnerRepository: save(owner)
+OwnerController --> APIGateway: success
+APIGateway --> UserInterface: redirect:/owners
+UserInterface --> User: confirms operation
+@enduml
+
